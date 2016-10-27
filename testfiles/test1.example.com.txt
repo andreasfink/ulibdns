@@ -1,0 +1,33 @@
+;
+; typical file
+;
+$ORIGIN example.com.
+;
+@       IN      SOA     ns0.example.com. postmaster.example.com. (
+2015032710;  serial INCREMENT AFTER CHANGEG
+     28800;  refresh every 8 hours
+      7200;  if refres fails, retry all 120 minutes
+   1209600;  expire secondary after 14 days
+    86400); keep entries one day in cache
+;
+@		NS		ns0.example.com.
+@       NS      ns1.example.com.
+
+www     CNAME   webserver.example.com.
+webserver	A	10.10.10.10
+			A	10.10.10.20
+www2.example.com.	AAAA 1001:2002:3003::1
+
+@       MX  	10  mail1.example.com.
+@       MX  	10  mail2
+
+@ IN TXT "v=spf1 mx ip4:85.195.192.0/18 ip4:95.128.32.160/24 ip4:84.253.29.179/28 ip6:2001:4b28::/32 ip6:2a01:0528::/32 ip6:2001:618:1:102:230:48ff:fe65:49ff//64 -all"
+
+_xmpp-server._tcp 18000 IN SRV 0 5 5269 mail
+_xmpp-client._tcp 18000 IN SRV 0 5 5222 mail
+
+xx	AAAA	2001:4b28:198:0:21c:42ff:fe6c:1
+xx	AAAA	2001:4b28:198:0:21c:42ff:fe6c:2
+@	AAAA	2001:4b28:198:0:21c:42ff:fe6c:3
+	AAAA	2001:4b28:198:0:21c:42ff:fe6c:4
+
