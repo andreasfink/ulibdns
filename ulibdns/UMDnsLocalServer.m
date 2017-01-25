@@ -7,6 +7,7 @@
 //
 
 #import "UMDnsLocalServer.h"
+#include <unistd.h>
 
 @implementation UMDnsLocalServer
 
