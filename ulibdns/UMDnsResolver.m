@@ -14,7 +14,9 @@
 
 - (UMDnsResolver *)init
 {
-    self = [super initWithName:@"UMDnsResolver" workSleeper:[[UMSleeper alloc]init]];
+    self = [super initWithName:@"UMDnsResolver" workSleeper:[[UMSleeper alloc]initFromFile:__FILE__
+                                                                                      line:__LINE__
+                                                                                  function:__func__]];
     if(self)
     {
         newRequests = [[UMQueue alloc]init];
