@@ -471,7 +471,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Andreas Fink";
+				ORGANIZATIONNAME = "Andreas Fink (andreas@fink.org)";
 				TargetAttributes = {
 					A696EA0B1B943764009727B0 = {
 						CreatedOnToolsVersion = 7.0;

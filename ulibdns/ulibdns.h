@@ -3,7 +3,7 @@
 //  ulibdns
 //
 //  Created by Andreas Fink on 31/08/15.
-//  Copyright (c) 2016 Andreas Fink
+//  Copyright © 2017 Andreas Fink (andreas@fink.org). All rights reserved.
 //
 
 /* implementation of RFC 1035 Domain Implementation and Specification    November 1987 */

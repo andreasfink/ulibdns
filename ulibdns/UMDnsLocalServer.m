@@ -3,7 +3,7 @@
 //  ulibdns
 //
 //  Created by Andreas Fink on 23.08.16.
-//  Copyright © 2016 Andreas Fink. All rights reserved.
+//  Copyright © 2017 Andreas Fink (andreas@fink.org). All rights reserved.
 //
 
 #import "UMDnsLocalServer.h"

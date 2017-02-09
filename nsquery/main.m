@@ -3,7 +3,7 @@
 //  nsquery
 //
 //  Created by Andreas Fink on 27.11.15.
-//  Copyright (c) 2016 Andreas Fink
+//  Copyright © 2017 Andreas Fink (andreas@fink.org). All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
