@@ -238,6 +238,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A61FCF051E8DA1CB00C1B90A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A696EA2E1B944702009727B0 /* ulib.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A62B9E241B95C15D00211137 /* testfiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,7 +261,7 @@
 				A628C8B81CB9299500211137 /* Makefile.linux.in */,
 				A628C8B91CB9299500211137 /* Makefile.osx.in */,
 				A628C8BA1CB9299500211137 /* VERSION */,
-				A696EA2E1B944702009727B0 /* ulib.framework */,
+				A61FCF051E8DA1CB00C1B90A /* Frameworks */,
 				A696EA0E1B943764009727B0 /* ulibdns */,
 				A696EA1A1B943764009727B0 /* ulibdnsTests */,
 				A69733B51C087CB400211137 /* nsquery */,
