@@ -7,7 +7,7 @@ includedir=${prefix}/include
 
 Name: ulibdns
 Cflags: -I${includedir}
-Libs: -L${libdir} -lulibdns
+Libs: -L${libdir} -l:libulibdns.@SHARED_LIBRARY_EXTENSION@.@MAJORVER@.@MINORVER@
 
 Description: universal DNS library
 Version: @VERSION@
