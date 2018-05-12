@@ -27,11 +27,13 @@
         if([address isIPv4])
         {
             socket = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_TCP4ONLY];
+            socket.objectStatisticsName = @"UMSocket(UMDnsRemoteServer-tcp4)";
+
         }
         else if([address isIPv6])
         {
-            socket = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_TCP4ONLY];
-
+            socket = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_TCP6ONLY];
+            socket.objectStatisticsName = @"UMSocket(UMDnsRemoteServer-tcp6)";
         }
         else
         {
