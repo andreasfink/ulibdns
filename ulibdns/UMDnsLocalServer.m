@@ -18,8 +18,11 @@
     if(self)
     {
         localSocketUdp = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_UDP];
+        localSocketUdp.objectStatisticsName = @"UMSocket(UMDnsLocalserver-udp)";
+
         localSocketUdp.localPort = port;
         localSocketTcp = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_TCP];
+        localSocketTcp.objectStatisticsName = @"UMSocket(UMDnsLocalserver-tcp)";
         localSocketTcp.localPort = port;
     }
     return self;

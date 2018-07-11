@@ -28,7 +28,11 @@
 {
     ulib_set_thread_name([NSString stringWithFormat:@"%@",self.name]);
     socket_u4 = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_UDP4ONLY];
+    socket_u4.objectStatisticsName = @"UMSocket(UMDnsResolver-udp4)";
+
     socket_u6 = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_UDP6ONLY];
+    socket_u6.objectStatisticsName = @"UMSocket(UMDnsResolver-udp6)";
+
     if((socket_u4==NULL) && (socket_u6==NULL))
     {
         @throw([NSException exceptionWithName:@"socket_error" reason:@"can not open sockets" userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);
