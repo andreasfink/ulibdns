@@ -64,7 +64,7 @@
      */
 
     NSLog(@"%@:%d %@",filename,lineno,currentLine);
-    NSArray *items = [currentLine componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSArray *items = [currentLine componentsSeparatedByCharactersInSet:[UMObject whitespaceAndNewlineCharacterSet]];
     items = [self trimArray:items];
 
     int i=0;
@@ -252,7 +252,7 @@
         NSString *line  = entry[@"line"];
         if((line.length >8) && ([[line substringToIndex:8] isEqualToString:@"$INCLUDE"]))
         {
-            NSArray *items = [line componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            NSArray *items = [line componentsSeparatedByCharactersInSet:[UMObject whitespaceAndNewlineCharacterSet]];
             items = [self trimArray:items];
             if([items count] < 2)
             {
