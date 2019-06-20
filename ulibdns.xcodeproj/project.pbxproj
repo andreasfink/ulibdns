@@ -22,14 +22,14 @@
 		A669C8921B959E8E00DEFC2E /* UMDnsResourceRecord_all.h in Headers */ = {isa = PBXBuildFile; fileRef = A669C8901B959E8D00DEFC2E /* UMDnsResourceRecord_all.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A669C8961B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.h in Headers */ = {isa = PBXBuildFile; fileRef = A669C8941B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A669C8971B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.m in Sources */ = {isa = PBXBuildFile; fileRef = A669C8951B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.m */; };
+		A6798AE022BB89FC0019806C /* ulib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6798AD622BB86FE0019806C /* ulib.framework */; };
+		A6798AE122BB89FD0019806C /* ulib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6798AD622BB86FE0019806C /* ulib.framework */; };
 		A696EA101B943764009727B0 /* ulibdns.h in Headers */ = {isa = PBXBuildFile; fileRef = A696EA0F1B943764009727B0 /* ulibdns.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A696EA171B943764009727B0 /* ulibdns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A696EA0C1B943764009727B0 /* ulibdns.framework */; };
 		A696EA1C1B943764009727B0 /* ulibdnsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A696EA1B1B943764009727B0 /* ulibdnsTests.m */; };
 		A696EA281B94377D009727B0 /* ulibdns_types.h in Headers */ = {isa = PBXBuildFile; fileRef = A696EA261B94377D009727B0 /* ulibdns_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A696EA2C1B9445D8009727B0 /* UMDnsResourceRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = A696EA2A1B9445D8009727B0 /* UMDnsResourceRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A696EA2D1B9445D8009727B0 /* UMDnsResourceRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = A696EA2B1B9445D8009727B0 /* UMDnsResourceRecord.m */; };
-		A696EA2F1B944702009727B0 /* ulib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A696EA2E1B944702009727B0 /* ulib.framework */; };
-		A696EA301B944702009727B0 /* ulib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A696EA2E1B944702009727B0 /* ulib.framework */; };
 		A696EA331B9448E0009727B0 /* UMDnsLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A696EA311B9448E0009727B0 /* UMDnsLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A696EA341B9448E0009727B0 /* UMDnsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A696EA321B9448E0009727B0 /* UMDnsLabel.m */; };
 		A696EA351B9448E0009727B0 /* UMDnsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A696EA321B9448E0009727B0 /* UMDnsLabel.m */; };
@@ -88,7 +88,6 @@
 		A696EA8E1B9492CE009727B0 /* UMDnsResourceRecordMR.m in Sources */ = {isa = PBXBuildFile; fileRef = A696EA8C1B9492CE009727B0 /* UMDnsResourceRecordMR.m */; };
 		A696EA8F1B9492CE009727B0 /* UMDnsResourceRecordMR.m in Sources */ = {isa = PBXBuildFile; fileRef = A696EA8C1B9492CE009727B0 /* UMDnsResourceRecordMR.m */; };
 		A69733B71C087CB400211137 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A69733B61C087CB400211137 /* main.m */; };
-		A69733BB1C087EA700211137 /* ulib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A696EA2E1B944702009727B0 /* ulib.framework */; };
 		A69733BC1C087FA300211137 /* ulibdns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A696EA0C1B943764009727B0 /* ulibdns.framework */; };
 		A69B48231D6C24F500211137 /* UMDnsLocalServer.h in Headers */ = {isa = PBXBuildFile; fileRef = A69B48211D6C24F500211137 /* UMDnsLocalServer.h */; };
 		A69B48241D6C24F500211137 /* UMDnsLocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A69B48221D6C24F500211137 /* UMDnsLocalServer.m */; };
@@ -143,6 +142,7 @@
 		A669C8901B959E8D00DEFC2E /* UMDnsResourceRecord_all.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecord_all.h; sourceTree = "<group>"; };
 		A669C8941B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordAAAA.h; sourceTree = "<group>"; };
 		A669C8951B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordAAAA.m; sourceTree = "<group>"; };
+		A6798AD622BB86FE0019806C /* ulib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ulib.framework; path = "/Library/Application Support/FinkTelecomServices/frameworks/ulib.framework"; sourceTree = "<absolute>"; };
 		A696EA0C1B943764009727B0 /* ulibdns.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ulibdns.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A696EA0F1B943764009727B0 /* ulibdns.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ulibdns.h; sourceTree = "<group>"; };
 		A696EA111B943764009727B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,7 +152,6 @@
 		A696EA261B94377D009727B0 /* ulibdns_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ulibdns_types.h; sourceTree = "<group>"; };
 		A696EA2A1B9445D8009727B0 /* UMDnsResourceRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecord.h; sourceTree = "<group>"; };
 		A696EA2B1B9445D8009727B0 /* UMDnsResourceRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecord.m; sourceTree = "<group>"; };
-		A696EA2E1B944702009727B0 /* ulib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ulib.framework; path = /Library/Frameworks/ulib.framework; sourceTree = "<absolute>"; };
 		A696EA311B9448E0009727B0 /* UMDnsLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsLabel.h; sourceTree = "<group>"; };
 		A696EA321B9448E0009727B0 /* UMDnsLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsLabel.m; sourceTree = "<group>"; };
 		A696EA361B944901009727B0 /* UMDnsName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsName.h; sourceTree = "<group>"; };
@@ -213,7 +212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A696EA2F1B944702009727B0 /* ulib.framework in Frameworks */,
+				A6798AE022BB89FC0019806C /* ulib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +220,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A696EA301B944702009727B0 /* ulib.framework in Frameworks */,
 				A696EA171B943764009727B0 /* ulibdns.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,8 +228,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6798AE122BB89FD0019806C /* ulib.framework in Frameworks */,
 				A69733BC1C087FA300211137 /* ulibdns.framework in Frameworks */,
-				A69733BB1C087EA700211137 /* ulib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +239,7 @@
 		A61FCF051E8DA1CB00C1B90A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A696EA2E1B944702009727B0 /* ulib.framework */,
+				A6798AD622BB86FE0019806C /* ulib.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -669,7 +667,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
@@ -722,7 +720,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
@@ -746,10 +744,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(LOCAL_LIBRARY_DIR)/Application\\ Support/FinkTelecomServices/frameworks",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ulibdns/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = "/Library/Application Support/FinkTelecomServices/frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = me.fink.ulibdns;
@@ -774,10 +773,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(LOCAL_LIBRARY_DIR)/Application\\ Support/FinkTelecomServices/frameworks",
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ulibdns/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = "/Library/Application Support/FinkTelecomServices/frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = me.fink.ulibdns;
@@ -821,11 +821,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(LOCAL_LIBRARY_DIR)/Application\\ Support/FinkTelecomServices/frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				INSTALL_PATH = "/Library/Application Support/FinkTelecomServices/bin";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -834,11 +838,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(LOCAL_LIBRARY_DIR)/Application\\ Support/FinkTelecomServices/frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				INSTALL_PATH = "/Library/Application Support/FinkTelecomServices/bin";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
