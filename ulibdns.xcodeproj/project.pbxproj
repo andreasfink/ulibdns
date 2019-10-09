@@ -476,7 +476,7 @@
 		A696EA031B943764009727B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Andreas Fink (andreas@fink.org)";
 				TargetAttributes = {
 					A696EA0B1B943764009727B0 = {
@@ -735,7 +735,7 @@
 		A696EA211B943764009727B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEPLOYMENT_LOCATION = YES;
@@ -764,7 +764,7 @@
 		A696EA221B943764009727B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEPLOYMENT_LOCATION = YES;
@@ -830,6 +830,7 @@
 				DEPLOYMENT_LOCATION = YES;
 				DEVELOPMENT_TEAM = 2GSNWPNR77;
 				DSTROOT = /;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
@@ -851,6 +852,7 @@
 				DEPLOYMENT_LOCATION = YES;
 				DEVELOPMENT_TEAM = 2GSNWPNR77;
 				DSTROOT = /;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
