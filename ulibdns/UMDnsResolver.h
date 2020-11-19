@@ -10,7 +10,7 @@
 
 @interface UMDnsResolver : UMBackgrounder
 {
-    UMQueue *newRequests;
+    UMQueueSingle *newRequests;
     UMSynchronizedDictionary *pendingRequestsByKey;
     UMSocket *socket_u4; /* sockets used for UDP IPv4 */
     UMSocket *socket_u6; /* sockets used for UDP IPv6 */

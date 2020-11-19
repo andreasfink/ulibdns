@@ -19,7 +19,7 @@
                                                                                   function:__func__]];
     if(self)
     {
-        newRequests = [[UMQueue alloc]init];
+        newRequests = [[UMQueueSingle alloc]init];
     }
     return self;
 }
