@@ -17,20 +17,20 @@
     self = [super init];
     if(self)
     {
-        localSocketUdp = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_UDP];
-        localSocketUdp.objectStatisticsName = @"UMSocket(UMDnsLocalserver-udp)";
+        _localSocketUdp = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_UDP];
+        _localSocketUdp.objectStatisticsName = @"UMSocket(UMDnsLocalserver-udp)";
 
-        localSocketUdp.localPort = port;
-        localSocketTcp = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_TCP];
-        localSocketTcp.objectStatisticsName = @"UMSocket(UMDnsLocalserver-tcp)";
-        localSocketTcp.localPort = port;
+        _localSocketUdp.localPort = port;
+        _localSocketTcp = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_TCP];
+        _localSocketTcp.objectStatisticsName = @"UMSocket(UMDnsLocalserver-tcp)";
+        _localSocketTcp.localPort = port;
     }
     return self;
 }
 
 - (void)start
 {
-    mustQuit=NO;
+    _mustQuit=NO;
     [NSThread detachNewThreadSelector:@selector(socketListenerUdp)
                              toTarget:self
                            withObject:NULL];
@@ -41,8 +41,8 @@
 
 - (void)stop
 {
-    mustQuit=YES;
-    while((localSocketUdp.isConnected) && (localSocketTcp.isConnected))
+    _mustQuit=YES;
+    while((_localSocketUdp.isConnected) && (_localSocketTcp.isConnected))
     {
         usleep(100000);
     }
@@ -50,13 +50,13 @@
 
 - (void)socketListenerTcp
 {
-    [localSocketTcp bind];
-    [localSocketTcp listen];
-    
-    while(mustQuit == NO)
+    [_localSocketTcp bind];
+    [_localSocketTcp listen];
+
+    while(_mustQuit == NO)
     {
         UMSocketError err = UMSocketError_no_error;
-        UMSocket *connection = [localSocketTcp accept:&err];
+        UMSocket *connection = [_localSocketTcp accept:&err];
         if(connection)
         {
             [NSThread detachNewThreadSelector:@selector(handleTcpConnection:)
@@ -64,18 +64,18 @@
                                    withObject:connection];
         }
     }
-    [localSocketTcp close];
+    [_localSocketTcp close];
 }
 
 - (void)socketListenerUdp
 {
-    [localSocketUdp bind];
-    [localSocketUdp listen];
+    [_localSocketUdp bind];
+    [_localSocketUdp listen];
 
-    while(mustQuit == NO)
+    while(_mustQuit == NO)
     {
         UMSocketError err = UMSocketError_no_error;
-        UMSocket *connection = [localSocketUdp accept:&err];
+        UMSocket *connection = [_localSocketUdp accept:&err];
         if(connection)
         {
             [NSThread detachNewThreadSelector:@selector(handleUdpConnection:)
@@ -83,7 +83,7 @@
                                    withObject:connection];
         }
     }
-    [localSocketUdp close];
+    [_localSocketUdp close];
 }
 
 
@@ -105,7 +105,6 @@
             break;
         }
         err = [connection dataIsAvailable:timeoutInMs];
-        
     }
     [connection close];
 }

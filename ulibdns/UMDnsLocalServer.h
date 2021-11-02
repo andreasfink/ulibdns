@@ -7,16 +7,19 @@
 //
 
 #import <ulib/ulib.h>
+#import "UMDnsResolvingRequestDelegateProtocol.h"
 
 @interface UMDnsLocalServer : UMObject
 {
-    UMSocket *localSocketUdp;
-    UMSocket *localSocketTcp;
-    BOOL     mustQuit;
+    UMSocket                                    *_localSocketUdp;
+    UMSocket                                    *_localSocketTcp;
+    BOOL                                        _mustQuit;
+    id<UMDnsResolvingRequestDelegateProtocol>   _resolvingDelegate;
 }
 
--  (UMDnsLocalServer *)initWithPort:(int)port;
+@property(readwrite,strong,atomic)  id<UMDnsResolvingRequestDelegateProtocol>   resolvingDelegate;
 
-- (void)start;
-- (void)stop;
+- (UMDnsLocalServer *) initWithPort:(int)port;
+- (void) start;
+- (void) stop;
 @end

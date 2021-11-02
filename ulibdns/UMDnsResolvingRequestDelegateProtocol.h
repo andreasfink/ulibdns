@@ -7,9 +7,9 @@
 //
 
 #import <ulib/ulib.h>
-@class UMResolvingRequest;
+@class UMDnsResolvingRequest;
 
 @protocol UMDnsResolvingRequestDelegateProtocol <NSObject>
-- (void) resolverCallback:(UMResolvingRequest *)request;
+- (void) resolverCallback:(UMDnsResolvingRequest *)request;
 @end
 

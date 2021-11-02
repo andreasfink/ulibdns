@@ -11,6 +11,8 @@
 		A628C8BC1CB9299500211137 /* Makefile.osx.in in Resources */ = {isa = PBXBuildFile; fileRef = A628C8B91CB9299500211137 /* Makefile.osx.in */; };
 		A628C8BD1CB9299500211137 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = A628C8BA1CB9299500211137 /* VERSION */; };
 		A62B9E261B95C2EA00211137 /* test1.example.com.txt in Resources */ = {isa = PBXBuildFile; fileRef = A62B9E251B95C2EA00211137 /* test1.example.com.txt */; };
+		A637C7442730716B00877560 /* UMDnsResourceRecordNAPTR.h in Headers */ = {isa = PBXBuildFile; fileRef = A637C7422730716B00877560 /* UMDnsResourceRecordNAPTR.h */; };
+		A637C7452730716B00877560 /* UMDnsResourceRecordNAPTR.m in Sources */ = {isa = PBXBuildFile; fileRef = A637C7432730716B00877560 /* UMDnsResourceRecordNAPTR.m */; };
 		A6566EBF1B94F81900211137 /* UMDnsMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = A6566EBD1B94F81900211137 /* UMDnsMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6566EC01B94F81900211137 /* UMDnsMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A6566EBE1B94F81900211137 /* UMDnsMessage.m */; };
 		A6566EC31B94F83600211137 /* UMDnsQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = A6566EC11B94F83600211137 /* UMDnsQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -89,19 +91,19 @@
 		A696EA8F1B9492CE009727B0 /* UMDnsResourceRecordMR.m in Sources */ = {isa = PBXBuildFile; fileRef = A696EA8C1B9492CE009727B0 /* UMDnsResourceRecordMR.m */; };
 		A69733B71C087CB400211137 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A69733B61C087CB400211137 /* main.m */; };
 		A69733BC1C087FA300211137 /* ulibdns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A696EA0C1B943764009727B0 /* ulibdns.framework */; };
-		A69B48231D6C24F500211137 /* UMDnsLocalServer.h in Headers */ = {isa = PBXBuildFile; fileRef = A69B48211D6C24F500211137 /* UMDnsLocalServer.h */; };
+		A69B48231D6C24F500211137 /* UMDnsLocalServer.h in Headers */ = {isa = PBXBuildFile; fileRef = A69B48211D6C24F500211137 /* UMDnsLocalServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A69B48241D6C24F500211137 /* UMDnsLocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A69B48221D6C24F500211137 /* UMDnsLocalServer.m */; };
-		A6EE6A8F1BFF5532002B6032 /* UMDnsClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A6EE6A8D1BFF5532002B6032 /* UMDnsClient.h */; };
+		A6EE6A8F1BFF5532002B6032 /* UMDnsClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A6EE6A8D1BFF5532002B6032 /* UMDnsClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6EE6A901BFF5532002B6032 /* UMDnsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EE6A8E1BFF5532002B6032 /* UMDnsClient.m */; };
-		A6F9A6ED1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F9A6EB1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.h */; };
+		A6F9A6ED1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F9A6EB1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6F9A6EE1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F9A6EC1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.m */; };
-		A6FFFC6F1B9D690100C331B0 /* UMDnsResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FFFC6D1B9D690100C331B0 /* UMDnsResolver.h */; };
+		A6FFFC6F1B9D690100C331B0 /* UMDnsResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FFFC6D1B9D690100C331B0 /* UMDnsResolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6FFFC701B9D690100C331B0 /* UMDnsResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FFFC6E1B9D690100C331B0 /* UMDnsResolver.m */; };
-		A6FFFC731B9D691400C331B0 /* UMDnsResolvingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FFFC711B9D691400C331B0 /* UMDnsResolvingRequest.h */; };
+		A6FFFC731B9D691400C331B0 /* UMDnsResolvingRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FFFC711B9D691400C331B0 /* UMDnsResolvingRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6FFFC741B9D691400C331B0 /* UMDnsResolvingRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FFFC721B9D691400C331B0 /* UMDnsResolvingRequest.m */; };
-		A6FFFC771B9D69C800C331B0 /* UMDnsRemoteServer.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FFFC751B9D69C800C331B0 /* UMDnsRemoteServer.h */; };
+		A6FFFC771B9D69C800C331B0 /* UMDnsRemoteServer.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FFFC751B9D69C800C331B0 /* UMDnsRemoteServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6FFFC781B9D69C800C331B0 /* UMDnsRemoteServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FFFC761B9D69C800C331B0 /* UMDnsRemoteServer.m */; };
-		A6FFFC7B1B9D6C8700C331B0 /* UMDnsResolvingRequestDelegateProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FFFC791B9D6C8700C331B0 /* UMDnsResolvingRequestDelegateProtocol.h */; };
+		A6FFFC7B1B9D6C8700C331B0 /* UMDnsResolvingRequestDelegateProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FFFC791B9D6C8700C331B0 /* UMDnsResolvingRequestDelegateProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		A628C8B91CB9299500211137 /* Makefile.osx.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.osx.in; sourceTree = "<group>"; };
 		A628C8BA1CB9299500211137 /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 		A62B9E251B95C2EA00211137 /* test1.example.com.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test1.example.com.txt; sourceTree = "<group>"; };
+		A637C7422730716B00877560 /* UMDnsResourceRecordNAPTR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordNAPTR.h; sourceTree = "<group>"; };
+		A637C7432730716B00877560 /* UMDnsResourceRecordNAPTR.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordNAPTR.m; sourceTree = "<group>"; };
 		A6566EBD1B94F81900211137 /* UMDnsMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsMessage.h; sourceTree = "<group>"; };
 		A6566EBE1B94F81900211137 /* UMDnsMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsMessage.m; sourceTree = "<group>"; };
 		A6566EC11B94F83600211137 /* UMDnsQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsQuery.h; sourceTree = "<group>"; };
@@ -346,6 +350,8 @@
 				A696EA821B947A13009727B0 /* UMDnsResourceRecordTXT.m */,
 				A6F9A6EB1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.h */,
 				A6F9A6EC1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.m */,
+				A637C7422730716B00877560 /* UMDnsResourceRecordNAPTR.h */,
+				A637C7432730716B00877560 /* UMDnsResourceRecordNAPTR.m */,
 				A696EA111B943764009727B0 /* Info.plist */,
 			);
 			path = ulibdns;
@@ -379,6 +385,7 @@
 				A696EA651B9479E1009727B0 /* UMDnsResourceRecordNULL.h in Headers */,
 				A6FFFC771B9D69C800C331B0 /* UMDnsRemoteServer.h in Headers */,
 				A696EA511B9479C5009727B0 /* UMDnsResourceRecordCNAME.h in Headers */,
+				A637C7442730716B00877560 /* UMDnsResourceRecordNAPTR.h in Headers */,
 				A6566EC71B94F94F00211137 /* UMDnsHeader.h in Headers */,
 				A696EA6F1B9479F2009727B0 /* UMDnsResourceRecordPTR.h in Headers */,
 				A696EA7E1B947A0B009727B0 /* UMDnsResourceRecordMX.h in Headers */,
@@ -549,6 +556,7 @@
 				A6566ECC1B95012000211137 /* UMDnsZone.m in Sources */,
 				A6566EC41B94F83600211137 /* UMDnsQuery.m in Sources */,
 				A696EA5C1B9479D3009727B0 /* UMDnsResourceRecordMB.m in Sources */,
+				A637C7452730716B00877560 /* UMDnsResourceRecordNAPTR.m in Sources */,
 				A696EA2D1B9445D8009727B0 /* UMDnsResourceRecord.m in Sources */,
 				A6566EC01B94F81900211137 /* UMDnsMessage.m in Sources */,
 				A696EA661B9479E1009727B0 /* UMDnsResourceRecordNULL.m in Sources */,
