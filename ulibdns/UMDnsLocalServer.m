@@ -19,7 +19,6 @@
     {
         _localSocketUdp = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_UDP];
         _localSocketUdp.objectStatisticsName = @"UMSocket(UMDnsLocalserver-udp)";
-
         _localSocketUdp.localPort = port;
         _localSocketTcp = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_TCP];
         _localSocketTcp.objectStatisticsName = @"UMSocket(UMDnsLocalserver-tcp)";

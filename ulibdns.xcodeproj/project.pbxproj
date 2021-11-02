@@ -95,6 +95,7 @@
 		A69B48241D6C24F500211137 /* UMDnsLocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A69B48221D6C24F500211137 /* UMDnsLocalServer.m */; };
 		A6EE6A8F1BFF5532002B6032 /* UMDnsClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A6EE6A8D1BFF5532002B6032 /* UMDnsClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6EE6A901BFF5532002B6032 /* UMDnsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EE6A8E1BFF5532002B6032 /* UMDnsClient.m */; };
+		A6F6DA3B2731F4A40080A507 /* UMDnsError.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6DA392731F4A40080A507 /* UMDnsError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6F9A6ED1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F9A6EB1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6F9A6EE1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F9A6EC1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.m */; };
 		A6FFFC6F1B9D690100C331B0 /* UMDnsResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = A6FFFC6D1B9D690100C331B0 /* UMDnsResolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -200,6 +201,7 @@
 		A69B48221D6C24F500211137 /* UMDnsLocalServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsLocalServer.m; sourceTree = "<group>"; };
 		A6EE6A8D1BFF5532002B6032 /* UMDnsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsClient.h; sourceTree = "<group>"; };
 		A6EE6A8E1BFF5532002B6032 /* UMDnsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsClient.m; sourceTree = "<group>"; };
+		A6F6DA392731F4A40080A507 /* UMDnsError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsError.h; sourceTree = "<group>"; };
 		A6F9A6EB1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordSRV.h; sourceTree = "<group>"; };
 		A6F9A6EC1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordSRV.m; sourceTree = "<group>"; };
 		A6FFFC6D1B9D690100C331B0 /* UMDnsResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsResolver.h; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				A6F9A6EC1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.m */,
 				A637C7422730716B00877560 /* UMDnsResourceRecordNAPTR.h */,
 				A637C7432730716B00877560 /* UMDnsResourceRecordNAPTR.m */,
+				A6F6DA392731F4A40080A507 /* UMDnsError.h */,
 				A696EA111B943764009727B0 /* Info.plist */,
 			);
 			path = ulibdns;
@@ -409,6 +412,7 @@
 				A696EA4C1B9479BC009727B0 /* UMDnsResourceRecordMF.h in Headers */,
 				A696EA6A1B9479EA009727B0 /* UMDnsResourceRecordWKS.h in Headers */,
 				A6EE6A8F1BFF5532002B6032 /* UMDnsClient.h in Headers */,
+				A6F6DA3B2731F4A40080A507 /* UMDnsError.h in Headers */,
 				A696EA8D1B9492CE009727B0 /* UMDnsResourceRecordMR.h in Headers */,
 				A696EA881B947B35009727B0 /* UMDnsCharacterString.h in Headers */,
 				A69B48231D6C24F500211137 /* UMDnsLocalServer.h in Headers */,

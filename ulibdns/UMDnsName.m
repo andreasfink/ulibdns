@@ -12,6 +12,55 @@
 
 @implementation UMDnsName
 
+- (NSArray<NSString *>*)visualComponents
+{
+    NSUInteger n = [_labels count];
+    if(n==0)
+    {
+        return @[];
+    }
+    NSUInteger i;
+    NSMutableArray *arr = [[NSMutableArray alloc]init];
+    for(i=0;i<n;i++)
+    {
+        UMDnsLabel *label = [_labels objectAtIndex:i];
+        [arr addObject:[label label]];
+    }
+    return arr;
+}
+
+- (NSArray<NSString *>*)visualComponentsRelativeTo:(NSString *)postfix; /* returns   "host" if prefix is "example.com" */
+{
+    if([postfix hasSuffix:@"."])
+    {
+        /* no last dot please */
+        postfix = [postfix substringToIndex:(postfix.length -1)];
+    }
+    if([postfix hasPrefix:@"."])
+    {
+        /* no first dot please */
+        postfix = [postfix substringFromIndex:1];
+    }
+
+    NSString *s = [self visualName];
+    if([s hasCaseInsensitiveSuffix:postfix])
+    {
+        if(s.length > postfix.length)
+        {
+            NSString *r = [s substringToIndex:(s.length -postfix.length-1)];
+            return [r componentsSeparatedByString:@"."];
+        }
+        else
+        {
+            return  @[];
+        }
+    }
+    else
+    {
+        return NULL;
+    }
+}
+
 - (NSString *)visualName
 {
     NSUInteger n = [_labels count];

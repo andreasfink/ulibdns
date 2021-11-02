@@ -32,3 +32,5 @@
 
 #import "ulibdns_types.h"
 
+#import "UMDnsError.h"
+
