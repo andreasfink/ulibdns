@@ -9,7 +9,6 @@
 #import "UMDnsResolvingRequest.h"
 #import "UMDnsName.h"
 #import "UMDnsRemoteServer.h"
-#import "UMDnsName.h"
 #import "UMDnsResourceRecord.h"
 
 

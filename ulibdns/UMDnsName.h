@@ -16,6 +16,7 @@
 - (NSString *)visualName; /* returns "host.example.com" */
 - (NSString *)visualNameAbsoluteWriting; /* returns "host.example.com." */
 - (NSString *)visualNameRelativeTo:(NSString *)postfix; /* returns   "host" if prefix is "example.com" */
+
 - (NSArray<NSString *>*)visualComponents; /* returns array "host", "example", "com" */
 - (NSArray<NSString *>*)visualComponentsRelativeTo:(NSString *)postfix; /* returns   "host" if prefix is "example.com" */
 
