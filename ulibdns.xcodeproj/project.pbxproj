@@ -11,7 +11,7 @@
 		A628C8BC1CB9299500211137 /* Makefile.osx.in in Resources */ = {isa = PBXBuildFile; fileRef = A628C8B91CB9299500211137 /* Makefile.osx.in */; };
 		A628C8BD1CB9299500211137 /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = A628C8BA1CB9299500211137 /* VERSION */; };
 		A62B9E261B95C2EA00211137 /* test1.example.com.txt in Resources */ = {isa = PBXBuildFile; fileRef = A62B9E251B95C2EA00211137 /* test1.example.com.txt */; };
-		A637C7442730716B00877560 /* UMDnsResourceRecordNAPTR.h in Headers */ = {isa = PBXBuildFile; fileRef = A637C7422730716B00877560 /* UMDnsResourceRecordNAPTR.h */; };
+		A637C7442730716B00877560 /* UMDnsResourceRecordNAPTR.h in Headers */ = {isa = PBXBuildFile; fileRef = A637C7422730716B00877560 /* UMDnsResourceRecordNAPTR.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A637C7452730716B00877560 /* UMDnsResourceRecordNAPTR.m in Sources */ = {isa = PBXBuildFile; fileRef = A637C7432730716B00877560 /* UMDnsResourceRecordNAPTR.m */; };
 		A6566EBF1B94F81900211137 /* UMDnsMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = A6566EBD1B94F81900211137 /* UMDnsMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6566EC01B94F81900211137 /* UMDnsMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A6566EBE1B94F81900211137 /* UMDnsMessage.m */; };

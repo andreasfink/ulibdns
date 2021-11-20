@@ -12,11 +12,6 @@
 
 @implementation UMDnsResourceRecord
 
-    
-@synthesize name;
-@synthesize recordType;
-@synthesize recordClass;
-@synthesize ttl;
 
 /* 
  All RRs have the same top level format shown below:
@@ -71,23 +66,23 @@ according to the TYPE and CLASS of the resource record.
 {
     NSMutableData *binary = [[NSMutableData alloc]init];
     
-    [binary appendData:[name binary]];
+    [binary appendData:[_name binary]];
     
     unsigned char typeBytes[2];
-    typeBytes[0] = (recordType & 0xFF00)>> 8;
-    typeBytes[1] = (recordType & 0x00FF);
+    typeBytes[0] = (_recordType & 0xFF00)>> 8;
+    typeBytes[1] = (_recordType & 0x00FF);
     [binary appendBytes:typeBytes length:2];
     
     unsigned char classBytes[2];
-    classBytes[0] = (recordClass & 0xFF00)>> 8;
-    classBytes[1] = (recordClass & 0x00FF);
+    classBytes[0] = (_recordClass & 0xFF00)>> 8;
+    classBytes[1] = (_recordClass & 0x00FF);
     [binary appendBytes:classBytes length:2];
 
     unsigned char ttlBytes[4];
-    ttlBytes[0] = (ttl & 0xFF000000)>> 24;
-    ttlBytes[1] = (ttl & 0x00FF0000)>> 16;
-    ttlBytes[2] = (ttl & 0x0000FF00)>> 8;
-    ttlBytes[3] = (ttl & 0x000000FF);
+    ttlBytes[0] = (_ttl & 0xFF000000)>> 24;
+    ttlBytes[1] = (_ttl & 0x00FF0000)>> 16;
+    ttlBytes[2] = (_ttl & 0x0000FF00)>> 8;
+    ttlBytes[3] = (_ttl & 0x000000FF);
     [binary appendBytes:ttlBytes length:2];
 
     NSData *rData = [self resourceData];
@@ -116,7 +111,7 @@ according to the TYPE and CLASS of the resource record.
 
 - (NSString *)recordClassString
 {
-    switch (recordClass)
+    switch (_recordClass)
     {
         case UlibDnsClass_RESERVED:
             return @"RESERVED";
@@ -213,6 +208,10 @@ according to the TYPE and CLASS of the resource record.
     else if( [rrtypeName caseInsensitiveCompare:@"SRV"]==NSOrderedSame)
     {
         rr = [[UMDnsResourceRecordSRV alloc]initWithParams:params zone:zone];
+    }
+    else if( [rrtypeName caseInsensitiveCompare:@"NAPTR"]==NSOrderedSame)
+    {
+        rr = [[UMDnsResourceRecordNAPTR alloc]initWithParams:params zone:zone];
     }
     else
     {

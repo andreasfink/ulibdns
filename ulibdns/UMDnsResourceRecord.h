@@ -38,10 +38,10 @@ All RRs have the same top level format shown below:
 
 @interface UMDnsResourceRecord : UMObject
 {
-    UMDnsName                   *name;
-    UlibDnsResourceRecordType   recordType;
-    UlibDnsClass                recordClass;
-    NSInteger                   ttl;
+    UMDnsName                   *_name;
+    UlibDnsResourceRecordType   _recordType;
+    UlibDnsClass                _recordClass;
+    NSInteger                   _ttl;
 }
 
 

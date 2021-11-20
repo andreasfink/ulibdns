@@ -7,6 +7,7 @@
 //
 
 #import "UMDnsResourceRecordA.h"
+#import "UMDnsResourceRecordAAAA.h"
 #import "UMDnsResourceRecordNS.h"
 #import "UMDnsResourceRecordCNAME.h"
 #import "UMDnsResourceRecordSOA.h"
@@ -22,5 +23,5 @@
 #import "UMDnsResourceRecordPTR.h"
 #import "UMDnsResourceRecordHINFO.h"
 #import "UMDnsResourceRecordTXT.h"
-#import "UMDnsResourceRecordAAAA.h"
 #import "UMDnsResourceRecordSRV.h"
+#import "UMDnsResourceRecordNAPTR.h"

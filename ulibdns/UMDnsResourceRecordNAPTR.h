@@ -10,11 +10,16 @@
 
 @interface UMDnsResourceRecordNAPTR : UMDnsResourceRecord
 {
-    int a;
-    int b;
-    int port;
-    UMDnsName *host;
+    int _a;
+    int _b;
+    int _port;
+    UMDnsName *_host;
 }
+
+@property(readwrite,assign) int a;
+@property(readwrite,assign) int b;
+@property(readwrite,assign) int port;
+@property(readwrite,strong) UMDnsName *host;
 
 @property(readwrite,strong) NSData *data;
 
