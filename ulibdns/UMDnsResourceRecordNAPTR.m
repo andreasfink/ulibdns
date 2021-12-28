@@ -64,7 +64,7 @@
 - (NSString *)visualRepresentation
 {
     NSMutableString *s =  [[NSMutableString alloc]init];
-    [s appendFormat:@"NAPTR\t%d\t%d\t%d\t%@",a,b,port,host.visualNameAbsoluteWriting];
+    [s appendFormat:@"NAPTR\t%d\t%d\t%d\t%@",_a,_b,_port,_host.visualNameAbsoluteWriting];
     return s;
 }
 
