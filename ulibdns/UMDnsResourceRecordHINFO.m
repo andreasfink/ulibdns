@@ -37,9 +37,6 @@
  
  */
 
-@synthesize cpu;
-@synthesize os;
-
 - (NSString *)recordTypeString
 {
     return @"HINFO";
@@ -54,8 +51,8 @@
 - (NSData *)resourceData
 {
     NSMutableData *binary = [[NSMutableData alloc]init];
-    [binary appendData:[cpu binary]];
-    [binary appendData:[os binary]];
+    [binary appendData:[_cpu binary]];
+    [binary appendData:[_os binary]];
     return binary;
 }
 
@@ -65,8 +62,8 @@
     self = [super init];
     if(self)
     {
-        cpu = [[UMDnsCharacterString alloc]initWithString:xcpu];
-        os = [[UMDnsCharacterString alloc]initWithString:xos];
+        _cpu = [[UMDnsCharacterString alloc]initWithString:xcpu];
+        _os = [[UMDnsCharacterString alloc]initWithString:xos];
     }
     return self;
 }
@@ -83,7 +80,7 @@
 
 - (NSString *)visualRepresentation
 {
-    return [NSString stringWithFormat:@"HINFO\t%@\t%@",cpu.visualRepresentation,os.visualRepresentation];
+    return [NSString stringWithFormat:@"HINFO\t%@\t%@",_cpu.visualRepresentation,_os.visualRepresentation];
 }
 
 @end

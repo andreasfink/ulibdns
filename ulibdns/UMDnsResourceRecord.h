@@ -68,6 +68,5 @@ All RRs have the same top level format shown below:
 - (UMDnsResourceRecord *)initWithRawData:(NSData *)data atOffset:(int *)pos;
 - (NSString *)visualRepresentation;
 - (NSString *)recordClassString;
-
 - (NSData *)encodeRequest;
 @end

@@ -31,8 +31,6 @@ mailbox.
 
 @implementation UMDnsResourceRecordMR
 
-@synthesize newname;
-
 - (NSString *)recordTypeString
 {
     return @"MR";
@@ -48,7 +46,7 @@ mailbox.
 
 - (NSData *)resourceData
 {
-    return [newname binary];
+    return [_newname binary];
 }
 
 
@@ -57,7 +55,7 @@ mailbox.
     self = [super init];
     if(self)
     {
-        newname = a;
+        _newname = a;
     }
     return self;
 }
@@ -70,7 +68,7 @@ mailbox.
 
 - (NSString *)visualRepresentation
 {
-    return [NSString stringWithFormat:@"MR\t%@",[newname visualNameAbsoluteWriting]];
+    return [NSString stringWithFormat:@"MR\t%@",[_newname visualNameAbsoluteWriting]];
 }
 
 @end

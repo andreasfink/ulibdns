@@ -81,14 +81,6 @@
 
 @implementation UMDnsResourceRecordSOA
 
-@synthesize mname;
-@synthesize rname;
-@synthesize serial;
-@synthesize refresh;
-@synthesize retry;
-@synthesize expire;
-@synthesize minimum;
-
 - (NSString *)recordTypeString
 {
     return @"SOA";
@@ -103,34 +95,34 @@
 {
     NSMutableData *binary = [[NSMutableData alloc]init];
     
-    [binary appendData:[mname binary]];
-    [binary appendData:[rname binary]];
+    [binary appendData:[_mname binary]];
+    [binary appendData:[_rname binary]];
     
     unsigned char s[20];
-    s[0] = (serial & 0xFF000000) >> 24;
-    s[1] = (serial & 0x00FF0000) >> 16;
-    s[2] = (serial & 0x0000FF00) >> 8;
-    s[3] = (serial & 0x000000FF) >> 0;
+    s[0] = (_serial & 0xFF000000) >> 24;
+    s[1] = (_serial & 0x00FF0000) >> 16;
+    s[2] = (_serial & 0x0000FF00) >> 8;
+    s[3] = (_serial & 0x000000FF) >> 0;
 
-    s[4] = (refresh & 0xFF000000) >> 24;
-    s[5] = (refresh & 0x00FF0000) >> 16;
-    s[6] = (refresh & 0x0000FF00) >> 8;
-    s[7] = (refresh & 0x000000FF) >> 0;
+    s[4] = (_refresh & 0xFF000000) >> 24;
+    s[5] = (_refresh & 0x00FF0000) >> 16;
+    s[6] = (_refresh & 0x0000FF00) >> 8;
+    s[7] = (_refresh & 0x000000FF) >> 0;
 
-    s[8] = (retry & 0xFF000000) >> 24;
-    s[9] = (retry & 0x00FF0000) >> 16;
-    s[10] = (retry & 0x0000FF00) >> 8;
-    s[11] = (retry & 0x000000FF) >> 0;
+    s[8] = (_retry & 0xFF000000) >> 24;
+    s[9] = (_retry & 0x00FF0000) >> 16;
+    s[10] = (_retry & 0x0000FF00) >> 8;
+    s[11] = (_retry & 0x000000FF) >> 0;
 
-    s[12] = (expire & 0xFF000000) >> 24;
-    s[13] = (expire & 0x00FF0000) >> 16;
-    s[14] = (expire & 0x0000FF00) >> 8;
-    s[15] = (expire & 0x000000FF) >> 0;
+    s[12] = (_expire & 0xFF000000) >> 24;
+    s[13] = (_expire & 0x00FF0000) >> 16;
+    s[14] = (_expire & 0x0000FF00) >> 8;
+    s[15] = (_expire & 0x000000FF) >> 0;
 
-    s[16] = (minimum & 0xFF000000) >> 24;
-    s[17] = (minimum & 0x00FF0000) >> 16;
-    s[18] = (minimum & 0x0000FF00) >> 8;
-    s[19] = (minimum & 0x000000FF) >> 0;
+    s[16] = (_minimum & 0xFF000000) >> 24;
+    s[17] = (_minimum & 0x00FF0000) >> 16;
+    s[18] = (_minimum & 0x0000FF00) >> 8;
+    s[19] = (_minimum & 0x000000FF) >> 0;
 
     [binary appendData:[NSData dataWithBytes:&s length:20]];
 
@@ -149,13 +141,13 @@
     self = [super init];
     if(self)
     {
-        mname = a;
-        rname = b;
-        serial = s;
-        refresh = r;
-        retry = rtry;
-        expire = exp;
-        minimum = min;
+        _mname = a;
+        _rname = b;
+        _serial = s;
+        _refresh = r;
+        _retry = rtry;
+        _expire = exp;
+        _minimum = min;
     }
     return self;
 }
@@ -185,12 +177,12 @@
 {
     NSMutableString *s = [[NSMutableString alloc]init];
     
-    [s appendFormat:@"SOA %@ %@ (\n",mname.visualNameAbsoluteWriting,rname.visualNameAbsoluteWriting];
-    [s appendFormat:@"\t%10d; serial INCREMENT AFTER CHANGE\n",serial];
-    [s appendFormat:@"\t%10d; refresh every %d hours\n",refresh,refresh/60/60];
-    [s appendFormat:@"\t%10d; if refres fails, retry all %d minutes\n",retry,retry/60];
-    [s appendFormat:@"\t%10d; expire secondary after %d days\n",expire,expire/60/60/24];
-    [s appendFormat:@"\t%10d; minimum in cache\n",minimum];
+    [s appendFormat:@"SOA %@ %@ (\n",_mname.visualNameAbsoluteWriting,_rname.visualNameAbsoluteWriting];
+    [s appendFormat:@"\t%10d; serial INCREMENT AFTER CHANGE\n",_serial];
+    [s appendFormat:@"\t%10d; refresh every %d hours\n",_refresh,_refresh/60/60];
+    [s appendFormat:@"\t%10d; if refres fails, retry all %d minutes\n",_retry,_retry/60];
+    [s appendFormat:@"\t%10d; expire secondary after %d days\n",_expire,_expire/60/60/24];
+    [s appendFormat:@"\t%10d; minimum in cache\n",_minimum];
     [s appendFormat:@"\t);\n"];
     return s;
 }

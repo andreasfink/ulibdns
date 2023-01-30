@@ -40,12 +40,12 @@
 
 - (NSData *)resourceData
 {
-    return [[NSData alloc]initWithBytes:&addr6.s6_addr length:16];
+    return [[NSData alloc]initWithBytes:&_addr6.s6_addr length:16];
 }
 
 - (void)setAddressFromString:(NSString *)str
 {
-    int result = inet_pton(AF_INET6,str.UTF8String, &addr6);
+    int result = inet_pton(AF_INET6,str.UTF8String, &_addr6);
     if(result==0)
     {
         @throw ([NSException exceptionWithName:@"invalid_address" reason:@"inet_pton fails to parse ipv6 address" userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);
@@ -71,7 +71,7 @@
 {
     char buffer[INET6_ADDRSTRLEN+1];
     memset(buffer,0x00,INET6_ADDRSTRLEN+1);
-    inet_ntop(AF_INET6, &addr6, &buffer[0], sizeof(buffer));
+    inet_ntop(AF_INET6, &_addr6, &buffer[0], sizeof(buffer));
     NSString *ip6 = @(buffer);
     return [NSString stringWithFormat:@"AAAA\t%@",ip6];
 }
@@ -89,7 +89,7 @@
             @throw ([NSException exceptionWithName:@"invalid_address" reason:@"not enough bytes left to read" userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);
             return NULL;
         }
-        memcpy(&addr6.s6_addr,&bytes[*pos],16);
+        memcpy(&_addr6.s6_addr,&bytes[*pos],16);
         *pos = *pos + 16;
     }
 

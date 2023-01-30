@@ -30,7 +30,6 @@
 
 @implementation UMDnsResourceRecordCNAME
 
-@synthesize aliasName;
 
 - (NSString *)recordTypeString
 {
@@ -44,7 +43,7 @@
 
 - (NSData *)resourceData
 {
-    return [aliasName binary];
+    return [_aliasName binary];
 }
 
 
@@ -66,7 +65,7 @@
 
 - (NSString *)visualRepresentation
 {
-    return [NSString stringWithFormat:@"CNAME\t%@",aliasName.visualNameAbsoluteWriting];
+    return [NSString stringWithFormat:@"CNAME\t%@",_aliasName.visualNameAbsoluteWriting];
 }
 
 @end

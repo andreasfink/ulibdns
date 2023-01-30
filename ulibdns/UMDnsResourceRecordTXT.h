@@ -10,10 +10,10 @@
 
 @interface UMDnsResourceRecordTXT : UMDnsResourceRecord
 {
-    NSArray *txtRecords;
+    NSArray *_txtRecords;
 }
 
-@property(readwrite,strong) NSData *data;
+@property(readwrite,strong)     NSArray *txtRecords;
 
 - (UMDnsResourceRecordTXT *)initWithString:(NSData *)string;
 - (UMDnsResourceRecordTXT *)initWithStrings:(NSArray *)strings;

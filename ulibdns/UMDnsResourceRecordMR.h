@@ -10,7 +10,7 @@
 
 @interface UMDnsResourceRecordMR : UMDnsResourceRecord
 {
-    UMDnsName *newname;
+    UMDnsName *_newname;
 }
 
 @property (readwrite,strong) UMDnsName *newname;

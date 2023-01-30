@@ -641,7 +641,6 @@ according to the TYPE and CLASS of the resource record.
     return [UMDnsResourceRecord recordOfType:rt
                                       params:params
                                         zone:zone];
-
 }
 
 +(UlibDnsResourceRecordType)resourceRecordTypeFromString:(NSString *)str
@@ -996,6 +995,5 @@ according to the TYPE and CLASS of the resource record.
     NSAssert(0,@"we do have a record type which doesnt implement method recordTypeString");
    return NULL;
 }
-
 
 @end

@@ -34,8 +34,6 @@
 
 @implementation UMDnsResourceRecordMF
 
-@synthesize madname;
-
 - (NSString *)recordTypeString
 {
     return @"MF";
@@ -49,7 +47,7 @@
 
 - (NSData *)resourceData
 {
-    return [madname binary];
+    return [_madname binary];
 }
 
 
@@ -58,7 +56,7 @@
     self = [super init];
     if(self)
     {
-        madname = a;
+        _madname = a;
     }
     return self;
 }
@@ -71,7 +69,7 @@
 
 - (NSString *)visualRepresentation
 {
-    return [NSString stringWithFormat:@"MF\t%@",[madname visualNameAbsoluteWriting]];
+    return [NSString stringWithFormat:@"MF\t%@",[_madname visualNameAbsoluteWriting]];
 }
 
 @end

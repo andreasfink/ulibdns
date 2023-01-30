@@ -57,9 +57,6 @@
 
 @implementation UMDnsResourceRecordWKS
 
-@synthesize address;
-@synthesize protocol;
-@synthesize bitmap;
 
 - (NSString *)recordTypeString
 {
@@ -75,13 +72,13 @@
 - (NSData *)resourceData
 {
     unsigned char s[5];
-    s[0] = (address & 0xFF000000) >> 24;
-    s[1] = (address & 0x00FF0000) >> 16;
-    s[2] = (address & 0x0000FF00) >> 8;
-    s[3] = (address & 0x000000FF) >> 0;
-    s[4] = (protocol & 0xFF);
+    s[0] = (_address & 0xFF000000) >> 24;
+    s[1] = (_address & 0x00FF0000) >> 16;
+    s[2] = (_address & 0x0000FF00) >> 8;
+    s[3] = (_address & 0x000000FF) >> 0;
+    s[4] = (_protocol & 0xFF);
     NSMutableData *binary = [NSMutableData dataWithBytes:&s[0] length:5];
-    [binary appendData:bitmap];
+    [binary appendData:_bitmap];
     return binary;
 }
 
@@ -108,8 +105,8 @@
     if(self)
     {
         [self setAddressFromString:addr];
-        protocol = p;
-        bitmap = bm;
+        _protocol = p;
+        _bitmap = bm;
     }
     return self;
 }

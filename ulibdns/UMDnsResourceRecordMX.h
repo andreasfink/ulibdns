@@ -10,8 +10,8 @@
 
 @interface UMDnsResourceRecordMX : UMDnsResourceRecord
 {
-    uint16_t    preference;
-    UMDnsName   *exchanger;
+    uint16_t    _preference;
+    UMDnsName   *_exchanger;
 }
 
 @property(readwrite,assign) uint16_t    preference;

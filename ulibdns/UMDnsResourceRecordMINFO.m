@@ -10,8 +10,6 @@
 
 @implementation UMDnsResourceRecordMINFO
 
-@synthesize rMailBx;
-@synthesize eMailBx;
 
 /*
 3.3.7. MINFO RDATA format (EXPERIMENTAL)
@@ -59,8 +57,8 @@ with a mailing list.
 - (NSData *)resourceData
 {
     NSMutableData *binary = [[NSMutableData alloc]init];
-    [binary appendData:[rMailBx binary]];
-    [binary appendData:[eMailBx binary]];
+    [binary appendData:[_rMailBx binary]];
+    [binary appendData:[_eMailBx binary]];
     return binary;
 }
 
@@ -70,8 +68,8 @@ with a mailing list.
     self = [super init];
     if(self)
     {
-        rMailBx = a;
-        eMailBx = b;
+        _rMailBx = a;
+        _eMailBx = b;
     }
     return self;
 }
@@ -86,7 +84,7 @@ with a mailing list.
 
 - (NSString *)visualRepresentation
 {
-    return [NSString stringWithFormat:@"MINFO\t%@\t%@",[rMailBx visualNameAbsoluteWriting],[eMailBx visualNameAbsoluteWriting]];
+    return [NSString stringWithFormat:@"MINFO\t%@\t%@",[_rMailBx visualNameAbsoluteWriting],[_eMailBx visualNameAbsoluteWriting]];
 }
 
 @end

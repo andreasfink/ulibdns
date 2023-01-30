@@ -44,7 +44,7 @@
     unsigned char addrBytes[4];
     char buffer[INET_ADDRSTRLEN+1];
     memset(buffer,0x00,INET_ADDRSTRLEN+1);
-    inet_ntop(AF_INET, &addr, &buffer[0], sizeof(buffer));
+    inet_ntop(AF_INET, &_addr, &buffer[0], sizeof(buffer));
     int a,b,c,d;
     sscanf(buffer,"%d.%d.%d.%d",&a,&b,&c,&d);
     
@@ -57,7 +57,7 @@
 
 - (void)setAddressFromString:(NSString *)str
 {
-    int result = inet_pton(AF_INET,str.UTF8String, &addr);
+    int result = inet_pton(AF_INET,str.UTF8String, &_addr);
     if(result==0)
     {
         @throw ([NSException exceptionWithName:@"invalid_address" reason:@"inet_pton fails to parse it" userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);
@@ -85,7 +85,7 @@
 {
     char buffer[INET_ADDRSTRLEN+1];
     memset(buffer,0x00,INET_ADDRSTRLEN+1);
-    inet_ntop(AF_INET, &addr, &buffer[0], sizeof(buffer));
+    inet_ntop(AF_INET, &_addr, &buffer[0], sizeof(buffer));
     NSString *ip = @(buffer);
     return [NSString stringWithFormat:@"A\t%@",ip];
 }
@@ -107,7 +107,7 @@
         int c = bytes[*pos++];
         int d = bytes[*pos++];
         NSString *str = [NSString stringWithFormat:@"%d.%d.%d.%d",a,b,c,d];
-        int result = inet_pton(AF_INET,str.UTF8String, &addr);
+        int result = inet_pton(AF_INET,str.UTF8String, &_addr);
         if(result==0)
         {
             @throw ([NSException exceptionWithName:@"invalid_address" reason:@"inet_pton fails to parse it" userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);

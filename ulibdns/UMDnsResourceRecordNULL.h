@@ -10,7 +10,7 @@
 
 @interface UMDnsResourceRecordNULL : UMDnsResourceRecord
 {
-    NSData *data;
+    NSData *_data;
 }
 
 @property(readwrite,strong) NSData *data;

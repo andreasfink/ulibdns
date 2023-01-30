@@ -39,7 +39,6 @@
 
 @implementation UMDnsResourceRecordNS
 
-@synthesize nsname;
 
 - (NSString *)recordTypeString
 {
@@ -53,7 +52,7 @@
 
 - (NSData *)resourceData
 {
-    return [nsname binary];
+    return [_nsname binary];
 }
 
 
@@ -62,7 +61,7 @@
     self = [super init];
     if(self)
     {
-        nsname = [[UMDnsName alloc]initWithVisualName:a];
+        _nsname = [[UMDnsName alloc]initWithVisualName:a];
     }
     return self;
 }
@@ -74,7 +73,7 @@
 
 - (NSString *)visualRepresentation
 {
-    return [NSString stringWithFormat:@"NS\t%@",nsname.visualNameAbsoluteWriting];
+    return [NSString stringWithFormat:@"NS\t%@",_nsname.visualNameAbsoluteWriting];
 }
 
 - (UMDnsResourceRecordNS *)initWithRawData:(NSData *)data atOffset:(int *)pos
@@ -83,7 +82,7 @@
     if(self)
     {
         
-        nsname = [[UMDnsName alloc] initWithRawData:data atOffset:pos];
+        _nsname = [[UMDnsName alloc] initWithRawData:data atOffset:pos];
     }
     
     return self;

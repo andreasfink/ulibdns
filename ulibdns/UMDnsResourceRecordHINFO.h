@@ -11,8 +11,8 @@
 
 @interface UMDnsResourceRecordHINFO : UMDnsResourceRecord
 {
-    UMDnsCharacterString *cpu;
-    UMDnsCharacterString *os;
+    UMDnsCharacterString *_cpu;
+    UMDnsCharacterString *_os;
 }
 
 @property(readwrite,strong) UMDnsCharacterString *cpu;

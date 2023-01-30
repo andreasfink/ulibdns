@@ -10,13 +10,13 @@
 
 @interface UMDnsResourceRecordSOA : UMDnsResourceRecord
 {
-    UMDnsName   *mname;
-    UMDnsName   *rname;
-    uint32_t    serial;
-    uint32_t    refresh;
-    uint32_t    retry;
-    uint32_t    expire;
-    uint32_t    minimum;
+    UMDnsName   *_mname;
+    UMDnsName   *_rname;
+    uint32_t    _serial;
+    uint32_t    _refresh;
+    uint32_t    _retry;
+    uint32_t    _expire;
+    uint32_t    _minimum;
 }
 
 

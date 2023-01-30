@@ -10,7 +10,7 @@
 
 @interface UMDnsResourceRecordA : UMDnsResourceRecord
 {
-    struct in_addr addr;
+    struct in_addr _addr;
 }
 
 

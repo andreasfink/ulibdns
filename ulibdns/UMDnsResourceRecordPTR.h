@@ -10,7 +10,7 @@
 
 @interface UMDnsResourceRecordPTR : UMDnsResourceRecord
 {
-    UMDnsName *ptrname;
+    UMDnsName *_ptrname;
 }
 
 @property (readwrite,strong) UMDnsName *ptrname;

@@ -28,7 +28,6 @@ experimental extensions of the DNS.
 
 @implementation UMDnsResourceRecordNULL
 
-@synthesize data;
 
 - (NSString *)recordTypeString
 {
@@ -43,7 +42,7 @@ experimental extensions of the DNS.
 
 - (NSData *)resourceData
 {
-    return data;
+    return _data;
 }
 
 
@@ -56,7 +55,7 @@ experimental extensions of the DNS.
         {
             @throw ([NSException exceptionWithName:@"invalidData" reason:@"tried to initialize resoureRecordNULL with data bigger than  65535" userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);
         }
-        data = d;
+        _data = d;
     }
     return self;
 }
@@ -70,7 +69,7 @@ experimental extensions of the DNS.
 
 - (NSString *)visualRepresentation
 {
-    return [NSString stringWithFormat:@"NULL\t%@",[data hexString]];
+    return [NSString stringWithFormat:@"NULL\t%@",[_data hexString]];
 }
 
 @end

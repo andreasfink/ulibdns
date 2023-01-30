@@ -36,9 +36,6 @@
 
 @implementation UMDnsResourceRecordMX
 
-@synthesize preference;
-@synthesize exchanger;
-
 - (NSString *)recordTypeString
 {
     return @"MX";
@@ -53,10 +50,10 @@
 - (NSData *)resourceData
 {
     char pref[2];
-    pref[0] = (preference & 0xFF00) >> 8;
-    pref[1] = (preference & 0x00FF);
+    pref[0] = (_preference & 0xFF00) >> 8;
+    pref[1] = (_preference & 0x00FF);
     NSMutableData *binary = [[NSMutableData alloc]initWithBytes:pref length:2];
-    [binary appendData: [exchanger binary]];
+    [binary appendData: [_exchanger binary]];
     return binary;
 }
 
@@ -66,8 +63,8 @@
     self = [super init];
     if(self)
     {
-        preference = p;
-        exchanger = ex;
+        _preference = p;
+        _exchanger = ex;
     }
     return self;
 }
@@ -82,7 +79,7 @@
 
 - (NSString *)visualRepresentation
 {
-    return [NSString stringWithFormat:@"MX\t%d\t%@",(int)preference,exchanger.visualNameAbsoluteWriting];
+    return [NSString stringWithFormat:@"MX\t%d\t%@",(int)_preference,_exchanger.visualNameAbsoluteWriting];
 }
 
 @end

@@ -10,9 +10,9 @@
 
 @interface UMDnsResourceRecordWKS : UMDnsResourceRecord
 {
-    uint32_t    address;
-    uint8_t     protocol;
-    NSData      *bitmap;
+    uint32_t    _address;
+    uint8_t     _protocol;
+    NSData      *_bitmap;
 }
 
 

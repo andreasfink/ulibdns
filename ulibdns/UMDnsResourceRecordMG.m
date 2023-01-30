@@ -26,7 +26,6 @@
 
 @implementation UMDnsResourceRecordMG
 
-@synthesize mgmname;
 
 - (NSString *)recordTypeString
 {
@@ -41,7 +40,7 @@
 
 - (NSData *)resourceData
 {
-    return [mgmname binary];
+    return [_mgmname binary];
 }
 
 
@@ -50,7 +49,7 @@
     self = [super init];
     if(self)
     {
-        mgmname = a;
+        _mgmname = a;
     }
     return self;
 }
@@ -63,7 +62,7 @@
 
 - (NSString *)visualRepresentation
 {
-    return [NSString stringWithFormat:@"MG\t%@",[mgmname visualNameAbsoluteWriting]];
+    return [NSString stringWithFormat:@"MG\t%@",[_mgmname visualNameAbsoluteWriting]];
 }
 
 @end

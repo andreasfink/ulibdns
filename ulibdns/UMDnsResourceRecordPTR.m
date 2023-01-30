@@ -32,7 +32,6 @@ description of the IN-ADDR.ARPA domain for an example.
 
 @implementation UMDnsResourceRecordPTR
 
-@synthesize ptrname;
 
 - (NSString *)recordTypeString
 {
@@ -47,7 +46,7 @@ description of the IN-ADDR.ARPA domain for an example.
 
 - (NSData *)resourceData
 {
-    return [ptrname binary];
+    return [_ptrname binary];
 }
 
 
@@ -56,7 +55,7 @@ description of the IN-ADDR.ARPA domain for an example.
     self = [super init];
     if(self)
     {
-        ptrname = a;
+        _ptrname = a;
     }
     return self;
 }
@@ -69,7 +68,7 @@ description of the IN-ADDR.ARPA domain for an example.
 
 - (NSString *)visualRepresentation
 {
-    return [NSString stringWithFormat:@"PTR\t%@",ptrname.visualNameAbsoluteWriting];
+    return [NSString stringWithFormat:@"PTR\t%@",_ptrname.visualNameAbsoluteWriting];
 }
 
 @end

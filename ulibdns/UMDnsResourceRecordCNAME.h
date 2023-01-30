@@ -10,7 +10,7 @@
 
 @interface UMDnsResourceRecordCNAME : UMDnsResourceRecord
 {
-    UMDnsName *aliasName;
+    UMDnsName *_aliasName;
 }
 
 @property (readwrite,strong) UMDnsName *aliasName;

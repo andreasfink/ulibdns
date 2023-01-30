@@ -42,7 +42,7 @@
 - (NSData *)resourceData
 {
     NSMutableData *binary = [[NSMutableData alloc]init];
-    for(UMDnsCharacterString *s in txtRecords)
+    for(UMDnsCharacterString *s in _txtRecords)
     {
         [binary appendData:[s binary]];
     }
@@ -65,7 +65,7 @@
         {
             [recs addObject:[[UMDnsCharacterString alloc]initWithString:s]];
         }
-        txtRecords = recs;
+        _txtRecords = recs;
         
     }
     return self;
@@ -80,7 +80,7 @@
 {
     NSMutableString *s =  [[NSMutableString alloc]init];
     [s appendString:@"TXT"];
-    for(UMDnsCharacterString *cs in txtRecords)
+    for(UMDnsCharacterString *cs in _txtRecords)
     {
         [s appendString:@"\t"];
         [s appendString:[cs visualRepresentation]];

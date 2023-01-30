@@ -29,6 +29,7 @@
     UMMicroSec                                  _requestTimeoutDelay;
     UMMicroSec                                  _requestTimeoutTime;
     BOOL                                        _useStream;
+    UMDnsResourceRecord                         *_request;
     NSArray<UMDnsResourceRecord *>              *_responses;
     int                                         _errorCode;
     id                                          _userData;

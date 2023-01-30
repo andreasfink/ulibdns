@@ -10,8 +10,8 @@
 
 @interface UMDnsResourceRecordMINFO : UMDnsResourceRecord
 {
-    UMDnsName *rMailBx;
-    UMDnsName *eMailBx;
+    UMDnsName *_rMailBx;
+    UMDnsName *_eMailBx;
 }
 
 @property(readwrite,strong) UMDnsName *rMailBx;
