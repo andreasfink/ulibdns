@@ -189,7 +189,8 @@
                 [array addObject:[items objectAtIndex:i]];
             }
             
-            UMDnsResourceRecord *rrec = [UMDnsResourceRecord recordOfType:item params:array zone:defaultOrigin.visualName];
+            UMDnsResourceRecord *rrec = [UMDnsResourceRecord recordOfTypeString:item                                                                params:array
+                                                                           zone:defaultOrigin.visualName];
             if([rrec isKindOfClass:[UMDnsResourceRecordSOA class]])
             {
                 soa = (UMDnsResourceRecordSOA *)rrec;

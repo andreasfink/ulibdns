@@ -11,5 +11,6 @@
 
 @protocol UMDnsResolvingRequestDelegateProtocol <NSObject>
 - (void) resolverCallback:(UMDnsResolvingRequest *)request;
+- (void) resolverTimeout:(UMDnsResolvingRequest *)request;
 @end
 

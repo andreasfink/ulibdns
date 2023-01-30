@@ -8,14 +8,16 @@
 
 #import <ulib/ulib.h>
 
-@interface UMDnsRemoteServer : UMObject
+@interface UMDnsRemoteServer : UMBackgrounder
 {
-    BOOL        isActive;
-    BOOL        isTcp;
-    BOOL        isIPv6;
-    NSString    *address;
-    int         port;
-    UMSocket    *socket;
+    BOOL        _isActive;
+    BOOL        _isTcp;
+    BOOL        _isIPv6;
+    BOOL        _isUDP;
+    NSString    *_address;
+    int         _port;
+    UMSocket    *_socket;
+    int         _waitTimeoutInMs;
 }
 
 @property (readwrite,strong)     NSString *address;
@@ -24,8 +26,11 @@
 @property (readwrite,assign)    BOOL        isActive;
 @property (readwrite,assign)    BOOL        isTcp;
 @property (readwrite,assign)    BOOL        isIPv6;
+@property (readwrite,assign)    BOOL        isUDP;
+@property (readwrite,assign)    int         waitTimeoutInMs;
 
-- (void)sendDatagrammRequest:(NSData *)data stream:(UMSocket *)sock;
+- (void)sendRequest:(NSData *)data;
+- (void)sendDatagramRequest:(NSData *)data;
 - (void)sendStreamRequest:(NSData *)data;
 
 @end

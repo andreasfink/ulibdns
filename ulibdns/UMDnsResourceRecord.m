@@ -134,90 +134,843 @@ according to the TYPE and CLASS of the resource record.
 }
 
 
-+ (UMDnsResourceRecord *)recordOfType:(NSString *)rrtypeName params:(NSArray *)params zone:(NSString *)zone
++ (UMDnsResourceRecord *)recordOfType:(UlibDnsResourceRecordType)rrtype
+                               params:(NSArray<NSString *>*)params
+                                 zone:(NSString *)zone
 {
     UMDnsResourceRecord *rr = NULL;
-    if( [rrtypeName caseInsensitiveCompare:@"A"]==NSOrderedSame)
+    switch(rrtype)
     {
-        rr = [[UMDnsResourceRecordA alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"NS"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordNS alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"CNAME"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordCNAME alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"SOA"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordSOA alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"MB"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordMB alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"MD"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordMD alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"MF"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordMF alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"MG"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordMG alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"MINFO"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordMINFO alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"MR"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordMR alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"MX"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordMX alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"NULL"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordNULL alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"WKS"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordWKS alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"PTR"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordPTR alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"HINFO"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordHINFO alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"TXT"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordTXT alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"AAAA"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordAAAA alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"SRV"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordSRV alloc]initWithParams:params zone:zone];
-    }
-    else if( [rrtypeName caseInsensitiveCompare:@"NAPTR"]==NSOrderedSame)
-    {
-        rr = [[UMDnsResourceRecordNAPTR alloc]initWithParams:params zone:zone];
-    }
-    else
-    {
-        @throw ([NSException exceptionWithName:@"unknown_resource_record_type" reason:rrtypeName userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);
+        case UlibDnsResourceRecordType_A:
+        {
+            rr = [[UMDnsResourceRecordA alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_NS:
+        {
+            rr = [[UMDnsResourceRecordNS alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_MD:
+        {
+            rr = [[UMDnsResourceRecordMD alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_MF:
+        {
+            rr = [[UMDnsResourceRecordMF alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_CNAME:
+        {
+            rr = [[UMDnsResourceRecordCNAME alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_SOA:
+        {
+            rr = [[UMDnsResourceRecordSOA alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_MB:
+        {
+            rr = [[UMDnsResourceRecordMB alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_MG:
+        {
+            rr = [[UMDnsResourceRecordMG alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_MR:
+        {
+            rr = [[UMDnsResourceRecordMR alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_NULL:
+        {
+            rr = [[UMDnsResourceRecordNULL alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_WKS:
+        {
+            rr = [[UMDnsResourceRecordWKS alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_PTR:
+        {
+            rr = [[UMDnsResourceRecordPTR alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_HINFO:
+        {
+            rr = [[UMDnsResourceRecordHINFO alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_MINFO:
+        {
+            rr = [[UMDnsResourceRecordMINFO alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_MX:
+        {
+            rr = [[UMDnsResourceRecordMX alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_TXT:
+        {
+            rr = [[UMDnsResourceRecordTXT alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_RP:
+        {
+            rr = [[UMDnsResourceRecordRP alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_AFSDB:
+        {
+            rr = [[UMDnsResourceRecordAFSDB alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_X25:
+        {
+            rr = [[UMDnsResourceRecordX25 alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_ISDN:
+        {
+            rr = [[UMDnsResourceRecordISDN alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_RT:
+        {
+            rr = [[UMDnsResourceRecordRT alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_NSAP:
+        {
+            rr = [[UMDnsResourceRecordNSAP alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_NSAP_PTR:
+        {
+            rr = [[UMDnsResourceRecordNSAP_PTR alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_SIG:
+        {
+            rr = [[UMDnsResourceRecordSIG alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_KEY:
+        {
+            rr = [[UMDnsResourceRecordKEY alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_PX:
+        {
+            rr = [[UMDnsResourceRecordPX alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_GPOS:
+        {
+            rr = [[UMDnsResourceRecordGPOS alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_AAAA:
+        {
+            rr = [[UMDnsResourceRecordAAAA alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_LOC:
+        {
+            rr = [[UMDnsResourceRecordLOC alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_NXT:
+        {
+            rr = [[UMDnsResourceRecordNXT alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_EID:
+        {
+            rr = [[UMDnsResourceRecordEID alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_NIMLOC:
+        {
+            rr = [[UMDnsResourceRecordNIMLOC alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_SRV:
+        {
+            rr = [[UMDnsResourceRecordSRV alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_ATMA:
+        {
+            rr = [[UMDnsResourceRecordATMA alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_NAPTR:
+        {
+            rr = [[UMDnsResourceRecordNAPTR alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_KX:
+        {
+            rr = [[UMDnsResourceRecordKX alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_CERT:
+        {
+            rr = [[UMDnsResourceRecordCERT alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_A6:
+        {
+            rr = [[UMDnsResourceRecordA6 alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_DNAME:
+        {
+            rr = [[UMDnsResourceRecordDNAME alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_SINK:
+        {
+            rr = [[UMDnsResourceRecordSINK alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_OPT:
+        {
+            rr = [[UMDnsResourceRecordOPT alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_APL:
+        {
+            rr = [[UMDnsResourceRecordAPL alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_DS:
+        {
+            rr = [[UMDnsResourceRecordDS alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_SSHFP:
+        {
+            rr = [[UMDnsResourceRecordSSHFP alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_IPSECKEY:
+        {
+            rr = [[UMDnsResourceRecordIPSECKEY alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_RRSIG:
+        {
+            rr = [[UMDnsResourceRecordRRSIG alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_NSEC:
+        {
+            rr = [[UMDnsResourceRecordNSEC alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_DNSKEY:
+        {
+            rr = [[UMDnsResourceRecordDNSKEY alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_DHCID:
+        {
+            rr = [[UMDnsResourceRecordDHCID alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_NSEC3:
+        {
+            rr = [[UMDnsResourceRecordNSEC3 alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_NSEC3PARAM:
+        {
+            rr = [[UMDnsResourceRecordNSEC3PARAM alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_TLSA:
+        {
+            rr = [[UMDnsResourceRecordTLSA alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_HIP:
+        {
+            rr = [[UMDnsResourceRecordHIP alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_NINFO:
+        {
+            rr = [[UMDnsResourceRecordNINFO alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_RKEY:
+        {
+            rr = [[UMDnsResourceRecordRKEY alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_TALINK:
+        {
+            rr = [[UMDnsResourceRecordTALINK alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_CDS:
+        {
+            rr = [[UMDnsResourceRecordCDS alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_CDNSKEY:
+        {
+            rr = [[UMDnsResourceRecordCDNSKEY alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_OPENPGPKEY:
+        {
+            rr = [[UMDnsResourceRecordOPENPGPKEY alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_CSYNC:
+        {
+            rr = [[UMDnsResourceRecordCSYNC alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_SPF:
+        {
+            rr = [[UMDnsResourceRecordSPF alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_UINFO:
+        {
+            rr = [[UMDnsResourceRecordUINFO alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_UID:
+        {
+            rr = [[UMDnsResourceRecordUID alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_GID:
+        {
+            rr = [[UMDnsResourceRecordGID alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_UNSPEC:
+        {
+            rr = [[UMDnsResourceRecordUNSPEC alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_NID:
+        {
+            rr = [[UMDnsResourceRecordNID alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_L32:
+        {
+            rr = [[UMDnsResourceRecordL32 alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_L64:
+        {
+            rr = [[UMDnsResourceRecordL64 alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_LP:
+        {
+            rr = [[UMDnsResourceRecordLP alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_EUI48:
+        {
+            rr = [[UMDnsResourceRecordEUI48 alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_EUI64:
+        {
+            rr = [[UMDnsResourceRecordEUI64 alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_TKEY:
+        {
+            rr = [[UMDnsResourceRecordTKEY alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_TSIG:
+        {
+            rr = [[UMDnsResourceRecordTSIG alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_IXFR:
+        {
+            rr = [[UMDnsResourceRecordIXFR alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_AXFR:
+        {
+            rr = [[UMDnsResourceRecordAXFR alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_MAILB:
+        {
+            rr = [[UMDnsResourceRecordMAILB alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_MAILA:
+        {
+            rr = [[UMDnsResourceRecordMAILA alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_URI:
+        {
+            rr = [[UMDnsResourceRecordURI alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_CAA:
+        {
+            rr = [[UMDnsResourceRecordCAA alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_TA:
+        {
+            rr = [[UMDnsResourceRecordTA alloc]initWithParams:params zone:zone];
+            break;
+        }
+
+        case UlibDnsResourceRecordType_DLV:
+        {
+            rr = [[UMDnsResourceRecordDLV alloc]initWithParams:params zone:zone];
+            break;
+        }
+        case    UlibDnsResourceRecordType_UNKNOWN:
+        default:
+            break;
     }
     return rr;
+}
+
++ (UMDnsResourceRecord *)recordOfTypeString:(NSString *)rrtype
+                                     params:(NSArray *)params
+                                       zone:(NSString *)zone
+{
+    UlibDnsResourceRecordType rt = [UMDnsResourceRecord resourceRecordTypeFromString:rrtype];
+    return [UMDnsResourceRecord recordOfType:rt
+                                      params:params
+                                        zone:zone];
+
+}
+
++(UlibDnsResourceRecordType)resourceRecordTypeFromString:(NSString *)str
+{
+    if( [str caseInsensitiveCompare:@"A"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_A;
+    }
+    if( [str caseInsensitiveCompare:@"NS"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_NS;
+    }
+    if( [str caseInsensitiveCompare:@"MD"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_MD;
+    }
+    if( [str caseInsensitiveCompare:@"MF"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_MF;
+    }
+    if( [str caseInsensitiveCompare:@"CNAME"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_CNAME;
+    }
+    if( [str caseInsensitiveCompare:@"SOA"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_SOA;
+    }
+    if( [str caseInsensitiveCompare:@"MB"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_MB;
+    }
+    if( [str caseInsensitiveCompare:@"MG"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_MG;
+    }
+    if( [str caseInsensitiveCompare:@"MR"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_MR;
+    }
+    if( [str caseInsensitiveCompare:@"NULL"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_NULL;
+    }
+    if( [str caseInsensitiveCompare:@"WKS"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_WKS;
+    }
+    if( [str caseInsensitiveCompare:@"PTR"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_PTR;
+    }
+    if( [str caseInsensitiveCompare:@"HINFO"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_HINFO;
+    }
+    if( [str caseInsensitiveCompare:@"MINFO"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_MINFO;
+    }
+    if( [str caseInsensitiveCompare:@"MX"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_MX;
+    }
+    if( [str caseInsensitiveCompare:@"TXT"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_TXT;
+    }
+    if( [str caseInsensitiveCompare:@"RP"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_RP;
+    }
+    if( [str caseInsensitiveCompare:@"AFSDB"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_AFSDB;
+    }
+    if( [str caseInsensitiveCompare:@"X25"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_X25;
+    }
+    if( [str caseInsensitiveCompare:@"ISDN"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_ISDN;
+    }
+    if( [str caseInsensitiveCompare:@"RT"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_RT;
+    }
+    if( [str caseInsensitiveCompare:@"NSAP"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_NSAP;
+    }
+    if( [str caseInsensitiveCompare:@"NSAP_PTR"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_NSAP_PTR;
+    }
+    if( [str caseInsensitiveCompare:@"SIG"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_SIG;
+    }
+    if( [str caseInsensitiveCompare:@"KEY"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_KEY;
+    }
+    if( [str caseInsensitiveCompare:@"PX"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_PX;
+    }
+    if( [str caseInsensitiveCompare:@"GPOS"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_GPOS;
+    }
+    if( [str caseInsensitiveCompare:@"AAAA"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_AAAA;
+    }
+    if( [str caseInsensitiveCompare:@"LOC"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_LOC;
+    }
+    if( [str caseInsensitiveCompare:@"NXT"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_NXT;
+    }
+    if( [str caseInsensitiveCompare:@"EID"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_EID;
+    }
+    if( [str caseInsensitiveCompare:@"NIMLOC"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_NIMLOC;
+    }
+    if( [str caseInsensitiveCompare:@"SRV"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_SRV;
+    }
+    if( [str caseInsensitiveCompare:@"ATMA"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_ATMA;
+    }
+    if( [str caseInsensitiveCompare:@"NAPTR"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_NAPTR;
+    }
+    if( [str caseInsensitiveCompare:@"KX"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_KX;
+    }
+    if( [str caseInsensitiveCompare:@"CERT"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_CERT;
+    }
+    if( [str caseInsensitiveCompare:@"A6"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_A6;
+    }
+    if( [str caseInsensitiveCompare:@"DNAME"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_DNAME;
+    }
+    if( [str caseInsensitiveCompare:@"SINK"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_SINK;
+    }
+    if( [str caseInsensitiveCompare:@"OPT"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_OPT;
+    }
+    if( [str caseInsensitiveCompare:@"APL"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_APL;
+    }
+    if( [str caseInsensitiveCompare:@"DS"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_DS;
+    }
+    if( [str caseInsensitiveCompare:@"SSHFP"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_SSHFP;
+    }
+    if( [str caseInsensitiveCompare:@"IPSECKEY"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_IPSECKEY;
+    }
+    if( [str caseInsensitiveCompare:@"RRSIG"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_RRSIG;
+    }
+    if( [str caseInsensitiveCompare:@"NSEC"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_NSEC;
+    }
+    if( [str caseInsensitiveCompare:@"DNSKEY"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_DNSKEY;
+    }
+    if( [str caseInsensitiveCompare:@"DHCID"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_DHCID;
+    }
+    if( [str caseInsensitiveCompare:@"NSEC3"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_NSEC3;
+    }
+    if( [str caseInsensitiveCompare:@"NSEC3PARAM"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_NSEC3PARAM;
+    }
+    if( [str caseInsensitiveCompare:@"TLSA"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_TLSA;
+    }
+    if( [str caseInsensitiveCompare:@"HIP"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_HIP;
+    }
+    if( [str caseInsensitiveCompare:@"NINFO"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_NINFO;
+    }
+    if( [str caseInsensitiveCompare:@"RKEY"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_RKEY;
+    }
+    if( [str caseInsensitiveCompare:@"TALINK"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_TALINK;
+    }
+    if( [str caseInsensitiveCompare:@"CDS"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_CDS;
+    }
+    if( [str caseInsensitiveCompare:@"CDNSKEY"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_CDNSKEY;
+    }
+    if( [str caseInsensitiveCompare:@"OPENPGPKEY"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_OPENPGPKEY;
+    }
+    if( [str caseInsensitiveCompare:@"CSYNC"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_CSYNC;
+    }
+    if( [str caseInsensitiveCompare:@"SPF"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_SPF;
+    }
+    if( [str caseInsensitiveCompare:@"UINFO"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_UINFO;
+    }
+    if( [str caseInsensitiveCompare:@"UID"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_UID;
+    }
+    if( [str caseInsensitiveCompare:@"GID"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_GID;
+    }
+    if( [str caseInsensitiveCompare:@"UNSPEC"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_UNSPEC;
+    }
+    if( [str caseInsensitiveCompare:@"NID"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_NID;
+    }
+    if( [str caseInsensitiveCompare:@"L32"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_L32;
+    }
+    if( [str caseInsensitiveCompare:@"L64"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_L64;
+    }
+    if( [str caseInsensitiveCompare:@"LP"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_LP;
+    }
+    if( [str caseInsensitiveCompare:@"EUI48"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_EUI48;
+    }
+    if( [str caseInsensitiveCompare:@"EUI64"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_EUI64;
+    }
+    if( [str caseInsensitiveCompare:@"TKEY"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_TKEY;
+    }
+    if( [str caseInsensitiveCompare:@"TSIG"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_TSIG;
+    }
+    if( [str caseInsensitiveCompare:@"IXFR"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_IXFR;
+    }
+    if( [str caseInsensitiveCompare:@"AXFR"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_AXFR;
+    }
+    if( [str caseInsensitiveCompare:@"MAILB"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_MAILB;
+    }
+    if( [str caseInsensitiveCompare:@"MAILA"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_MAILA;
+    }
+    if( [str caseInsensitiveCompare:@"URI"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_URI;
+    }
+    if( [str caseInsensitiveCompare:@"CAA"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_CAA;
+    }
+    if( [str caseInsensitiveCompare:@"TA"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_TA;
+    }
+    if( [str caseInsensitiveCompare:@"DLV"]==NSOrderedSame)
+    {
+        return     UlibDnsResourceRecordType_DLV;
+    }
+    return UlibDnsResourceRecordType_UNKNOWN;
 }
 
 - (UMDnsResourceRecord *)initWithParams:(NSArray *)params zone:(NSString *)zone

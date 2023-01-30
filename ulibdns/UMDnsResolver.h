@@ -7,14 +7,17 @@
 //
 
 #import <ulib/ulib.h>
+@class UMDnsResolvingRequest;
 
 @interface UMDnsResolver : UMBackgrounder
 {
-    UMQueueSingle *newRequests;
-    UMSynchronizedDictionary *pendingRequestsByKey;
-    UMSocket *socket_u4; /* sockets used for UDP IPv4 */
-    UMSocket *socket_u6; /* sockets used for UDP IPv6 */
+    UMQueueSingle               *_newRequests;
+    UMSynchronizedDictionary    *_pendingRequestsByKey;
+    UMSocket                    *_socket_u4; /* sockets used for UDP IPv4 */
+    UMSocket                    *_socket_u6; /* sockets used for UDP IPv6 */
     /* Note: TCP IPv4/IPv6 sockets are defined in the UMDnsServer object */
 }
+
+- (void)addRequest:(UMDnsResolvingRequest *)req;
 
 @end

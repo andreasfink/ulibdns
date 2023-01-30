@@ -39,4 +39,13 @@
     return _key;
 }
 
+- (NSData *)requestData
+{
+    NSArray *params = @[_nameToResolve];
+    NSString *zone = NULL;
+    UMDnsResourceRecord *rr = [UMDnsResourceRecord recordOfType:_resourceType
+                                                         params:params
+                                                           zone:zone];
+    return [rr encodeRequest];
+}
 @end

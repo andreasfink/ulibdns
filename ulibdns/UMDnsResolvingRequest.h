@@ -31,6 +31,8 @@
     BOOL                                        _useStream;
     NSArray<UMDnsResourceRecord *>              *_responses;
     int                                         _errorCode;
+    id                                          _userData;
+    id<UMDnsResolvingRequestDelegateProtocol>   _callbackDelegate;
 }
 
 - (NSString *)key;
@@ -48,5 +50,8 @@
 @property (readwrite,assign,atomic)    BOOL                                         useStream;
 @property (readwrite,strong,atomic)    NSArray<UMDnsResourceRecord *>               *responses;
 @property (readwrite,assign,atomic)    int                                          errorCode;
+@property (readwrite,strong,atomic)    id                                           userData;
+
+- (NSData *)requestData;
 
 @end

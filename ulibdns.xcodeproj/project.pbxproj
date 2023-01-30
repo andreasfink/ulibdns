@@ -93,6 +93,130 @@
 		A69733BC1C087FA300211137 /* ulibdns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A696EA0C1B943764009727B0 /* ulibdns.framework */; };
 		A69B48231D6C24F500211137 /* UMDnsLocalServer.h in Headers */ = {isa = PBXBuildFile; fileRef = A69B48211D6C24F500211137 /* UMDnsLocalServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A69B48241D6C24F500211137 /* UMDnsLocalServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A69B48221D6C24F500211137 /* UMDnsLocalServer.m */; };
+		A6D6F1AC29867B860002A612 /* UMDnsResourceRecordRP.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1AA29867B860002A612 /* UMDnsResourceRecordRP.h */; };
+		A6D6F1AD29867B860002A612 /* UMDnsResourceRecordRP.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1AB29867B860002A612 /* UMDnsResourceRecordRP.m */; };
+		A6D6F1B029867E7A0002A612 /* UMDnsResourceRecordAFSDB.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1AE29867E7A0002A612 /* UMDnsResourceRecordAFSDB.h */; };
+		A6D6F1B129867E7A0002A612 /* UMDnsResourceRecordAFSDB.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1AF29867E7A0002A612 /* UMDnsResourceRecordAFSDB.m */; };
+		A6D6F1B829867ED20002A612 /* UMDnsResourceRecordX25.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1B629867ED20002A612 /* UMDnsResourceRecordX25.h */; };
+		A6D6F1B929867ED20002A612 /* UMDnsResourceRecordX25.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1B729867ED20002A612 /* UMDnsResourceRecordX25.m */; };
+		A6D6F1BC29867EE00002A612 /* UMDnsResourceRecordISDN.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1BA29867EE00002A612 /* UMDnsResourceRecordISDN.h */; };
+		A6D6F1BD29867EE00002A612 /* UMDnsResourceRecordISDN.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1BB29867EE00002A612 /* UMDnsResourceRecordISDN.m */; };
+		A6D6F1C029867EF20002A612 /* UMDnsResourceRecordRT.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1BE29867EF20002A612 /* UMDnsResourceRecordRT.h */; };
+		A6D6F1C129867EF20002A612 /* UMDnsResourceRecordRT.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1BF29867EF20002A612 /* UMDnsResourceRecordRT.m */; };
+		A6D6F1C429867EFD0002A612 /* UMDnsResourceRecordNSAP.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1C229867EFD0002A612 /* UMDnsResourceRecordNSAP.h */; };
+		A6D6F1C529867EFD0002A612 /* UMDnsResourceRecordNSAP.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1C329867EFD0002A612 /* UMDnsResourceRecordNSAP.m */; };
+		A6D6F1C829867F090002A612 /* UMDnsResourceRecordNSAP_PTR.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1C629867F090002A612 /* UMDnsResourceRecordNSAP_PTR.h */; };
+		A6D6F1C929867F090002A612 /* UMDnsResourceRecordNSAP_PTR.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1C729867F090002A612 /* UMDnsResourceRecordNSAP_PTR.m */; };
+		A6D6F1CC29867F110002A612 /* UMDnsResourceRecordSIG.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1CA29867F110002A612 /* UMDnsResourceRecordSIG.h */; };
+		A6D6F1CD29867F110002A612 /* UMDnsResourceRecordSIG.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1CB29867F110002A612 /* UMDnsResourceRecordSIG.m */; };
+		A6D6F1D029867F1B0002A612 /* UMDnsResourceRecordKEY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1CE29867F1B0002A612 /* UMDnsResourceRecordKEY.h */; };
+		A6D6F1D129867F1B0002A612 /* UMDnsResourceRecordKEY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1CF29867F1B0002A612 /* UMDnsResourceRecordKEY.m */; };
+		A6D6F1D429867F250002A612 /* UMDnsResourceRecordPX.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1D229867F250002A612 /* UMDnsResourceRecordPX.h */; };
+		A6D6F1D529867F250002A612 /* UMDnsResourceRecordPX.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1D329867F250002A612 /* UMDnsResourceRecordPX.m */; };
+		A6D6F1D829867F730002A612 /* UMDnsResourceRecordGPOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1D629867F730002A612 /* UMDnsResourceRecordGPOS.h */; };
+		A6D6F1D929867F730002A612 /* UMDnsResourceRecordGPOS.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1D729867F730002A612 /* UMDnsResourceRecordGPOS.m */; };
+		A6D6F1DC298680520002A612 /* UMDnsResourceRecordLOC.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1DA298680520002A612 /* UMDnsResourceRecordLOC.h */; };
+		A6D6F1DD298680520002A612 /* UMDnsResourceRecordLOC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1DB298680520002A612 /* UMDnsResourceRecordLOC.m */; };
+		A6D6F1E02986805B0002A612 /* UMDnsResourceRecordNXT.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1DE2986805B0002A612 /* UMDnsResourceRecordNXT.h */; };
+		A6D6F1E12986805B0002A612 /* UMDnsResourceRecordNXT.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1DF2986805B0002A612 /* UMDnsResourceRecordNXT.m */; };
+		A6D6F1E4298680660002A612 /* UMDnsResourceRecordEID.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1E2298680660002A612 /* UMDnsResourceRecordEID.h */; };
+		A6D6F1E5298680660002A612 /* UMDnsResourceRecordEID.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1E3298680660002A612 /* UMDnsResourceRecordEID.m */; };
+		A6D6F1E82986806D0002A612 /* UMDnsResourceRecordNIMLOC.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1E62986806D0002A612 /* UMDnsResourceRecordNIMLOC.h */; };
+		A6D6F1E92986806D0002A612 /* UMDnsResourceRecordNIMLOC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1E72986806D0002A612 /* UMDnsResourceRecordNIMLOC.m */; };
+		A6D6F1EC298680740002A612 /* UMDnsResourceRecordATMA.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1EA298680740002A612 /* UMDnsResourceRecordATMA.h */; };
+		A6D6F1ED298680740002A612 /* UMDnsResourceRecordATMA.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1EB298680740002A612 /* UMDnsResourceRecordATMA.m */; };
+		A6D6F1F02986807B0002A612 /* UMDnsResourceRecordKX.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1EE2986807B0002A612 /* UMDnsResourceRecordKX.h */; };
+		A6D6F1F12986807B0002A612 /* UMDnsResourceRecordKX.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1EF2986807B0002A612 /* UMDnsResourceRecordKX.m */; };
+		A6D6F1F4298680810002A612 /* UMDnsResourceRecordCERT.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1F2298680810002A612 /* UMDnsResourceRecordCERT.h */; };
+		A6D6F1F5298680810002A612 /* UMDnsResourceRecordCERT.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1F3298680810002A612 /* UMDnsResourceRecordCERT.m */; };
+		A6D6F1F8298680850002A612 /* UMDnsResourceRecordA6.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1F6298680850002A612 /* UMDnsResourceRecordA6.h */; };
+		A6D6F1F9298680850002A612 /* UMDnsResourceRecordA6.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1F7298680850002A612 /* UMDnsResourceRecordA6.m */; };
+		A6D6F1FC2986808A0002A612 /* UMDnsResourceRecordDNAME.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1FA2986808A0002A612 /* UMDnsResourceRecordDNAME.h */; };
+		A6D6F1FD2986808A0002A612 /* UMDnsResourceRecordDNAME.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1FB2986808A0002A612 /* UMDnsResourceRecordDNAME.m */; };
+		A6D6F2002986808F0002A612 /* UMDnsResourceRecordSINK.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F1FE2986808F0002A612 /* UMDnsResourceRecordSINK.h */; };
+		A6D6F2012986808F0002A612 /* UMDnsResourceRecordSINK.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F1FF2986808F0002A612 /* UMDnsResourceRecordSINK.m */; };
+		A6D6F204298681770002A612 /* UMDnsResourceRecordOPT.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F202298681770002A612 /* UMDnsResourceRecordOPT.h */; };
+		A6D6F205298681770002A612 /* UMDnsResourceRecordOPT.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F203298681770002A612 /* UMDnsResourceRecordOPT.m */; };
+		A6D6F2082986817C0002A612 /* UMDnsResourceRecordAPL.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F2062986817C0002A612 /* UMDnsResourceRecordAPL.h */; };
+		A6D6F2092986817C0002A612 /* UMDnsResourceRecordAPL.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F2072986817C0002A612 /* UMDnsResourceRecordAPL.m */; };
+		A6D6F20C298681810002A612 /* UMDnsResourceRecordDS.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F20A298681810002A612 /* UMDnsResourceRecordDS.h */; };
+		A6D6F20D298681810002A612 /* UMDnsResourceRecordDS.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F20B298681810002A612 /* UMDnsResourceRecordDS.m */; };
+		A6D6F2102986818D0002A612 /* UMDnsResourceRecordSSHFP.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F20E2986818D0002A612 /* UMDnsResourceRecordSSHFP.h */; };
+		A6D6F2112986818D0002A612 /* UMDnsResourceRecordSSHFP.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F20F2986818D0002A612 /* UMDnsResourceRecordSSHFP.m */; };
+		A6D6F214298681970002A612 /* UMDnsResourceRecordIPSECKEY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F212298681970002A612 /* UMDnsResourceRecordIPSECKEY.h */; };
+		A6D6F215298681970002A612 /* UMDnsResourceRecordIPSECKEY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F213298681970002A612 /* UMDnsResourceRecordIPSECKEY.m */; };
+		A6D6F2182986819D0002A612 /* UMDnsResourceRecordRRSIG.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F2162986819D0002A612 /* UMDnsResourceRecordRRSIG.h */; };
+		A6D6F2192986819D0002A612 /* UMDnsResourceRecordRRSIG.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F2172986819D0002A612 /* UMDnsResourceRecordRRSIG.m */; };
+		A6D6F21C298681A40002A612 /* UMDnsResourceRecordNSEC.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F21A298681A40002A612 /* UMDnsResourceRecordNSEC.h */; };
+		A6D6F21D298681A40002A612 /* UMDnsResourceRecordNSEC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F21B298681A40002A612 /* UMDnsResourceRecordNSEC.m */; };
+		A6D6F220298681AC0002A612 /* UMDnsResourceRecordDNSKEY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F21E298681AC0002A612 /* UMDnsResourceRecordDNSKEY.h */; };
+		A6D6F221298681AC0002A612 /* UMDnsResourceRecordDNSKEY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F21F298681AC0002A612 /* UMDnsResourceRecordDNSKEY.m */; };
+		A6D6F224298681B30002A612 /* UMDnsResourceRecordDHCID.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F222298681B30002A612 /* UMDnsResourceRecordDHCID.h */; };
+		A6D6F225298681B30002A612 /* UMDnsResourceRecordDHCID.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F223298681B30002A612 /* UMDnsResourceRecordDHCID.m */; };
+		A6D6F228298681BA0002A612 /* UMDnsResourceRecordNSEC3.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F226298681BA0002A612 /* UMDnsResourceRecordNSEC3.h */; };
+		A6D6F229298681BA0002A612 /* UMDnsResourceRecordNSEC3.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F227298681BA0002A612 /* UMDnsResourceRecordNSEC3.m */; };
+		A6D6F22C298682150002A612 /* UMDnsResourceRecordNSEC3PARAM.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F22A298682150002A612 /* UMDnsResourceRecordNSEC3PARAM.h */; };
+		A6D6F22D298682150002A612 /* UMDnsResourceRecordNSEC3PARAM.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F22B298682150002A612 /* UMDnsResourceRecordNSEC3PARAM.m */; };
+		A6D6F2302986821E0002A612 /* UMDnsResourceRecordTLSA.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F22E2986821E0002A612 /* UMDnsResourceRecordTLSA.h */; };
+		A6D6F2312986821E0002A612 /* UMDnsResourceRecordTLSA.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F22F2986821E0002A612 /* UMDnsResourceRecordTLSA.m */; };
+		A6D6F234298682230002A612 /* UMDnsResourceRecordHIP.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F232298682230002A612 /* UMDnsResourceRecordHIP.h */; };
+		A6D6F235298682230002A612 /* UMDnsResourceRecordHIP.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F233298682230002A612 /* UMDnsResourceRecordHIP.m */; };
+		A6D6F238298682290002A612 /* UMDnsResourceRecordNINFO.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F236298682290002A612 /* UMDnsResourceRecordNINFO.h */; };
+		A6D6F239298682290002A612 /* UMDnsResourceRecordNINFO.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F237298682290002A612 /* UMDnsResourceRecordNINFO.m */; };
+		A6D6F23C298682300002A612 /* UMDnsResourceRecordRKEY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F23A298682300002A612 /* UMDnsResourceRecordRKEY.h */; };
+		A6D6F23D298682300002A612 /* UMDnsResourceRecordRKEY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F23B298682300002A612 /* UMDnsResourceRecordRKEY.m */; };
+		A6D6F240298682360002A612 /* UMDnsResourceRecordTALINK.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F23E298682360002A612 /* UMDnsResourceRecordTALINK.h */; };
+		A6D6F241298682360002A612 /* UMDnsResourceRecordTALINK.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F23F298682360002A612 /* UMDnsResourceRecordTALINK.m */; };
+		A6D6F2442986823C0002A612 /* UMDnsResourceRecordCDS.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F2422986823C0002A612 /* UMDnsResourceRecordCDS.h */; };
+		A6D6F2452986823C0002A612 /* UMDnsResourceRecordCDS.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F2432986823C0002A612 /* UMDnsResourceRecordCDS.m */; };
+		A6D6F248298682430002A612 /* UMDnsResourceRecordCDNSKEY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F246298682430002A612 /* UMDnsResourceRecordCDNSKEY.h */; };
+		A6D6F249298682430002A612 /* UMDnsResourceRecordCDNSKEY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F247298682430002A612 /* UMDnsResourceRecordCDNSKEY.m */; };
+		A6D6F24C2986824B0002A612 /* UMDnsResourceRecordOPENPGPKEY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F24A2986824B0002A612 /* UMDnsResourceRecordOPENPGPKEY.h */; };
+		A6D6F24D2986824B0002A612 /* UMDnsResourceRecordOPENPGPKEY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F24B2986824B0002A612 /* UMDnsResourceRecordOPENPGPKEY.m */; };
+		A6D6F250298682500002A612 /* UMDnsResourceRecordCSYNC.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F24E298682500002A612 /* UMDnsResourceRecordCSYNC.h */; };
+		A6D6F251298682500002A612 /* UMDnsResourceRecordCSYNC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F24F298682500002A612 /* UMDnsResourceRecordCSYNC.m */; };
+		A6D6F254298682AE0002A612 /* UMDnsResourceRecordSPF.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F252298682AE0002A612 /* UMDnsResourceRecordSPF.h */; };
+		A6D6F255298682AE0002A612 /* UMDnsResourceRecordSPF.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F253298682AE0002A612 /* UMDnsResourceRecordSPF.m */; };
+		A6D6F258298682B30002A612 /* UMDnsResourceRecordUINFO.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F256298682B30002A612 /* UMDnsResourceRecordUINFO.h */; };
+		A6D6F259298682B30002A612 /* UMDnsResourceRecordUINFO.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F257298682B30002A612 /* UMDnsResourceRecordUINFO.m */; };
+		A6D6F25C298682B80002A612 /* UMDnsResourceRecordUID.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F25A298682B80002A612 /* UMDnsResourceRecordUID.h */; };
+		A6D6F25D298682B80002A612 /* UMDnsResourceRecordUID.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F25B298682B80002A612 /* UMDnsResourceRecordUID.m */; };
+		A6D6F260298682BD0002A612 /* UMDnsResourceRecordGID.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F25E298682BD0002A612 /* UMDnsResourceRecordGID.h */; };
+		A6D6F261298682BD0002A612 /* UMDnsResourceRecordGID.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F25F298682BD0002A612 /* UMDnsResourceRecordGID.m */; };
+		A6D6F264298682C30002A612 /* UMDnsResourceRecordUNSPEC.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F262298682C30002A612 /* UMDnsResourceRecordUNSPEC.h */; };
+		A6D6F265298682C30002A612 /* UMDnsResourceRecordUNSPEC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F263298682C30002A612 /* UMDnsResourceRecordUNSPEC.m */; };
+		A6D6F268298682C80002A612 /* UMDnsResourceRecordNID.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F266298682C80002A612 /* UMDnsResourceRecordNID.h */; };
+		A6D6F269298682C80002A612 /* UMDnsResourceRecordNID.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F267298682C80002A612 /* UMDnsResourceRecordNID.m */; };
+		A6D6F26C298682CD0002A612 /* UMDnsResourceRecordL32.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F26A298682CD0002A612 /* UMDnsResourceRecordL32.h */; };
+		A6D6F26D298682CD0002A612 /* UMDnsResourceRecordL32.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F26B298682CD0002A612 /* UMDnsResourceRecordL32.m */; };
+		A6D6F270298682D30002A612 /* UMDnsResourceRecordL64.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F26E298682D30002A612 /* UMDnsResourceRecordL64.h */; };
+		A6D6F271298682D30002A612 /* UMDnsResourceRecordL64.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F26F298682D30002A612 /* UMDnsResourceRecordL64.m */; };
+		A6D6F274298682D80002A612 /* UMDnsResourceRecordLP.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F272298682D80002A612 /* UMDnsResourceRecordLP.h */; };
+		A6D6F275298682D80002A612 /* UMDnsResourceRecordLP.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F273298682D80002A612 /* UMDnsResourceRecordLP.m */; };
+		A6D6F278298682E10002A612 /* UMDnsResourceRecordEUI48.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F276298682E10002A612 /* UMDnsResourceRecordEUI48.h */; };
+		A6D6F279298682E10002A612 /* UMDnsResourceRecordEUI48.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F277298682E10002A612 /* UMDnsResourceRecordEUI48.m */; };
+		A6D6F27C2986833C0002A612 /* UMDnsResourceRecordEUI64.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F27A2986833C0002A612 /* UMDnsResourceRecordEUI64.h */; };
+		A6D6F27D2986833C0002A612 /* UMDnsResourceRecordEUI64.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F27B2986833C0002A612 /* UMDnsResourceRecordEUI64.m */; };
+		A6D6F280298683410002A612 /* UMDnsResourceRecordTKEY.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F27E298683410002A612 /* UMDnsResourceRecordTKEY.h */; };
+		A6D6F281298683410002A612 /* UMDnsResourceRecordTKEY.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F27F298683410002A612 /* UMDnsResourceRecordTKEY.m */; };
+		A6D6F284298683460002A612 /* UMDnsResourceRecordTSIG.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F282298683460002A612 /* UMDnsResourceRecordTSIG.h */; };
+		A6D6F285298683460002A612 /* UMDnsResourceRecordTSIG.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F283298683460002A612 /* UMDnsResourceRecordTSIG.m */; };
+		A6D6F2882986834B0002A612 /* UMDnsResourceRecordIXFR.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F2862986834B0002A612 /* UMDnsResourceRecordIXFR.h */; };
+		A6D6F2892986834B0002A612 /* UMDnsResourceRecordIXFR.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F2872986834B0002A612 /* UMDnsResourceRecordIXFR.m */; };
+		A6D6F28C298683520002A612 /* UMDnsResourceRecordAXFR.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F28A298683520002A612 /* UMDnsResourceRecordAXFR.h */; };
+		A6D6F28D298683520002A612 /* UMDnsResourceRecordAXFR.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F28B298683520002A612 /* UMDnsResourceRecordAXFR.m */; };
+		A6D6F290298683580002A612 /* UMDnsResourceRecordMAILB.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F28E298683580002A612 /* UMDnsResourceRecordMAILB.h */; };
+		A6D6F291298683580002A612 /* UMDnsResourceRecordMAILB.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F28F298683580002A612 /* UMDnsResourceRecordMAILB.m */; };
+		A6D6F2942986835D0002A612 /* UMDnsResourceRecordMAILA.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F2922986835D0002A612 /* UMDnsResourceRecordMAILA.h */; };
+		A6D6F2952986835D0002A612 /* UMDnsResourceRecordMAILA.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F2932986835D0002A612 /* UMDnsResourceRecordMAILA.m */; };
+		A6D6F298298683620002A612 /* UMDnsResourceRecordURI.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F296298683620002A612 /* UMDnsResourceRecordURI.h */; };
+		A6D6F299298683620002A612 /* UMDnsResourceRecordURI.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F297298683620002A612 /* UMDnsResourceRecordURI.m */; };
+		A6D6F29C298683670002A612 /* UMDnsResourceRecordCAA.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F29A298683670002A612 /* UMDnsResourceRecordCAA.h */; };
+		A6D6F29D298683670002A612 /* UMDnsResourceRecordCAA.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F29B298683670002A612 /* UMDnsResourceRecordCAA.m */; };
+		A6D6F2A02986836C0002A612 /* UMDnsResourceRecordTA.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F29E2986836C0002A612 /* UMDnsResourceRecordTA.h */; };
+		A6D6F2A12986836C0002A612 /* UMDnsResourceRecordTA.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F29F2986836C0002A612 /* UMDnsResourceRecordTA.m */; };
+		A6D6F2A4298683700002A612 /* UMDnsResourceRecordDLV.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F2A2298683700002A612 /* UMDnsResourceRecordDLV.h */; };
+		A6D6F2A5298683700002A612 /* UMDnsResourceRecordDLV.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F2A3298683700002A612 /* UMDnsResourceRecordDLV.m */; };
 		A6EE6A8F1BFF5532002B6032 /* UMDnsClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A6EE6A8D1BFF5532002B6032 /* UMDnsClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6EE6A901BFF5532002B6032 /* UMDnsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EE6A8E1BFF5532002B6032 /* UMDnsClient.m */; };
 		A6F6DA3B2731F4A40080A507 /* UMDnsError.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6DA392731F4A40080A507 /* UMDnsError.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -199,6 +323,130 @@
 		A69733B61C087CB400211137 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A69B48211D6C24F500211137 /* UMDnsLocalServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsLocalServer.h; sourceTree = "<group>"; };
 		A69B48221D6C24F500211137 /* UMDnsLocalServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsLocalServer.m; sourceTree = "<group>"; };
+		A6D6F1AA29867B860002A612 /* UMDnsResourceRecordRP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordRP.h; sourceTree = "<group>"; };
+		A6D6F1AB29867B860002A612 /* UMDnsResourceRecordRP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordRP.m; sourceTree = "<group>"; };
+		A6D6F1AE29867E7A0002A612 /* UMDnsResourceRecordAFSDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordAFSDB.h; sourceTree = "<group>"; };
+		A6D6F1AF29867E7A0002A612 /* UMDnsResourceRecordAFSDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordAFSDB.m; sourceTree = "<group>"; };
+		A6D6F1B629867ED20002A612 /* UMDnsResourceRecordX25.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordX25.h; sourceTree = "<group>"; };
+		A6D6F1B729867ED20002A612 /* UMDnsResourceRecordX25.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordX25.m; sourceTree = "<group>"; };
+		A6D6F1BA29867EE00002A612 /* UMDnsResourceRecordISDN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordISDN.h; sourceTree = "<group>"; };
+		A6D6F1BB29867EE00002A612 /* UMDnsResourceRecordISDN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordISDN.m; sourceTree = "<group>"; };
+		A6D6F1BE29867EF20002A612 /* UMDnsResourceRecordRT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordRT.h; sourceTree = "<group>"; };
+		A6D6F1BF29867EF20002A612 /* UMDnsResourceRecordRT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordRT.m; sourceTree = "<group>"; };
+		A6D6F1C229867EFD0002A612 /* UMDnsResourceRecordNSAP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordNSAP.h; sourceTree = "<group>"; };
+		A6D6F1C329867EFD0002A612 /* UMDnsResourceRecordNSAP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordNSAP.m; sourceTree = "<group>"; };
+		A6D6F1C629867F090002A612 /* UMDnsResourceRecordNSAP_PTR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordNSAP_PTR.h; sourceTree = "<group>"; };
+		A6D6F1C729867F090002A612 /* UMDnsResourceRecordNSAP_PTR.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordNSAP_PTR.m; sourceTree = "<group>"; };
+		A6D6F1CA29867F110002A612 /* UMDnsResourceRecordSIG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordSIG.h; sourceTree = "<group>"; };
+		A6D6F1CB29867F110002A612 /* UMDnsResourceRecordSIG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordSIG.m; sourceTree = "<group>"; };
+		A6D6F1CE29867F1B0002A612 /* UMDnsResourceRecordKEY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordKEY.h; sourceTree = "<group>"; };
+		A6D6F1CF29867F1B0002A612 /* UMDnsResourceRecordKEY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordKEY.m; sourceTree = "<group>"; };
+		A6D6F1D229867F250002A612 /* UMDnsResourceRecordPX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordPX.h; sourceTree = "<group>"; };
+		A6D6F1D329867F250002A612 /* UMDnsResourceRecordPX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordPX.m; sourceTree = "<group>"; };
+		A6D6F1D629867F730002A612 /* UMDnsResourceRecordGPOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordGPOS.h; sourceTree = "<group>"; };
+		A6D6F1D729867F730002A612 /* UMDnsResourceRecordGPOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordGPOS.m; sourceTree = "<group>"; };
+		A6D6F1DA298680520002A612 /* UMDnsResourceRecordLOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordLOC.h; sourceTree = "<group>"; };
+		A6D6F1DB298680520002A612 /* UMDnsResourceRecordLOC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordLOC.m; sourceTree = "<group>"; };
+		A6D6F1DE2986805B0002A612 /* UMDnsResourceRecordNXT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordNXT.h; sourceTree = "<group>"; };
+		A6D6F1DF2986805B0002A612 /* UMDnsResourceRecordNXT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordNXT.m; sourceTree = "<group>"; };
+		A6D6F1E2298680660002A612 /* UMDnsResourceRecordEID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordEID.h; sourceTree = "<group>"; };
+		A6D6F1E3298680660002A612 /* UMDnsResourceRecordEID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordEID.m; sourceTree = "<group>"; };
+		A6D6F1E62986806D0002A612 /* UMDnsResourceRecordNIMLOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordNIMLOC.h; sourceTree = "<group>"; };
+		A6D6F1E72986806D0002A612 /* UMDnsResourceRecordNIMLOC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordNIMLOC.m; sourceTree = "<group>"; };
+		A6D6F1EA298680740002A612 /* UMDnsResourceRecordATMA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordATMA.h; sourceTree = "<group>"; };
+		A6D6F1EB298680740002A612 /* UMDnsResourceRecordATMA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordATMA.m; sourceTree = "<group>"; };
+		A6D6F1EE2986807B0002A612 /* UMDnsResourceRecordKX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordKX.h; sourceTree = "<group>"; };
+		A6D6F1EF2986807B0002A612 /* UMDnsResourceRecordKX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordKX.m; sourceTree = "<group>"; };
+		A6D6F1F2298680810002A612 /* UMDnsResourceRecordCERT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordCERT.h; sourceTree = "<group>"; };
+		A6D6F1F3298680810002A612 /* UMDnsResourceRecordCERT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordCERT.m; sourceTree = "<group>"; };
+		A6D6F1F6298680850002A612 /* UMDnsResourceRecordA6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordA6.h; sourceTree = "<group>"; };
+		A6D6F1F7298680850002A612 /* UMDnsResourceRecordA6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordA6.m; sourceTree = "<group>"; };
+		A6D6F1FA2986808A0002A612 /* UMDnsResourceRecordDNAME.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordDNAME.h; sourceTree = "<group>"; };
+		A6D6F1FB2986808A0002A612 /* UMDnsResourceRecordDNAME.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordDNAME.m; sourceTree = "<group>"; };
+		A6D6F1FE2986808F0002A612 /* UMDnsResourceRecordSINK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordSINK.h; sourceTree = "<group>"; };
+		A6D6F1FF2986808F0002A612 /* UMDnsResourceRecordSINK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordSINK.m; sourceTree = "<group>"; };
+		A6D6F202298681770002A612 /* UMDnsResourceRecordOPT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordOPT.h; sourceTree = "<group>"; };
+		A6D6F203298681770002A612 /* UMDnsResourceRecordOPT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordOPT.m; sourceTree = "<group>"; };
+		A6D6F2062986817C0002A612 /* UMDnsResourceRecordAPL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordAPL.h; sourceTree = "<group>"; };
+		A6D6F2072986817C0002A612 /* UMDnsResourceRecordAPL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordAPL.m; sourceTree = "<group>"; };
+		A6D6F20A298681810002A612 /* UMDnsResourceRecordDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordDS.h; sourceTree = "<group>"; };
+		A6D6F20B298681810002A612 /* UMDnsResourceRecordDS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordDS.m; sourceTree = "<group>"; };
+		A6D6F20E2986818D0002A612 /* UMDnsResourceRecordSSHFP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordSSHFP.h; sourceTree = "<group>"; };
+		A6D6F20F2986818D0002A612 /* UMDnsResourceRecordSSHFP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordSSHFP.m; sourceTree = "<group>"; };
+		A6D6F212298681970002A612 /* UMDnsResourceRecordIPSECKEY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordIPSECKEY.h; sourceTree = "<group>"; };
+		A6D6F213298681970002A612 /* UMDnsResourceRecordIPSECKEY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordIPSECKEY.m; sourceTree = "<group>"; };
+		A6D6F2162986819D0002A612 /* UMDnsResourceRecordRRSIG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordRRSIG.h; sourceTree = "<group>"; };
+		A6D6F2172986819D0002A612 /* UMDnsResourceRecordRRSIG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordRRSIG.m; sourceTree = "<group>"; };
+		A6D6F21A298681A40002A612 /* UMDnsResourceRecordNSEC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordNSEC.h; sourceTree = "<group>"; };
+		A6D6F21B298681A40002A612 /* UMDnsResourceRecordNSEC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordNSEC.m; sourceTree = "<group>"; };
+		A6D6F21E298681AC0002A612 /* UMDnsResourceRecordDNSKEY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordDNSKEY.h; sourceTree = "<group>"; };
+		A6D6F21F298681AC0002A612 /* UMDnsResourceRecordDNSKEY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordDNSKEY.m; sourceTree = "<group>"; };
+		A6D6F222298681B30002A612 /* UMDnsResourceRecordDHCID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordDHCID.h; sourceTree = "<group>"; };
+		A6D6F223298681B30002A612 /* UMDnsResourceRecordDHCID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordDHCID.m; sourceTree = "<group>"; };
+		A6D6F226298681BA0002A612 /* UMDnsResourceRecordNSEC3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordNSEC3.h; sourceTree = "<group>"; };
+		A6D6F227298681BA0002A612 /* UMDnsResourceRecordNSEC3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordNSEC3.m; sourceTree = "<group>"; };
+		A6D6F22A298682150002A612 /* UMDnsResourceRecordNSEC3PARAM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordNSEC3PARAM.h; sourceTree = "<group>"; };
+		A6D6F22B298682150002A612 /* UMDnsResourceRecordNSEC3PARAM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordNSEC3PARAM.m; sourceTree = "<group>"; };
+		A6D6F22E2986821E0002A612 /* UMDnsResourceRecordTLSA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordTLSA.h; sourceTree = "<group>"; };
+		A6D6F22F2986821E0002A612 /* UMDnsResourceRecordTLSA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordTLSA.m; sourceTree = "<group>"; };
+		A6D6F232298682230002A612 /* UMDnsResourceRecordHIP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordHIP.h; sourceTree = "<group>"; };
+		A6D6F233298682230002A612 /* UMDnsResourceRecordHIP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordHIP.m; sourceTree = "<group>"; };
+		A6D6F236298682290002A612 /* UMDnsResourceRecordNINFO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordNINFO.h; sourceTree = "<group>"; };
+		A6D6F237298682290002A612 /* UMDnsResourceRecordNINFO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordNINFO.m; sourceTree = "<group>"; };
+		A6D6F23A298682300002A612 /* UMDnsResourceRecordRKEY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordRKEY.h; sourceTree = "<group>"; };
+		A6D6F23B298682300002A612 /* UMDnsResourceRecordRKEY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordRKEY.m; sourceTree = "<group>"; };
+		A6D6F23E298682360002A612 /* UMDnsResourceRecordTALINK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordTALINK.h; sourceTree = "<group>"; };
+		A6D6F23F298682360002A612 /* UMDnsResourceRecordTALINK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordTALINK.m; sourceTree = "<group>"; };
+		A6D6F2422986823C0002A612 /* UMDnsResourceRecordCDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordCDS.h; sourceTree = "<group>"; };
+		A6D6F2432986823C0002A612 /* UMDnsResourceRecordCDS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordCDS.m; sourceTree = "<group>"; };
+		A6D6F246298682430002A612 /* UMDnsResourceRecordCDNSKEY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordCDNSKEY.h; sourceTree = "<group>"; };
+		A6D6F247298682430002A612 /* UMDnsResourceRecordCDNSKEY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordCDNSKEY.m; sourceTree = "<group>"; };
+		A6D6F24A2986824B0002A612 /* UMDnsResourceRecordOPENPGPKEY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordOPENPGPKEY.h; sourceTree = "<group>"; };
+		A6D6F24B2986824B0002A612 /* UMDnsResourceRecordOPENPGPKEY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordOPENPGPKEY.m; sourceTree = "<group>"; };
+		A6D6F24E298682500002A612 /* UMDnsResourceRecordCSYNC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordCSYNC.h; sourceTree = "<group>"; };
+		A6D6F24F298682500002A612 /* UMDnsResourceRecordCSYNC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordCSYNC.m; sourceTree = "<group>"; };
+		A6D6F252298682AE0002A612 /* UMDnsResourceRecordSPF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordSPF.h; sourceTree = "<group>"; };
+		A6D6F253298682AE0002A612 /* UMDnsResourceRecordSPF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordSPF.m; sourceTree = "<group>"; };
+		A6D6F256298682B30002A612 /* UMDnsResourceRecordUINFO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordUINFO.h; sourceTree = "<group>"; };
+		A6D6F257298682B30002A612 /* UMDnsResourceRecordUINFO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordUINFO.m; sourceTree = "<group>"; };
+		A6D6F25A298682B80002A612 /* UMDnsResourceRecordUID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordUID.h; sourceTree = "<group>"; };
+		A6D6F25B298682B80002A612 /* UMDnsResourceRecordUID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordUID.m; sourceTree = "<group>"; };
+		A6D6F25E298682BD0002A612 /* UMDnsResourceRecordGID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordGID.h; sourceTree = "<group>"; };
+		A6D6F25F298682BD0002A612 /* UMDnsResourceRecordGID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordGID.m; sourceTree = "<group>"; };
+		A6D6F262298682C30002A612 /* UMDnsResourceRecordUNSPEC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordUNSPEC.h; sourceTree = "<group>"; };
+		A6D6F263298682C30002A612 /* UMDnsResourceRecordUNSPEC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordUNSPEC.m; sourceTree = "<group>"; };
+		A6D6F266298682C80002A612 /* UMDnsResourceRecordNID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordNID.h; sourceTree = "<group>"; };
+		A6D6F267298682C80002A612 /* UMDnsResourceRecordNID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordNID.m; sourceTree = "<group>"; };
+		A6D6F26A298682CD0002A612 /* UMDnsResourceRecordL32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordL32.h; sourceTree = "<group>"; };
+		A6D6F26B298682CD0002A612 /* UMDnsResourceRecordL32.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordL32.m; sourceTree = "<group>"; };
+		A6D6F26E298682D30002A612 /* UMDnsResourceRecordL64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordL64.h; sourceTree = "<group>"; };
+		A6D6F26F298682D30002A612 /* UMDnsResourceRecordL64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordL64.m; sourceTree = "<group>"; };
+		A6D6F272298682D80002A612 /* UMDnsResourceRecordLP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordLP.h; sourceTree = "<group>"; };
+		A6D6F273298682D80002A612 /* UMDnsResourceRecordLP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordLP.m; sourceTree = "<group>"; };
+		A6D6F276298682E10002A612 /* UMDnsResourceRecordEUI48.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordEUI48.h; sourceTree = "<group>"; };
+		A6D6F277298682E10002A612 /* UMDnsResourceRecordEUI48.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordEUI48.m; sourceTree = "<group>"; };
+		A6D6F27A2986833C0002A612 /* UMDnsResourceRecordEUI64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordEUI64.h; sourceTree = "<group>"; };
+		A6D6F27B2986833C0002A612 /* UMDnsResourceRecordEUI64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordEUI64.m; sourceTree = "<group>"; };
+		A6D6F27E298683410002A612 /* UMDnsResourceRecordTKEY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordTKEY.h; sourceTree = "<group>"; };
+		A6D6F27F298683410002A612 /* UMDnsResourceRecordTKEY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordTKEY.m; sourceTree = "<group>"; };
+		A6D6F282298683460002A612 /* UMDnsResourceRecordTSIG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordTSIG.h; sourceTree = "<group>"; };
+		A6D6F283298683460002A612 /* UMDnsResourceRecordTSIG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordTSIG.m; sourceTree = "<group>"; };
+		A6D6F2862986834B0002A612 /* UMDnsResourceRecordIXFR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordIXFR.h; sourceTree = "<group>"; };
+		A6D6F2872986834B0002A612 /* UMDnsResourceRecordIXFR.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordIXFR.m; sourceTree = "<group>"; };
+		A6D6F28A298683520002A612 /* UMDnsResourceRecordAXFR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordAXFR.h; sourceTree = "<group>"; };
+		A6D6F28B298683520002A612 /* UMDnsResourceRecordAXFR.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordAXFR.m; sourceTree = "<group>"; };
+		A6D6F28E298683580002A612 /* UMDnsResourceRecordMAILB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordMAILB.h; sourceTree = "<group>"; };
+		A6D6F28F298683580002A612 /* UMDnsResourceRecordMAILB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordMAILB.m; sourceTree = "<group>"; };
+		A6D6F2922986835D0002A612 /* UMDnsResourceRecordMAILA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordMAILA.h; sourceTree = "<group>"; };
+		A6D6F2932986835D0002A612 /* UMDnsResourceRecordMAILA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordMAILA.m; sourceTree = "<group>"; };
+		A6D6F296298683620002A612 /* UMDnsResourceRecordURI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordURI.h; sourceTree = "<group>"; };
+		A6D6F297298683620002A612 /* UMDnsResourceRecordURI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordURI.m; sourceTree = "<group>"; };
+		A6D6F29A298683670002A612 /* UMDnsResourceRecordCAA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordCAA.h; sourceTree = "<group>"; };
+		A6D6F29B298683670002A612 /* UMDnsResourceRecordCAA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordCAA.m; sourceTree = "<group>"; };
+		A6D6F29E2986836C0002A612 /* UMDnsResourceRecordTA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordTA.h; sourceTree = "<group>"; };
+		A6D6F29F2986836C0002A612 /* UMDnsResourceRecordTA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordTA.m; sourceTree = "<group>"; };
+		A6D6F2A2298683700002A612 /* UMDnsResourceRecordDLV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordDLV.h; sourceTree = "<group>"; };
+		A6D6F2A3298683700002A612 /* UMDnsResourceRecordDLV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordDLV.m; sourceTree = "<group>"; };
 		A6EE6A8D1BFF5532002B6032 /* UMDnsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsClient.h; sourceTree = "<group>"; };
 		A6EE6A8E1BFF5532002B6032 /* UMDnsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsClient.m; sourceTree = "<group>"; };
 		A6F6DA392731F4A40080A507 /* UMDnsError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsError.h; sourceTree = "<group>"; };
@@ -354,6 +602,130 @@
 				A6F9A6EC1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.m */,
 				A637C7422730716B00877560 /* UMDnsResourceRecordNAPTR.h */,
 				A637C7432730716B00877560 /* UMDnsResourceRecordNAPTR.m */,
+				A6D6F1AA29867B860002A612 /* UMDnsResourceRecordRP.h */,
+				A6D6F1AB29867B860002A612 /* UMDnsResourceRecordRP.m */,
+				A6D6F1AE29867E7A0002A612 /* UMDnsResourceRecordAFSDB.h */,
+				A6D6F1AF29867E7A0002A612 /* UMDnsResourceRecordAFSDB.m */,
+				A6D6F1B629867ED20002A612 /* UMDnsResourceRecordX25.h */,
+				A6D6F1B729867ED20002A612 /* UMDnsResourceRecordX25.m */,
+				A6D6F1BA29867EE00002A612 /* UMDnsResourceRecordISDN.h */,
+				A6D6F1BB29867EE00002A612 /* UMDnsResourceRecordISDN.m */,
+				A6D6F1BE29867EF20002A612 /* UMDnsResourceRecordRT.h */,
+				A6D6F1BF29867EF20002A612 /* UMDnsResourceRecordRT.m */,
+				A6D6F1C229867EFD0002A612 /* UMDnsResourceRecordNSAP.h */,
+				A6D6F1C329867EFD0002A612 /* UMDnsResourceRecordNSAP.m */,
+				A6D6F1C629867F090002A612 /* UMDnsResourceRecordNSAP_PTR.h */,
+				A6D6F1C729867F090002A612 /* UMDnsResourceRecordNSAP_PTR.m */,
+				A6D6F1CA29867F110002A612 /* UMDnsResourceRecordSIG.h */,
+				A6D6F1CB29867F110002A612 /* UMDnsResourceRecordSIG.m */,
+				A6D6F1CE29867F1B0002A612 /* UMDnsResourceRecordKEY.h */,
+				A6D6F1CF29867F1B0002A612 /* UMDnsResourceRecordKEY.m */,
+				A6D6F1D229867F250002A612 /* UMDnsResourceRecordPX.h */,
+				A6D6F1D329867F250002A612 /* UMDnsResourceRecordPX.m */,
+				A6D6F1D629867F730002A612 /* UMDnsResourceRecordGPOS.h */,
+				A6D6F1D729867F730002A612 /* UMDnsResourceRecordGPOS.m */,
+				A6D6F1DA298680520002A612 /* UMDnsResourceRecordLOC.h */,
+				A6D6F1DB298680520002A612 /* UMDnsResourceRecordLOC.m */,
+				A6D6F1DE2986805B0002A612 /* UMDnsResourceRecordNXT.h */,
+				A6D6F1DF2986805B0002A612 /* UMDnsResourceRecordNXT.m */,
+				A6D6F1E2298680660002A612 /* UMDnsResourceRecordEID.h */,
+				A6D6F1E3298680660002A612 /* UMDnsResourceRecordEID.m */,
+				A6D6F1E62986806D0002A612 /* UMDnsResourceRecordNIMLOC.h */,
+				A6D6F1E72986806D0002A612 /* UMDnsResourceRecordNIMLOC.m */,
+				A6D6F1EA298680740002A612 /* UMDnsResourceRecordATMA.h */,
+				A6D6F1EB298680740002A612 /* UMDnsResourceRecordATMA.m */,
+				A6D6F1EE2986807B0002A612 /* UMDnsResourceRecordKX.h */,
+				A6D6F1EF2986807B0002A612 /* UMDnsResourceRecordKX.m */,
+				A6D6F1F2298680810002A612 /* UMDnsResourceRecordCERT.h */,
+				A6D6F1F3298680810002A612 /* UMDnsResourceRecordCERT.m */,
+				A6D6F1F6298680850002A612 /* UMDnsResourceRecordA6.h */,
+				A6D6F1F7298680850002A612 /* UMDnsResourceRecordA6.m */,
+				A6D6F1FA2986808A0002A612 /* UMDnsResourceRecordDNAME.h */,
+				A6D6F1FB2986808A0002A612 /* UMDnsResourceRecordDNAME.m */,
+				A6D6F1FE2986808F0002A612 /* UMDnsResourceRecordSINK.h */,
+				A6D6F1FF2986808F0002A612 /* UMDnsResourceRecordSINK.m */,
+				A6D6F202298681770002A612 /* UMDnsResourceRecordOPT.h */,
+				A6D6F203298681770002A612 /* UMDnsResourceRecordOPT.m */,
+				A6D6F2062986817C0002A612 /* UMDnsResourceRecordAPL.h */,
+				A6D6F2072986817C0002A612 /* UMDnsResourceRecordAPL.m */,
+				A6D6F20A298681810002A612 /* UMDnsResourceRecordDS.h */,
+				A6D6F20B298681810002A612 /* UMDnsResourceRecordDS.m */,
+				A6D6F20E2986818D0002A612 /* UMDnsResourceRecordSSHFP.h */,
+				A6D6F20F2986818D0002A612 /* UMDnsResourceRecordSSHFP.m */,
+				A6D6F212298681970002A612 /* UMDnsResourceRecordIPSECKEY.h */,
+				A6D6F213298681970002A612 /* UMDnsResourceRecordIPSECKEY.m */,
+				A6D6F2162986819D0002A612 /* UMDnsResourceRecordRRSIG.h */,
+				A6D6F2172986819D0002A612 /* UMDnsResourceRecordRRSIG.m */,
+				A6D6F21A298681A40002A612 /* UMDnsResourceRecordNSEC.h */,
+				A6D6F21B298681A40002A612 /* UMDnsResourceRecordNSEC.m */,
+				A6D6F21E298681AC0002A612 /* UMDnsResourceRecordDNSKEY.h */,
+				A6D6F21F298681AC0002A612 /* UMDnsResourceRecordDNSKEY.m */,
+				A6D6F222298681B30002A612 /* UMDnsResourceRecordDHCID.h */,
+				A6D6F223298681B30002A612 /* UMDnsResourceRecordDHCID.m */,
+				A6D6F226298681BA0002A612 /* UMDnsResourceRecordNSEC3.h */,
+				A6D6F227298681BA0002A612 /* UMDnsResourceRecordNSEC3.m */,
+				A6D6F22A298682150002A612 /* UMDnsResourceRecordNSEC3PARAM.h */,
+				A6D6F22B298682150002A612 /* UMDnsResourceRecordNSEC3PARAM.m */,
+				A6D6F22E2986821E0002A612 /* UMDnsResourceRecordTLSA.h */,
+				A6D6F22F2986821E0002A612 /* UMDnsResourceRecordTLSA.m */,
+				A6D6F232298682230002A612 /* UMDnsResourceRecordHIP.h */,
+				A6D6F233298682230002A612 /* UMDnsResourceRecordHIP.m */,
+				A6D6F236298682290002A612 /* UMDnsResourceRecordNINFO.h */,
+				A6D6F237298682290002A612 /* UMDnsResourceRecordNINFO.m */,
+				A6D6F23A298682300002A612 /* UMDnsResourceRecordRKEY.h */,
+				A6D6F23B298682300002A612 /* UMDnsResourceRecordRKEY.m */,
+				A6D6F23E298682360002A612 /* UMDnsResourceRecordTALINK.h */,
+				A6D6F23F298682360002A612 /* UMDnsResourceRecordTALINK.m */,
+				A6D6F2422986823C0002A612 /* UMDnsResourceRecordCDS.h */,
+				A6D6F2432986823C0002A612 /* UMDnsResourceRecordCDS.m */,
+				A6D6F246298682430002A612 /* UMDnsResourceRecordCDNSKEY.h */,
+				A6D6F247298682430002A612 /* UMDnsResourceRecordCDNSKEY.m */,
+				A6D6F24A2986824B0002A612 /* UMDnsResourceRecordOPENPGPKEY.h */,
+				A6D6F24B2986824B0002A612 /* UMDnsResourceRecordOPENPGPKEY.m */,
+				A6D6F24E298682500002A612 /* UMDnsResourceRecordCSYNC.h */,
+				A6D6F24F298682500002A612 /* UMDnsResourceRecordCSYNC.m */,
+				A6D6F252298682AE0002A612 /* UMDnsResourceRecordSPF.h */,
+				A6D6F253298682AE0002A612 /* UMDnsResourceRecordSPF.m */,
+				A6D6F256298682B30002A612 /* UMDnsResourceRecordUINFO.h */,
+				A6D6F257298682B30002A612 /* UMDnsResourceRecordUINFO.m */,
+				A6D6F25A298682B80002A612 /* UMDnsResourceRecordUID.h */,
+				A6D6F25B298682B80002A612 /* UMDnsResourceRecordUID.m */,
+				A6D6F25E298682BD0002A612 /* UMDnsResourceRecordGID.h */,
+				A6D6F25F298682BD0002A612 /* UMDnsResourceRecordGID.m */,
+				A6D6F262298682C30002A612 /* UMDnsResourceRecordUNSPEC.h */,
+				A6D6F263298682C30002A612 /* UMDnsResourceRecordUNSPEC.m */,
+				A6D6F266298682C80002A612 /* UMDnsResourceRecordNID.h */,
+				A6D6F267298682C80002A612 /* UMDnsResourceRecordNID.m */,
+				A6D6F26A298682CD0002A612 /* UMDnsResourceRecordL32.h */,
+				A6D6F26B298682CD0002A612 /* UMDnsResourceRecordL32.m */,
+				A6D6F26E298682D30002A612 /* UMDnsResourceRecordL64.h */,
+				A6D6F26F298682D30002A612 /* UMDnsResourceRecordL64.m */,
+				A6D6F272298682D80002A612 /* UMDnsResourceRecordLP.h */,
+				A6D6F273298682D80002A612 /* UMDnsResourceRecordLP.m */,
+				A6D6F276298682E10002A612 /* UMDnsResourceRecordEUI48.h */,
+				A6D6F277298682E10002A612 /* UMDnsResourceRecordEUI48.m */,
+				A6D6F27A2986833C0002A612 /* UMDnsResourceRecordEUI64.h */,
+				A6D6F27B2986833C0002A612 /* UMDnsResourceRecordEUI64.m */,
+				A6D6F27E298683410002A612 /* UMDnsResourceRecordTKEY.h */,
+				A6D6F27F298683410002A612 /* UMDnsResourceRecordTKEY.m */,
+				A6D6F282298683460002A612 /* UMDnsResourceRecordTSIG.h */,
+				A6D6F283298683460002A612 /* UMDnsResourceRecordTSIG.m */,
+				A6D6F2862986834B0002A612 /* UMDnsResourceRecordIXFR.h */,
+				A6D6F2872986834B0002A612 /* UMDnsResourceRecordIXFR.m */,
+				A6D6F28A298683520002A612 /* UMDnsResourceRecordAXFR.h */,
+				A6D6F28B298683520002A612 /* UMDnsResourceRecordAXFR.m */,
+				A6D6F28E298683580002A612 /* UMDnsResourceRecordMAILB.h */,
+				A6D6F28F298683580002A612 /* UMDnsResourceRecordMAILB.m */,
+				A6D6F2922986835D0002A612 /* UMDnsResourceRecordMAILA.h */,
+				A6D6F2932986835D0002A612 /* UMDnsResourceRecordMAILA.m */,
+				A6D6F296298683620002A612 /* UMDnsResourceRecordURI.h */,
+				A6D6F297298683620002A612 /* UMDnsResourceRecordURI.m */,
+				A6D6F29A298683670002A612 /* UMDnsResourceRecordCAA.h */,
+				A6D6F29B298683670002A612 /* UMDnsResourceRecordCAA.m */,
+				A6D6F29E2986836C0002A612 /* UMDnsResourceRecordTA.h */,
+				A6D6F29F2986836C0002A612 /* UMDnsResourceRecordTA.m */,
+				A6D6F2A2298683700002A612 /* UMDnsResourceRecordDLV.h */,
+				A6D6F2A3298683700002A612 /* UMDnsResourceRecordDLV.m */,
 				A6F6DA392731F4A40080A507 /* UMDnsError.h */,
 				A696EA111B943764009727B0 /* Info.plist */,
 			);
@@ -385,41 +757,103 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6D6F1E4298680660002A612 /* UMDnsResourceRecordEID.h in Headers */,
 				A696EA651B9479E1009727B0 /* UMDnsResourceRecordNULL.h in Headers */,
+				A6D6F280298683410002A612 /* UMDnsResourceRecordTKEY.h in Headers */,
+				A6D6F22C298682150002A612 /* UMDnsResourceRecordNSEC3PARAM.h in Headers */,
+				A6D6F26C298682CD0002A612 /* UMDnsResourceRecordL32.h in Headers */,
 				A6FFFC771B9D69C800C331B0 /* UMDnsRemoteServer.h in Headers */,
+				A6D6F2A02986836C0002A612 /* UMDnsResourceRecordTA.h in Headers */,
 				A696EA511B9479C5009727B0 /* UMDnsResourceRecordCNAME.h in Headers */,
 				A637C7442730716B00877560 /* UMDnsResourceRecordNAPTR.h in Headers */,
+				A6D6F2082986817C0002A612 /* UMDnsResourceRecordAPL.h in Headers */,
+				A6D6F1C829867F090002A612 /* UMDnsResourceRecordNSAP_PTR.h in Headers */,
 				A6566EC71B94F94F00211137 /* UMDnsHeader.h in Headers */,
+				A6D6F248298682430002A612 /* UMDnsResourceRecordCDNSKEY.h in Headers */,
 				A696EA6F1B9479F2009727B0 /* UMDnsResourceRecordPTR.h in Headers */,
+				A6D6F1FC2986808A0002A612 /* UMDnsResourceRecordDNAME.h in Headers */,
 				A696EA7E1B947A0B009727B0 /* UMDnsResourceRecordMX.h in Headers */,
 				A669C8961B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.h in Headers */,
 				A696EA381B944901009727B0 /* UMDnsName.h in Headers */,
+				A6D6F268298682C80002A612 /* UMDnsResourceRecordNID.h in Headers */,
+				A6D6F1BC29867EE00002A612 /* UMDnsResourceRecordISDN.h in Headers */,
 				A696EA3D1B9479A4009727B0 /* UMDnsResourceRecordA.h in Headers */,
 				A6F9A6ED1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.h in Headers */,
+				A6D6F2942986835D0002A612 /* UMDnsResourceRecordMAILA.h in Headers */,
+				A6D6F1B829867ED20002A612 /* UMDnsResourceRecordX25.h in Headers */,
 				A696EA281B94377D009727B0 /* ulibdns_types.h in Headers */,
+				A6D6F2442986823C0002A612 /* UMDnsResourceRecordCDS.h in Headers */,
 				A6566EC31B94F83600211137 /* UMDnsQuery.h in Headers */,
 				A696EA331B9448E0009727B0 /* UMDnsLabel.h in Headers */,
 				A696EA471B9479B5009727B0 /* UMDnsResourceRecordMD.h in Headers */,
+				A6D6F2002986808F0002A612 /* UMDnsResourceRecordSINK.h in Headers */,
 				A696EA421B9479AE009727B0 /* UMDnsResourceRecordNS.h in Headers */,
+				A6D6F264298682C30002A612 /* UMDnsResourceRecordUNSPEC.h in Headers */,
+				A6D6F260298682BD0002A612 /* UMDnsResourceRecordGID.h in Headers */,
+				A6D6F204298681770002A612 /* UMDnsResourceRecordOPT.h in Headers */,
+				A6D6F25C298682B80002A612 /* UMDnsResourceRecordUID.h in Headers */,
 				A6566EBF1B94F81900211137 /* UMDnsMessage.h in Headers */,
+				A6D6F1AC29867B860002A612 /* UMDnsResourceRecordRP.h in Headers */,
 				A696EA2C1B9445D8009727B0 /* UMDnsResourceRecord.h in Headers */,
+				A6D6F1D429867F250002A612 /* UMDnsResourceRecordPX.h in Headers */,
+				A6D6F2A4298683700002A612 /* UMDnsResourceRecordDLV.h in Headers */,
 				A6566ECB1B95012000211137 /* UMDnsZone.h in Headers */,
+				A6D6F250298682500002A612 /* UMDnsResourceRecordCSYNC.h in Headers */,
 				A696EA601B9479DA009727B0 /* UMDnsResourceRecordMG.h in Headers */,
+				A6D6F23C298682300002A612 /* UMDnsResourceRecordRKEY.h in Headers */,
 				A696EA831B947A13009727B0 /* UMDnsResourceRecordTXT.h in Headers */,
+				A6D6F220298681AC0002A612 /* UMDnsResourceRecordDNSKEY.h in Headers */,
+				A6D6F2302986821E0002A612 /* UMDnsResourceRecordTLSA.h in Headers */,
+				A6D6F29C298683670002A612 /* UMDnsResourceRecordCAA.h in Headers */,
 				A6FFFC7B1B9D6C8700C331B0 /* UMDnsResolvingRequestDelegateProtocol.h in Headers */,
+				A6D6F1F02986807B0002A612 /* UMDnsResourceRecordKX.h in Headers */,
+				A6D6F234298682230002A612 /* UMDnsResourceRecordHIP.h in Headers */,
+				A6D6F1C029867EF20002A612 /* UMDnsResourceRecordRT.h in Headers */,
 				A6FFFC731B9D691400C331B0 /* UMDnsResolvingRequest.h in Headers */,
+				A6D6F240298682360002A612 /* UMDnsResourceRecordTALINK.h in Headers */,
 				A696EA741B9479FB009727B0 /* UMDnsResourceRecordHINFO.h in Headers */,
+				A6D6F284298683460002A612 /* UMDnsResourceRecordTSIG.h in Headers */,
 				A696EA4C1B9479BC009727B0 /* UMDnsResourceRecordMF.h in Headers */,
+				A6D6F2182986819D0002A612 /* UMDnsResourceRecordRRSIG.h in Headers */,
+				A6D6F274298682D80002A612 /* UMDnsResourceRecordLP.h in Headers */,
+				A6D6F278298682E10002A612 /* UMDnsResourceRecordEUI48.h in Headers */,
+				A6D6F254298682AE0002A612 /* UMDnsResourceRecordSPF.h in Headers */,
 				A696EA6A1B9479EA009727B0 /* UMDnsResourceRecordWKS.h in Headers */,
+				A6D6F2882986834B0002A612 /* UMDnsResourceRecordIXFR.h in Headers */,
+				A6D6F24C2986824B0002A612 /* UMDnsResourceRecordOPENPGPKEY.h in Headers */,
+				A6D6F1E02986805B0002A612 /* UMDnsResourceRecordNXT.h in Headers */,
+				A6D6F270298682D30002A612 /* UMDnsResourceRecordL64.h in Headers */,
+				A6D6F224298681B30002A612 /* UMDnsResourceRecordDHCID.h in Headers */,
+				A6D6F1C429867EFD0002A612 /* UMDnsResourceRecordNSAP.h in Headers */,
+				A6D6F214298681970002A612 /* UMDnsResourceRecordIPSECKEY.h in Headers */,
 				A6EE6A8F1BFF5532002B6032 /* UMDnsClient.h in Headers */,
+				A6D6F28C298683520002A612 /* UMDnsResourceRecordAXFR.h in Headers */,
+				A6D6F1CC29867F110002A612 /* UMDnsResourceRecordSIG.h in Headers */,
+				A6D6F20C298681810002A612 /* UMDnsResourceRecordDS.h in Headers */,
 				A6F6DA3B2731F4A40080A507 /* UMDnsError.h in Headers */,
 				A696EA8D1B9492CE009727B0 /* UMDnsResourceRecordMR.h in Headers */,
+				A6D6F290298683580002A612 /* UMDnsResourceRecordMAILB.h in Headers */,
+				A6D6F21C298681A40002A612 /* UMDnsResourceRecordNSEC.h in Headers */,
+				A6D6F27C2986833C0002A612 /* UMDnsResourceRecordEUI64.h in Headers */,
+				A6D6F1B029867E7A0002A612 /* UMDnsResourceRecordAFSDB.h in Headers */,
+				A6D6F298298683620002A612 /* UMDnsResourceRecordURI.h in Headers */,
+				A6D6F2102986818D0002A612 /* UMDnsResourceRecordSSHFP.h in Headers */,
+				A6D6F1DC298680520002A612 /* UMDnsResourceRecordLOC.h in Headers */,
+				A6D6F258298682B30002A612 /* UMDnsResourceRecordUINFO.h in Headers */,
+				A6D6F238298682290002A612 /* UMDnsResourceRecordNINFO.h in Headers */,
+				A6D6F1F8298680850002A612 /* UMDnsResourceRecordA6.h in Headers */,
+				A6D6F228298681BA0002A612 /* UMDnsResourceRecordNSEC3.h in Headers */,
+				A6D6F1D829867F730002A612 /* UMDnsResourceRecordGPOS.h in Headers */,
+				A6D6F1D029867F1B0002A612 /* UMDnsResourceRecordKEY.h in Headers */,
 				A696EA881B947B35009727B0 /* UMDnsCharacterString.h in Headers */,
 				A69B48231D6C24F500211137 /* UMDnsLocalServer.h in Headers */,
 				A696EA561B9479CB009727B0 /* UMDnsResourceRecordSOA.h in Headers */,
 				A696EA791B947A02009727B0 /* UMDnsResourceRecordMINFO.h in Headers */,
 				A696EA5B1B9479D3009727B0 /* UMDnsResourceRecordMB.h in Headers */,
+				A6D6F1EC298680740002A612 /* UMDnsResourceRecordATMA.h in Headers */,
 				A696EA101B943764009727B0 /* ulibdns.h in Headers */,
+				A6D6F1E82986806D0002A612 /* UMDnsResourceRecordNIMLOC.h in Headers */,
+				A6D6F1F4298680810002A612 /* UMDnsResourceRecordCERT.h in Headers */,
 				A6FFFC6F1B9D690100C331B0 /* UMDnsResolver.h in Headers */,
 				A669C8921B959E8E00DEFC2E /* UMDnsResourceRecord_all.h in Headers */,
 			);
@@ -552,36 +986,98 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6D6F229298681BA0002A612 /* UMDnsResourceRecordNSEC3.m in Sources */,
+				A6D6F2012986808F0002A612 /* UMDnsResourceRecordSINK.m in Sources */,
+				A6D6F24D2986824B0002A612 /* UMDnsResourceRecordOPENPGPKEY.m in Sources */,
+				A6D6F269298682C80002A612 /* UMDnsResourceRecordNID.m in Sources */,
 				A6566EC81B94F94F00211137 /* UMDnsHeader.m in Sources */,
+				A6D6F251298682500002A612 /* UMDnsResourceRecordCSYNC.m in Sources */,
+				A6D6F1E5298680660002A612 /* UMDnsResourceRecordEID.m in Sources */,
+				A6D6F1F5298680810002A612 /* UMDnsResourceRecordCERT.m in Sources */,
+				A6D6F205298681770002A612 /* UMDnsResourceRecordOPT.m in Sources */,
+				A6D6F1C929867F090002A612 /* UMDnsResourceRecordNSAP_PTR.m in Sources */,
+				A6D6F1D129867F1B0002A612 /* UMDnsResourceRecordKEY.m in Sources */,
+				A6D6F255298682AE0002A612 /* UMDnsResourceRecordSPF.m in Sources */,
 				A696EA6B1B9479EA009727B0 /* UMDnsResourceRecordWKS.m in Sources */,
+				A6D6F1C529867EFD0002A612 /* UMDnsResourceRecordNSAP.m in Sources */,
+				A6D6F1F9298680850002A612 /* UMDnsResourceRecordA6.m in Sources */,
+				A6D6F249298682430002A612 /* UMDnsResourceRecordCDNSKEY.m in Sources */,
 				A696EA7F1B947A0B009727B0 /* UMDnsResourceRecordMX.m in Sources */,
+				A6D6F1C129867EF20002A612 /* UMDnsResourceRecordRT.m in Sources */,
+				A6D6F26D298682CD0002A612 /* UMDnsResourceRecordL32.m in Sources */,
+				A6D6F28D298683520002A612 /* UMDnsResourceRecordAXFR.m in Sources */,
+				A6D6F23D298682300002A612 /* UMDnsResourceRecordRKEY.m in Sources */,
+				A6D6F2952986835D0002A612 /* UMDnsResourceRecordMAILA.m in Sources */,
+				A6D6F1E92986806D0002A612 /* UMDnsResourceRecordNIMLOC.m in Sources */,
+				A6D6F285298683460002A612 /* UMDnsResourceRecordTSIG.m in Sources */,
 				A696EA481B9479B5009727B0 /* UMDnsResourceRecordMD.m in Sources */,
 				A669C8971B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.m in Sources */,
+				A6D6F1B129867E7A0002A612 /* UMDnsResourceRecordAFSDB.m in Sources */,
 				A6566ECC1B95012000211137 /* UMDnsZone.m in Sources */,
+				A6D6F25D298682B80002A612 /* UMDnsResourceRecordUID.m in Sources */,
 				A6566EC41B94F83600211137 /* UMDnsQuery.m in Sources */,
 				A696EA5C1B9479D3009727B0 /* UMDnsResourceRecordMB.m in Sources */,
+				A6D6F225298681B30002A612 /* UMDnsResourceRecordDHCID.m in Sources */,
+				A6D6F2192986819D0002A612 /* UMDnsResourceRecordRRSIG.m in Sources */,
+				A6D6F235298682230002A612 /* UMDnsResourceRecordHIP.m in Sources */,
 				A637C7452730716B00877560 /* UMDnsResourceRecordNAPTR.m in Sources */,
 				A696EA2D1B9445D8009727B0 /* UMDnsResourceRecord.m in Sources */,
+				A6D6F215298681970002A612 /* UMDnsResourceRecordIPSECKEY.m in Sources */,
 				A6566EC01B94F81900211137 /* UMDnsMessage.m in Sources */,
 				A696EA661B9479E1009727B0 /* UMDnsResourceRecordNULL.m in Sources */,
+				A6D6F20D298681810002A612 /* UMDnsResourceRecordDS.m in Sources */,
 				A696EA431B9479AE009727B0 /* UMDnsResourceRecordNS.m in Sources */,
+				A6D6F275298682D80002A612 /* UMDnsResourceRecordLP.m in Sources */,
+				A6D6F221298681AC0002A612 /* UMDnsResourceRecordDNSKEY.m in Sources */,
+				A6D6F1AD29867B860002A612 /* UMDnsResourceRecordRP.m in Sources */,
+				A6D6F2092986817C0002A612 /* UMDnsResourceRecordAPL.m in Sources */,
+				A6D6F1ED298680740002A612 /* UMDnsResourceRecordATMA.m in Sources */,
 				A69B48241D6C24F500211137 /* UMDnsLocalServer.m in Sources */,
+				A6D6F1D929867F730002A612 /* UMDnsResourceRecordGPOS.m in Sources */,
+				A6D6F1B929867ED20002A612 /* UMDnsResourceRecordX25.m in Sources */,
 				A696EA8E1B9492CE009727B0 /* UMDnsResourceRecordMR.m in Sources */,
 				A696EA611B9479DA009727B0 /* UMDnsResourceRecordMG.m in Sources */,
 				A6FFFC701B9D690100C331B0 /* UMDnsResolver.m in Sources */,
+				A6D6F1BD29867EE00002A612 /* UMDnsResourceRecordISDN.m in Sources */,
+				A6D6F279298682E10002A612 /* UMDnsResourceRecordEUI48.m in Sources */,
 				A696EA891B947B35009727B0 /* UMDnsCharacterString.m in Sources */,
+				A6D6F265298682C30002A612 /* UMDnsResourceRecordUNSPEC.m in Sources */,
 				A696EA751B9479FB009727B0 /* UMDnsResourceRecordHINFO.m in Sources */,
+				A6D6F259298682B30002A612 /* UMDnsResourceRecordUINFO.m in Sources */,
 				A696EA701B9479F2009727B0 /* UMDnsResourceRecordPTR.m in Sources */,
+				A6D6F27D2986833C0002A612 /* UMDnsResourceRecordEUI64.m in Sources */,
+				A6D6F281298683410002A612 /* UMDnsResourceRecordTKEY.m in Sources */,
+				A6D6F299298683620002A612 /* UMDnsResourceRecordURI.m in Sources */,
+				A6D6F1F12986807B0002A612 /* UMDnsResourceRecordKX.m in Sources */,
+				A6D6F2A5298683700002A612 /* UMDnsResourceRecordDLV.m in Sources */,
+				A6D6F1D529867F250002A612 /* UMDnsResourceRecordPX.m in Sources */,
+				A6D6F261298682BD0002A612 /* UMDnsResourceRecordGID.m in Sources */,
+				A6D6F291298683580002A612 /* UMDnsResourceRecordMAILB.m in Sources */,
 				A6FFFC781B9D69C800C331B0 /* UMDnsRemoteServer.m in Sources */,
+				A6D6F1DD298680520002A612 /* UMDnsResourceRecordLOC.m in Sources */,
+				A6D6F1CD29867F110002A612 /* UMDnsResourceRecordSIG.m in Sources */,
 				A696EA4D1B9479BC009727B0 /* UMDnsResourceRecordMF.m in Sources */,
 				A6FFFC741B9D691400C331B0 /* UMDnsResolvingRequest.m in Sources */,
+				A6D6F21D298681A40002A612 /* UMDnsResourceRecordNSEC.m in Sources */,
+				A6D6F2892986834B0002A612 /* UMDnsResourceRecordIXFR.m in Sources */,
 				A696EA7A1B947A02009727B0 /* UMDnsResourceRecordMINFO.m in Sources */,
+				A6D6F29D298683670002A612 /* UMDnsResourceRecordCAA.m in Sources */,
 				A6F9A6EE1B9F2FD60009EFEB /* UMDnsResourceRecordSRV.m in Sources */,
+				A6D6F22D298682150002A612 /* UMDnsResourceRecordNSEC3PARAM.m in Sources */,
 				A6EE6A901BFF5532002B6032 /* UMDnsClient.m in Sources */,
 				A696EA841B947A13009727B0 /* UMDnsResourceRecordTXT.m in Sources */,
+				A6D6F2A12986836C0002A612 /* UMDnsResourceRecordTA.m in Sources */,
+				A6D6F2112986818D0002A612 /* UMDnsResourceRecordSSHFP.m in Sources */,
+				A6D6F2452986823C0002A612 /* UMDnsResourceRecordCDS.m in Sources */,
 				A696EA3E1B9479A4009727B0 /* UMDnsResourceRecordA.m in Sources */,
+				A6D6F2312986821E0002A612 /* UMDnsResourceRecordTLSA.m in Sources */,
 				A696EA571B9479CB009727B0 /* UMDnsResourceRecordSOA.m in Sources */,
 				A696EA391B944901009727B0 /* UMDnsName.m in Sources */,
+				A6D6F241298682360002A612 /* UMDnsResourceRecordTALINK.m in Sources */,
+				A6D6F239298682290002A612 /* UMDnsResourceRecordNINFO.m in Sources */,
+				A6D6F271298682D30002A612 /* UMDnsResourceRecordL64.m in Sources */,
+				A6D6F1FD2986808A0002A612 /* UMDnsResourceRecordDNAME.m in Sources */,
+				A6D6F1E12986805B0002A612 /* UMDnsResourceRecordNXT.m in Sources */,
 				A696EA521B9479C5009727B0 /* UMDnsResourceRecordCNAME.m in Sources */,
 				A696EA341B9448E0009727B0 /* UMDnsLabel.m in Sources */,
 			);

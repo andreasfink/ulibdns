@@ -18,7 +18,6 @@
 
 - (void)addServer:(UMDnsRemoteServer *)server;
 - (void)removeServer:(UMDnsRemoteServer *)server;
-
 - (void)addUserQuery:(UMDnsResolvingRequest *)q;
 
 @end

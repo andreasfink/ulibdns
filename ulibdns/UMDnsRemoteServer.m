@@ -10,47 +10,67 @@
 
 @implementation UMDnsRemoteServer
 
-@synthesize address;
-@synthesize socket;
 
-@synthesize isActive;
-@synthesize isTcp;
-@synthesize isIPv6;
-
-
-- (UMDnsRemoteServer *)initWithAddress:(NSString *)addr
+- (UMDnsRemoteServer *)initWithAddress:(NSString *)addr useUDP:(BOOL)udp
 {
     self = [super init];
     if(self)
     {
-        address = addr;
-        if([address isIPv4])
+        _address = addr;
+        _isUDP = udp;
+        _waitTimeoutInMs = 100;
+        if(_isUDP)
         {
-            socket = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_TCP4ONLY];
-            socket.objectStatisticsName = @"UMSocket(UMDnsRemoteServer-tcp4)";
-
-        }
-        else if([address isIPv6])
-        {
-            socket = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_TCP6ONLY];
-            socket.objectStatisticsName = @"UMSocket(UMDnsRemoteServer-tcp6)";
+            if([_address isIPv4])
+            {
+                _socket = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_TCP4ONLY];
+                _socket.objectStatisticsName = @"UMSocket(UMDnsRemoteServer-tcp4)";
+                
+            }
+            else if([_address isIPv6])
+            {
+                _socket = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_TCP6ONLY];
+                _socket.objectStatisticsName = @"UMSocket(UMDnsRemoteServer-tcp6)";
+            }
+            else
+            {
+                NSLog(@"Unknown address type for %@",_address);
+                return NULL;
+            }
         }
         else
         {
-            return NULL;
+            if([_address isIPv4])
+            {
+                _socket = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_UDP4ONLY];
+                _socket.objectStatisticsName = @"UMSocket(UMDnsRemoteServer-udp4)";
+                
+            }
+            else if([_address isIPv6])
+            {
+                _socket = [[UMSocket alloc]initWithType:UMSOCKET_TYPE_UDP6ONLY];
+                _socket.objectStatisticsName = @"UMSocket(UMDnsRemoteServer-udp6)";
+            }
+            else
+            {
+                NSLog(@"Unknown address type for %@",_address);
+                return NULL;
+            }
         }
+        _socket.remoteHost = [[UMHost alloc]initWithAddress:_address];
+        _socket.requestedRemotePort = 53;
     }
     return self;
 }
 
-- (void)sendDatagrammRequest:(NSData *)data stream:(UMSocket *)sock
+- (void)sendDatagramRequest:(NSData *)data
 {
     if([data length]>512)
     {
         @throw([NSException exceptionWithName:@"packet_too_big" reason:@"udp packet is over 512" userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);
     }
 
-    UMSocketError err = [sock sendData:data];
+    UMSocketError err = [_socket sendData:data];
     if(err)
     {
         @throw([NSException exceptionWithName:@"write_error" reason:
@@ -59,14 +79,13 @@
 }
 
 - (void)sendStreamRequest:(NSData *)data
-
 {
     UMSocketError err;
 
-    UMAssert(socket!=NULL,@"cant send on NULL socket");
-    if(socket.isConnected == NO)
+    UMAssert(_socket!=NULL,@"cant send on NULL socket");
+    if(_socket.isConnected == NO)
     {
-        err = [socket connect];
+        err = [_socket connect];
         if(err)
         {
             @throw([NSException exceptionWithName:@"connect_error" reason:
@@ -87,12 +106,77 @@
     {
         @throw([NSException exceptionWithName:@"packet_too_big" reason:@"tcp packet is over 64k" userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);
     }
-    err = [socket sendData:d];
+    err = [_socket sendData:d];
     if(err)
     {
         @throw([NSException exceptionWithName:@"write_error" reason:
                 [NSString stringWithFormat:@"error %d" ,err] userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);
     }
+}
+
+- (void)sendRequest:(NSData *)data
+{
+    if(_isUDP)
+    {
+        [self sendDatagramRequest:data];
+    }
+    else
+    {
+        [self sendStreamRequest:data];
+    }
+}
+
+- (void)backgroundInit
+{
+    if(_isUDP)
+    {
+        [_socket bind];
+    }
+    else
+    {
+        [_socket connect];
+    }
+}
+
+- (void)backgroundExit
+{
+    [_socket close];
+}
+
+- (int)work
+{
+    int i =0;
+    UMSocketError err =  [_socket dataIsAvailable:_waitTimeoutInMs];
+    while((err == UMSocketError_has_data) || (err==UMSocketError_has_data_and_hup))
+    {
+        /* handle data */
+        i++;
+        err = [self receiveAndProcessData];
+        /* handleTcapData */
+        if((err==UMSocketError_has_data_and_hup) && (err != UMSocketError_has_data))
+        {
+            break;
+        }
+        err =  [_socket dataIsAvailable:_waitTimeoutInMs];
+    }
+    return i;
+}
+
+- (UMSocketError)receiveAndProcessData
+{
+    NSData *data = NULL;
+    size_t size = 0;
+    UMSocketError err = [_socket receiveEverythingTo:&data];
+    if(err==UMSocketError_no_error)
+    {
+        [self processReceivedData:data];
+    }
+    return err;
+}
+
+- (void)processReceivedData:(NSData *)data
+{
+    
 }
 
 @end
