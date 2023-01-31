@@ -14,16 +14,18 @@
 @interface UMDnsMessage : UMObject
 {
     UMDnsHeader         *_header;
-    NSArray             *_queries; /* array of UMDnsQuery objects */
-    NSArray             *_answers; /* array of UMDnsResourceRecord objects */
-    UMDnsResourceRecord *_authority;
-    UMDnsResourceRecord *_additional;
+    NSArray<UMDnsQuery *>           *_queries; /* array of UMDnsQuery objects */
+    NSArray<UMDnsResourceRecord *>  *_answers; /* array of UMDnsResourceRecord objects */
+    NSArray<UMDnsResourceRecord *>  *_authority;
+    NSArray<UMDnsResourceRecord *>  *_additional;
 }
 
-@property(readwrite,strong,atomic)  UMDnsHeader         *header;
-@property(readwrite,strong,atomic)  NSArray             *queries; /* array of UMDnsQuery objects */
-@property(readwrite,strong,atomic)  NSArray             *answers; /* array of UMDnsResourceRecord objects */
-@property(readwrite,strong,atomic)  UMDnsResourceRecord *authority;
-@property(readwrite,strong,atomic)  UMDnsResourceRecord *additional;
+@property(readwrite,strong,atomic)  UMDnsHeader                     *header;
+@property(readwrite,strong,atomic)  NSArray<UMDnsQuery *>           *queries; /* array of UMDnsQuery objects */
+@property(readwrite,strong,atomic)  NSArray<UMDnsResourceRecord *>  *answers; /* array of UMDnsResourceRecord objects */
+@property(readwrite,strong,atomic)  NSArray<UMDnsResourceRecord *>  *authority;
+@property(readwrite,strong,atomic)  NSArray<UMDnsResourceRecord *>  *additional;
 
+- (NSData *)encodedData;
+- (UMDnsMessage *)initWithData:(NSData *)data;
 @end

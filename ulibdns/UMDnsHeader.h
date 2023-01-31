@@ -10,21 +10,47 @@
 
 @interface UMDnsHeader : UMObject
 {
-    uint16_t    requestId;
-    BOOL        isResponse;
-    uint8_t     opCode; /* 4 bits */
-    BOOL        authoritativeAnswer;
-    BOOL        trunCation;
-    BOOL        recursionDesired;
-    BOOL        recursionAvailable;
-    uint8_t     zBits;
-    uint8_t     responseCode;
-    uint16_t    qdcount;
-    uint16_t    ancount;
-    uint16_t    nscount;
-    uint16_t    arcount;
+    uint16_t    _requestId;
+    BOOL        _isResponse;
+    uint8_t     _opCode; /* 4 bits */
+    BOOL        _authoritativeAnswer;
+    BOOL        _trunCation;
+    BOOL        _recursionDesired;
+    BOOL        _recursionAvailable;
+    uint8_t     _zBits;
+    uint8_t     _responseCode;
+    uint16_t    _qdcount;
+    uint16_t    _ancount;
+    uint16_t    _nscount;
+    uint16_t    _arcount;
 }
 
-- (NSData *)binary;
+@property(readwrite,assign) uint16_t    requestId;
+@property(readwrite,assign) BOOL        isResponse;
+@property(readwrite,assign) uint8_t     opCode; /* 4 bits */
+@property(readwrite,assign) BOOL        authoritativeAnswer;
+@property(readwrite,assign) BOOL        trunCation;
+@property(readwrite,assign) BOOL        recursionDesired;
+@property(readwrite,assign) BOOL        recursionAvailable;
+@property(readwrite,assign) uint8_t     zBits;
+@property(readwrite,assign) uint8_t     responseCode;
+@property(readwrite,assign) uint16_t    qdcount;
+@property(readwrite,assign) uint16_t    ancount;
+@property(readwrite,assign) uint16_t    nscount;
+@property(readwrite,assign) uint16_t    arcount;
+
+- (NSData *)encodedData;
+
+
++ (uint16_t)uniqueRequestId
+{
+    
+}
+
++ (uint16_t)returnUniqueRequestId
+{
+    
+}
 @end
+
 

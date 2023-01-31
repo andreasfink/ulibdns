@@ -9,6 +9,7 @@
 #import "UMDnsClient.h"
 #import "UMDnsRemoteServer.h"
 #import "UMDnsResolvingRequest.h"
+#import "UMDnsMessage.h"
 
 @implementation UMDnsClient
 
@@ -46,8 +47,21 @@
         UMDnsRemoteServer *server = [remoteServers removeFirst];
         [remoteServers addObject:server];
     }
+
+    UMDnsQuery *query = [[UMDnsQuery alloc]init];
+    query.name          = req.nameToResolve;
+    query.recordType    = req.resourceType;
+    query.recordClass   = UlibDnsClass_IN;
+    
+    UMDnsMessage *msg = [[UMDnsMessage alloc]init];
+    msg.header = [[UMDnsHeader alloc]init];
+    msg.requestId = [UMDnsHeader uniqueRequestId];
+    msg.queries = @[query];
+    msg.answers = @[];
+    msg.authority = @[];
+    msg.additional = @[];
+    NSData *data = [msg encodedData];
     [pendingUserQueries addObject:req];
-    NSData *data = req.requestData;
     [server sendDatagramRequest:data];
 }
 

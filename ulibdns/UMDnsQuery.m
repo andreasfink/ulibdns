@@ -15,7 +15,7 @@
 @synthesize name;
 
 
-- (NSData *)binary
+- (NSData *)encodedData
 {
     NSMutableData *binary = [[NSMutableData alloc]init];
     
