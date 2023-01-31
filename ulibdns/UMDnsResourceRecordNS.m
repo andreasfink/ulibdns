@@ -39,7 +39,6 @@
 
 @implementation UMDnsResourceRecordNS
 
-
 - (NSString *)recordTypeString
 {
     return @"NS";
@@ -81,10 +80,8 @@
     self = [super init];
     if(self)
     {
-        
         _nsname = [[UMDnsName alloc] initWithRawData:data atOffset:pos];
     }
-    
     return self;
 }
 

@@ -18,6 +18,7 @@
     int         _port;
     UMSocket    *_socket;
     int         _waitTimeoutInMs;
+    id          _delegate;
 }
 
 @property (readwrite,strong)     NSString *address;
@@ -27,7 +28,9 @@
 @property (readwrite,assign)    BOOL        isTcp;
 @property (readwrite,assign)    BOOL        isIPv6;
 @property (readwrite,assign)    BOOL        isUDP;
+@property (readwrite,assign)    int         port;
 @property (readwrite,assign)    int         waitTimeoutInMs;
+@property (readwrite,strong)    id          delegate;
 
 - (void)sendRequest:(NSData *)data;
 - (void)sendDatagramRequest:(NSData *)data;

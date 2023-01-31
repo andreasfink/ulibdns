@@ -52,7 +52,6 @@
 @property (readwrite,strong,atomic)    NSArray<UMDnsResourceRecord *>               *responses;
 @property (readwrite,assign,atomic)    int                                          errorCode;
 @property (readwrite,strong,atomic)    id                                           userData;
-
 - (NSData *)requestData;
 
 @end

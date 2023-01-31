@@ -7,17 +7,24 @@
 //
 
 #import <ulib/ulib.h>
+#import "UMDnsResolvingRequestDelegateProtocol.h"
+
 @class UMDnsRemoteServer;
 @class UMDnsResolvingRequest;
 
-@interface UMDnsClient : UMObject
+@interface UMDnsClient : UMObject<UMDnsResolvingRequestDelegateProtocol>
 {
-    NSMutableArray *remoteServers;
-    NSMutableArray *pendingUserQueries;
+    UMSynchronizedArray *remoteServers;
+    UMSynchronizedArray *pendingUserQueries;
 }
 
 - (void)addServer:(UMDnsRemoteServer *)server;
 - (void)removeServer:(UMDnsRemoteServer *)server;
-- (void)addUserQuery:(UMDnsResolvingRequest *)q;
+- (void)sendUserQuery:(UMDnsResolvingRequest *)q;
+
+- (void) resolverCallback:(UMDnsResolvingRequest *)request;
+- (void) resolverTimeout:(UMDnsResolvingRequest *)request;
+
+- (void)processReceivedData:(NSData *)data;
 
 @end

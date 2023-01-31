@@ -47,7 +47,6 @@
     inet_ntop(AF_INET, &_addr, &buffer[0], sizeof(buffer));
     int a,b,c,d;
     sscanf(buffer,"%d.%d.%d.%d",&a,&b,&c,&d);
-    
     addrBytes[0] = a;
     addrBytes[1] = b;
     addrBytes[2] = c;

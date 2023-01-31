@@ -18,6 +18,7 @@
     {
         _address = addr;
         _isUDP = udp;
+        _port = 53;
         _waitTimeoutInMs = 100;
         if(_isUDP)
         {
@@ -70,7 +71,7 @@
         @throw([NSException exceptionWithName:@"packet_too_big" reason:@"udp packet is over 512" userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);
     }
 
-    UMSocketError err = [_socket sendData:data];
+    UMSocketError err = [_socket sendData:data toAddress:_address toPort:_port];
     if(err)
     {
         @throw([NSException exceptionWithName:@"write_error" reason:
@@ -176,7 +177,7 @@
 
 - (void)processReceivedData:(NSData *)data
 {
-    
+    [_delegate processReceivedData:data];
 }
 
 @end

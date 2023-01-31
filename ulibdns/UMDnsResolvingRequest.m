@@ -43,11 +43,11 @@
 {
     NSArray *params = @[_nameToResolve];
     NSString *zone = NULL;
+    
     _request = [UMDnsResourceRecord recordOfType:_resourceType
                                           params:params
                                             zone:zone];
     _requestSent = ulib_microsecondTime();
-    
-    return [_request encodeRequest];
+    return [_request resourceData];
 }
 @end

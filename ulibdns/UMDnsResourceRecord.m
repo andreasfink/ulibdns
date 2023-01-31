@@ -146,25 +146,21 @@ according to the TYPE and CLASS of the resource record.
             rr = [[UMDnsResourceRecordA alloc]initWithParams:params zone:zone];
             break;
         }
-
         case UlibDnsResourceRecordType_NS:
         {
             rr = [[UMDnsResourceRecordNS alloc]initWithParams:params zone:zone];
             break;
         }
-
         case UlibDnsResourceRecordType_MD:
         {
             rr = [[UMDnsResourceRecordMD alloc]initWithParams:params zone:zone];
             break;
         }
-
         case UlibDnsResourceRecordType_MF:
         {
             rr = [[UMDnsResourceRecordMF alloc]initWithParams:params zone:zone];
             break;
         }
-
         case UlibDnsResourceRecordType_CNAME:
         {
             rr = [[UMDnsResourceRecordCNAME alloc]initWithParams:params zone:zone];
@@ -176,37 +172,31 @@ according to the TYPE and CLASS of the resource record.
             rr = [[UMDnsResourceRecordSOA alloc]initWithParams:params zone:zone];
             break;
         }
-
         case UlibDnsResourceRecordType_MB:
         {
             rr = [[UMDnsResourceRecordMB alloc]initWithParams:params zone:zone];
             break;
         }
-
         case UlibDnsResourceRecordType_MG:
         {
             rr = [[UMDnsResourceRecordMG alloc]initWithParams:params zone:zone];
             break;
         }
-
         case UlibDnsResourceRecordType_MR:
         {
             rr = [[UMDnsResourceRecordMR alloc]initWithParams:params zone:zone];
             break;
         }
-
         case UlibDnsResourceRecordType_NULL:
         {
             rr = [[UMDnsResourceRecordNULL alloc]initWithParams:params zone:zone];
             break;
         }
-
         case UlibDnsResourceRecordType_WKS:
         {
             rr = [[UMDnsResourceRecordWKS alloc]initWithParams:params zone:zone];
             break;
         }
-
         case UlibDnsResourceRecordType_PTR:
         {
             rr = [[UMDnsResourceRecordPTR alloc]initWithParams:params zone:zone];

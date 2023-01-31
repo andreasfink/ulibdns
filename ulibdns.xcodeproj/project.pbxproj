@@ -217,6 +217,8 @@
 		A6D6F2A12986836C0002A612 /* UMDnsResourceRecordTA.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F29F2986836C0002A612 /* UMDnsResourceRecordTA.m */; };
 		A6D6F2A4298683700002A612 /* UMDnsResourceRecordDLV.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D6F2A2298683700002A612 /* UMDnsResourceRecordDLV.h */; };
 		A6D6F2A5298683700002A612 /* UMDnsResourceRecordDLV.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D6F2A3298683700002A612 /* UMDnsResourceRecordDLV.m */; };
+		A6D6F2A6298928F50002A612 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A69733B61C087CB400211137 /* main.m */; };
+		A6D6F2A8298936370002A612 /* doc in Resources */ = {isa = PBXBuildFile; fileRef = A6D6F2A7298936370002A612 /* doc */; };
 		A6EE6A8F1BFF5532002B6032 /* UMDnsClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A6EE6A8D1BFF5532002B6032 /* UMDnsClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6EE6A901BFF5532002B6032 /* UMDnsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A6EE6A8E1BFF5532002B6032 /* UMDnsClient.m */; };
 		A6F6DA3B2731F4A40080A507 /* UMDnsError.h in Headers */ = {isa = PBXBuildFile; fileRef = A6F6DA392731F4A40080A507 /* UMDnsError.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -447,6 +449,7 @@
 		A6D6F29F2986836C0002A612 /* UMDnsResourceRecordTA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordTA.m; sourceTree = "<group>"; };
 		A6D6F2A2298683700002A612 /* UMDnsResourceRecordDLV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordDLV.h; sourceTree = "<group>"; };
 		A6D6F2A3298683700002A612 /* UMDnsResourceRecordDLV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordDLV.m; sourceTree = "<group>"; };
+		A6D6F2A7298936370002A612 /* doc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = doc; sourceTree = "<group>"; };
 		A6EE6A8D1BFF5532002B6032 /* UMDnsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsClient.h; sourceTree = "<group>"; };
 		A6EE6A8E1BFF5532002B6032 /* UMDnsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsClient.m; sourceTree = "<group>"; };
 		A6F6DA392731F4A40080A507 /* UMDnsError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMDnsError.h; sourceTree = "<group>"; };
@@ -510,6 +513,7 @@
 		A696EA021B943764009727B0 = {
 			isa = PBXGroup;
 			children = (
+				A6D6F2A7298936370002A612 /* doc */,
 				A628C8B81CB9299500211137 /* Makefile.linux.in */,
 				A628C8B91CB9299500211137 /* Makefile.osx.in */,
 				A628C8BA1CB9299500211137 /* VERSION */,
@@ -926,7 +930,7 @@
 				TargetAttributes = {
 					A696EA0B1B943764009727B0 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 2GSNWPNR77;
+						DevelopmentTeam = 38L827M334;
 						ProvisioningStyle = Automatic;
 					};
 					A696EA151B943764009727B0 = {
@@ -935,7 +939,7 @@
 					};
 					A69733B31C087CB400211137 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 2GSNWPNR77;
+						DevelopmentTeam = 38L827M334;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -966,6 +970,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A628C8BD1CB9299500211137 /* VERSION in Resources */,
+				A6D6F2A8298936370002A612 /* doc in Resources */,
 				A628C8BC1CB9299500211137 /* Makefile.osx.in in Resources */,
 				A628C8BB1CB9299500211137 /* Makefile.linux.in in Resources */,
 			);
@@ -1051,6 +1056,7 @@
 				A6D6F1F12986807B0002A612 /* UMDnsResourceRecordKX.m in Sources */,
 				A6D6F2A5298683700002A612 /* UMDnsResourceRecordDLV.m in Sources */,
 				A6D6F1D529867F250002A612 /* UMDnsResourceRecordPX.m in Sources */,
+				A6D6F2A6298928F50002A612 /* main.m in Sources */,
 				A6D6F261298682BD0002A612 /* UMDnsResourceRecordGID.m in Sources */,
 				A6D6F291298683580002A612 /* UMDnsResourceRecordMAILB.m in Sources */,
 				A6FFFC781B9D69C800C331B0 /* UMDnsRemoteServer.m in Sources */,
@@ -1259,7 +1265,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = NO;
 				DEPLOYMENT_LOCATION = YES;
-				DEVELOPMENT_TEAM = 2GSNWPNR77;
+				DEVELOPMENT_TEAM = 38L827M334;
 				DSTROOT = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1291,7 +1297,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = NO;
 				DEPLOYMENT_LOCATION = YES;
-				DEVELOPMENT_TEAM = 2GSNWPNR77;
+				DEVELOPMENT_TEAM = 38L827M334;
 				DSTROOT = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1353,7 +1359,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEPLOYMENT_LOCATION = YES;
-				DEVELOPMENT_TEAM = 2GSNWPNR77;
+				DEVELOPMENT_TEAM = 38L827M334;
 				DSTROOT = /;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1375,7 +1381,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEPLOYMENT_LOCATION = YES;
-				DEVELOPMENT_TEAM = 2GSNWPNR77;
+				DEVELOPMENT_TEAM = 38L827M334;
 				DSTROOT = /;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
