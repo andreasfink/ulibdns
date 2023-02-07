@@ -20,6 +20,7 @@
     NSString                                    *_key;
     UlibDnsResourceRecordType                   _resourceType;
     UlibDnsQueryType                            _queryType;
+    UlibDnsClass                                _dnsClass;
     UMDnsName                                   *_nameToResolve;
     UMDnsRemoteServer                           *_serverToQuery;
     id<UMDnsResolvingRequestDelegateProtocol>   _delegate;   /* callback delegate */
@@ -40,6 +41,7 @@
 
 @property (readwrite,assign,atomic)    UlibDnsResourceRecordType                    resourceType;
 @property (readwrite,assign,atomic)    UlibDnsQueryType                             queryType;
+@property (readwrite,assign,atomic)    UlibDnsClass                                 dnsClass;
 @property (readwrite,strong,atomic)    UMDnsName                                    *nameToResolve;
 @property (readwrite,strong,atomic)    UMDnsRemoteServer                            *serverToQuery;
 @property (readwrite,strong,atomic)    id<UMDnsResolvingRequestDelegateProtocol>    delegate;   /* callback delegate */

@@ -9,6 +9,7 @@
 #import "UMDnsClient.h"
 #import "UMDnsRemoteServer.h"
 #import "UMDnsResolvingRequest.h"
+#import "UMDnsMessage.h"
 
 @implementation UMDnsClient
 
@@ -47,7 +48,17 @@
         [remoteServers addObject:server];
     }
     [pendingUserQueries addObject:req];
-    NSData *data = req.requestData;
+    UMDnsMessage *msg = [[UMDnsMessage alloc]init];
+    msg.header.requestId = [UMDnsClient getNewRequestIdFor:msg];
+    msg.header.isResponse = NO;
+    UMDnsQuery *query = [[UMDnsQuery alloc]init];
+
+    query.name = req.nameToResolve;
+    query.recordType = req.resourceType;
+    query.recordClass = req.dnsClass;
+    msg.queries = @[query];
+    
+    NSData *data = [msg binary];
     [server sendDatagramRequest:data];
 }
 
@@ -73,4 +84,37 @@
     UMDnsResourceRecord *rec = [[UMDnsResourceRecord alloc]initWithRawData:data atOffset:&offset];
     NSLog(@"Response: %@",rec.visualRepresentation);
 }
+
+
+static  UMSynchronizedArray         *_unusedRequestIds = NULL;
+static  UMSynchronizedDictionary    *_usedRequestIds  = NULL;
+
++ (uint16_t)getNewRequestIdFor:(id)obj
+{
+    if(_unusedRequestIds==NULL)
+    {
+        _unusedRequestIds   = [[UMSynchronizedArray alloc]init];
+        _usedRequestIds     = [[UMSynchronizedDictionary alloc]init];
+        for(uint16_t i=1;i<0xFFF0;i++)
+        {
+            [_unusedRequestIds addObject:@(i)];
+        }
+    }
+    NSNumber *n = [_unusedRequestIds removeFirst];
+    _usedRequestIds[n] = obj;
+    return (uint16_t)n.unsignedShortValue;
+}
+
++ (void)returnRequestId:(uint16_t)rid
+{
+    [_usedRequestIds removeObjectForKey:@(rid)];
+    [_unusedRequestIds addObject:@(rid)];
+}
+
++ (id)getObjectForRequestId:(uint16_t)rid
+{
+    return  _usedRequestIds [@(rid)];
+}
+
+
 @end

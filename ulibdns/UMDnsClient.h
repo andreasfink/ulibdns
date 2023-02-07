@@ -27,4 +27,8 @@
 
 - (void)processReceivedData:(NSData *)data;
 
++ (uint16_t)getNewRequestIdFor:(id)obj;
++ (void)returnRequestId:(uint16_t)rid;
++ (id)getObjectForRequestId:(uint16_t)rid;
+
 @end
