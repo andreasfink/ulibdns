@@ -69,6 +69,7 @@
 - (void)processReceivedData:(NSData *)data
 {
     int offset = 0;
+    
     UMDnsResourceRecord *rec = [[UMDnsResourceRecord alloc]initWithRawData:data atOffset:&offset];
     NSLog(@"Response: %@",rec.visualRepresentation);
 }

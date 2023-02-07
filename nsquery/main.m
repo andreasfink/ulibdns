@@ -45,7 +45,7 @@ int main(int argc, const char * argv[])
         remoteServer.isUDP = YES;
         [client addServer:remoteServer];
         UMDnsResolvingRequest *request = [[UMDnsResolvingRequest alloc]init];
-        request.resourceType    = UlibDnsResourceRecordType_A;
+        request.resourceType    = UlibDnsResourceRecordType_NAPTR;
         request.queryType       = UlibDnsQueryType_ANY;
         request.nameToResolve   = [[UMDnsName alloc]initWithVisualName:name];
         request.serverToQuery   = remoteServer;

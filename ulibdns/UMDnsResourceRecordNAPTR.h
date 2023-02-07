@@ -8,21 +8,24 @@
 
 #import "UMDnsResourceRecord.h"
 #import "UMDnsName.h"
+#import "UMDnsCharacterString.h"
 
 @interface UMDnsResourceRecordNAPTR : UMDnsResourceRecord
 {
-    int         _a;
-    int         _b;
-    int         _port;
-    UMDnsName   *_host;
+    uint16_t    _order;
+    uint16_t    _preference;
+    UMDnsCharacterString    *_flags;
+    UMDnsCharacterString    *_service;
+    UMDnsCharacterString    *_regexp;
+    UMDnsName               *_replacement;
 }
 
-@property(readwrite,assign) int a;
-@property(readwrite,assign) int b;
-@property(readwrite,assign) int port;
-@property(readwrite,strong) UMDnsName *host;
-
-@property(readwrite,strong) NSData *data;
+@property(readwrite,assign) uint16_t                order;
+@property(readwrite,assign) uint16_t                preference;
+@property(readwrite,strong) UMDnsCharacterString    *flags;
+@property(readwrite,strong) UMDnsCharacterString    *service;
+@property(readwrite,strong) UMDnsCharacterString    *regexp;
+@property(readwrite,strong) UMDnsName               *replacement;
 
 - (UMDnsResourceRecordNAPTR *)initWithString:(NSData *)string;
 - (UMDnsResourceRecordNAPTR *)initWithStrings:(NSArray *)strings;
