@@ -10,7 +10,7 @@
 
 @implementation UMDnsHeader
 
-- (NSData *)binary
+- (NSData *)encodedData
 {
     unsigned char header[12];
     
@@ -103,6 +103,27 @@
         _zBits = (flags >>4) & 0x07;
     }
     return self;
+}
+
+UMSynchronizedArray *_ulibdns_requestIds = NULL;
+
++ (uint16_t)uniqueRequestId
+{
+    if(_ulibdns_requestIds==NULL)
+    {
+        _ulibdns_requestIds = [[UMSynchronizedArray alloc]init];
+        for(uint16_t i=1;i<0xFFF0;i++)
+        {
+            [_ulibdns_requestIds addObject:@(i)];
+        }
+    }
+    NSNumber *n = [_ulibdns_requestIds removeFirst];
+    return n.intValue;
+}
+
++ (void)returnUniqueRequestId:(uint16_t)i
+{
+    [_ulibdns_requestIds addObject:@(i)];
 }
 
 @end

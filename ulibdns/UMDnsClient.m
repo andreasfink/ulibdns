@@ -47,18 +47,22 @@
         UMDnsRemoteServer *server = [remoteServers removeFirst];
         [remoteServers addObject:server];
     }
-    [pendingUserQueries addObject:req];
+
+    UMDnsQuery *query = [[UMDnsQuery alloc]init];
+    query.name          = req.nameToResolve;
+    query.recordType    = req.resourceType;
+    query.recordClass   = UlibDnsClass_IN;
+    
     UMDnsMessage *msg = [[UMDnsMessage alloc]init];
+    msg.header = [[UMDnsHeader alloc]init];
     msg.header.requestId = [UMDnsClient getNewRequestIdFor:msg];
     msg.header.isResponse = NO;
-    UMDnsQuery *query = [[UMDnsQuery alloc]init];
-
-    query.name = req.nameToResolve;
-    query.recordType = req.resourceType;
-    query.recordClass = req.dnsClass;
     msg.queries = @[query];
-    
-    NSData *data = [msg binary];
+    msg.answers = @[];
+    msg.authority = @[];
+    msg.additional = @[];
+    [pendingUserQueries addObject:req];
+    NSData *data = [msg encodedData];
     [server sendDatagramRequest:data];
 }
 

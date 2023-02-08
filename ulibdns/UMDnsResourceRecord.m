@@ -62,7 +62,7 @@ according to the TYPE and CLASS of the resource record.
 
 */
 
-- (NSData *)binary
+- (NSData *)encodedData
 {
     NSMutableData *binary = [[NSMutableData alloc]init];
     
@@ -91,12 +91,11 @@ according to the TYPE and CLASS of the resource record.
     dataLenBytes[0] = (dataLen & 0xFF00)>> 8;
     dataLenBytes[1] = (dataLen & 0x00FF);
     [binary appendBytes:dataLenBytes length:2];
-
     [binary appendData:rData];
     return binary;
 }
 
-- (void)setBinary:(NSData *)data
+- (void)setEncodedData:(NSData *)data
 {
     UMAssert(0,@"WTF are we doing here?");
     /*

@@ -25,20 +25,25 @@
     uint16_t    _arcount;
 }
 
-@property(readwrite,atomic,assign)  uint16_t    requestId;
-@property(readwrite,atomic,assign)  BOOL        isResponse;
-@property(readwrite,atomic,assign)  uint8_t     opCode; /* 4 bits */
-@property(readwrite,atomic,assign)  BOOL        authoritativeAnswer;
-@property(readwrite,atomic,assign)  BOOL        trunCation;
-@property(readwrite,atomic,assign)  BOOL        recursionDesired;
-@property(readwrite,atomic,assign)  BOOL        recursionAvailable;
-@property(readwrite,atomic,assign)  uint8_t     zBits;
-@property(readwrite,atomic,assign)  uint8_t     responseCode;
-@property(readwrite,atomic,assign)  uint16_t    qdcount;
-@property(readwrite,atomic,assign)  uint16_t    ancount;
-@property(readwrite,atomic,assign)  uint16_t    nscount;
-@property(readwrite,atomic,assign)  uint16_t    arcount;
+@property(readwrite,assign) uint16_t    requestId;
+@property(readwrite,assign) BOOL        isResponse;
+@property(readwrite,assign) uint8_t     opCode; /* 4 bits */
+@property(readwrite,assign) BOOL        authoritativeAnswer;
+@property(readwrite,assign) BOOL        trunCation;
+@property(readwrite,assign) BOOL        recursionDesired;
+@property(readwrite,assign) BOOL        recursionAvailable;
+@property(readwrite,assign) uint8_t     zBits;
+@property(readwrite,assign) uint8_t     responseCode;
+@property(readwrite,assign) uint16_t    qdcount;
+@property(readwrite,assign) uint16_t    ancount;
+@property(readwrite,assign) uint16_t    nscount;
+@property(readwrite,assign) uint16_t    arcount;
 
-- (NSData *)binary;
+- (NSData *)encodedData;
+
++ (uint16_t)uniqueRequestId;
++ (void)returnUniqueRequestId:(uint16_t)i;
+
 @end
+
 

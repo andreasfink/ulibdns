@@ -51,7 +51,8 @@ All RRs have the same top level format shown below:
 @property(readwrite,assign) NSInteger                   ttl;
 @property(readwrite,strong) NSData                      *rData;
 
-- (NSData *)binary;
+- (NSData *)encodedData;
+- (void)setEncodedData:(NSData *)data;
 - (NSData *)resourceData;
 - (NSString *)recordTypeString;
 
@@ -68,4 +69,5 @@ All RRs have the same top level format shown below:
 - (UMDnsResourceRecord *)initWithRawData:(NSData *)data atOffset:(int *)pos;
 - (NSString *)visualRepresentation;
 - (NSString *)recordClassString;
+
 @end

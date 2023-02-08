@@ -22,6 +22,6 @@
 @property(readwrite,assign) UlibDnsResourceRecordType   recordType;
 @property(readwrite,assign) UlibDnsClass                recordClass;
 
-- (NSData *)binary;
+- (NSData *)encodedData;
 
 @end

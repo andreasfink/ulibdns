@@ -10,7 +10,7 @@
 
 @implementation UMDnsMessage
 
-- (UMDnsMessage *)init
+- (UMDnsMessage *)initWithData:(NSData *)data
 {
     self = [super init];
     if(self)
@@ -20,31 +20,31 @@
     return self;
 }
 
-- (NSData *)binary
+- (NSData *)encodedData
 {
-    _header.qdcount = [_queries count];
-    _header.ancount = [_answers count];
-    _header.nscount = [_authority count];
-    _header.arcount = [_additional count];
-    NSMutableData *binary = [[NSMutableData alloc]init];
-    [binary appendData:[_header binary]];
+    _header.qdcount = _queries.count;
+    _header.ancount = _answers.count;
+    _header.nscount = _authority.count;
+    _header.arcount = _additional.count;
+    NSMutableData *d = [[NSMutableData alloc]init];
+    [d appendData:[_header encodedData]];
     for(UMDnsQuery *query in _queries)
     {
-        [binary appendData:[query binary]];
+        [d appendData:[query encodedData]];
     }
-    for(UMDnsResourceRecord *rec in _answers)
+    for(UMDnsResourceRecord *rr in _answers)
     {
-        [binary appendData:[rec binary]];
+        [d appendData:[rr encodedData]];
     }
-    for(UMDnsResourceRecord *rec in _authority)
+    for(UMDnsResourceRecord *rr in _authority)
     {
-        [binary appendData:[rec binary]];
+        [d appendData:[rr encodedData]];
     }
-    for(UMDnsResourceRecord *rec in _additional)
+    for(UMDnsResourceRecord *rr in _additional)
     {
-        [binary appendData:[rec binary]];
+        [d appendData:[rr encodedData]];
     }
-    return binary;
+    return d;
 }
 
 - (size_t)grabData:(NSData *)data
