@@ -62,4 +62,47 @@
     
     return [NSData dataWithBytes:&header[0] length:12];
 }
+
++ (size_t)headerSize
+{
+    return 12;
+}
+
+- (UMDnsHeader *)initWithBytes:(uint8_t *)h
+{
+    self = [super init];
+    if(self)
+    {
+        _requestId = (h[0] <<8) | h[1];
+        int flags  = (h[2] <<8) | h[3];
+        _qdcount   = (h[4] <<8) | h[5];
+        _ancount   = (h[6] <<8) | h[7];
+        _nscount   = (h[8] <<8) | h[9];
+        _arcount   = (h[10] <<8) | h[11];
+        if(flags & (1 << 15))
+        {
+            _isResponse =YES;
+        }
+        _opCode = (flags >> 11) & 0x0F;
+        if(flags & (1<< 10))
+        {
+            _authoritativeAnswer = YES;
+        }
+        if(flags & (1<< 9))
+        {
+            _trunCation = YES;
+        }
+        if(flags & (1<< 8))
+        {
+            _recursionDesired = YES;
+        }
+        if(flags & (1<< 7))
+        {
+            _recursionAvailable = YES;
+        }
+        _zBits = (flags >>4) & 0x07;
+    }
+    return self;
+}
+
 @end

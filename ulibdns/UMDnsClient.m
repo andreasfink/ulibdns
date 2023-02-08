@@ -80,9 +80,14 @@
 - (void)processReceivedData:(NSData *)data
 {
     int offset = 0;
-    
-    UMDnsResourceRecord *rec = [[UMDnsResourceRecord alloc]initWithRawData:data atOffset:&offset];
-    NSLog(@"Response: %@",rec.visualRepresentation);
+    while(offset < data.length)
+    {
+        UMDnsMessage *msg = [[UMDnsMessage alloc]initWithRawData:data atOffset:&offset];
+        if(msg)
+        {
+            NSLog(@"Response: %@",msg.visualRepresentation);
+        }
+    }
 }
 
 

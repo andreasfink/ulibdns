@@ -47,5 +47,42 @@
     return binary;
 }
 
+- (size_t)grabData:(NSData *)data
+{
+    uint8_t *bytes = data.bytes;
+    size_t maxlen = data.length;
+    
+}
+
+- (UMDnsMessage *)initWithRawData:(NSData *)data atOffset:(size_t *)offset
+{
+    self = [super init];
+    if(self)
+    {
+        NSData *sub;
+        size_t pos = *offset;
+        if(pos >= data.length)
+        {
+            return NULL;
+        }
+        if(pos==0)
+        {
+            sub = data;
+        }
+        else
+        {
+            size_t remaining = data.length - pos;
+            sub = [data subdataWithRange:NSMakeRange(pos,remaining)];
+        }
+        size_t bytesCount = [self grabData:sub];
+        *offset += bytesCount;
+    }
+    return self;
+}
+
+- (NSString *)visualRepresentation
+{
+    
+}
 
 @end
