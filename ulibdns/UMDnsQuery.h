@@ -13,9 +13,9 @@
 
 @interface UMDnsQuery : UMObject
 {
-    UMDnsName                   *name;
-    UlibDnsResourceRecordType   recordType;
-    UlibDnsClass                recordClass;
+    UMDnsName                   *_name;
+    UlibDnsResourceRecordType   _recordType;
+    UlibDnsClass                _recordClass;
 }
 
 @property(readwrite,strong) UMDnsName                   *name;

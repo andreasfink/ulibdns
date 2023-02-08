@@ -25,10 +25,8 @@ int main(int argc, const char * argv[])
         NSString *name=@(argv[3]);
         NSString *nameserver=@(argv[4]);
 #else
-        NSString *class=@"IN";
-        NSString *type=@"A";
         NSString *name=@"www.apple.com";
-        NSString *nameserver=@"79.134.233.233";
+        NSString *nameserver=@"1.1.1.1";
 #endif
         
         UMDnsRemoteServer *remoteServer = [[UMDnsRemoteServer alloc]initWithName:nameserver workSleeper:NULL];
@@ -45,9 +43,10 @@ int main(int argc, const char * argv[])
         remoteServer.isUDP = YES;
         [client addServer:remoteServer];
         UMDnsResolvingRequest *request = [[UMDnsResolvingRequest alloc]init];
-        request.resourceType    = UlibDnsResourceRecordType_A;
+        request.resourceType    = UlibDnsResourceRecordType_NAPTR;
         request.queryType       = UlibDnsQueryType_ANY;
         request.nameToResolve   = [[UMDnsName alloc]initWithVisualName:name];
+        request.dnsClass        = UlibDnsClass_IN;
         request.serverToQuery   = remoteServer;
         request.delegate = client;
         request.useStream = NO;

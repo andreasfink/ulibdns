@@ -21,6 +21,7 @@
 		A6566EC81B94F94F00211137 /* UMDnsHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A6566EC61B94F94F00211137 /* UMDnsHeader.m */; };
 		A6566ECB1B95012000211137 /* UMDnsZone.h in Headers */ = {isa = PBXBuildFile; fileRef = A6566EC91B95012000211137 /* UMDnsZone.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6566ECC1B95012000211137 /* UMDnsZone.m in Sources */ = {isa = PBXBuildFile; fileRef = A6566ECA1B95012000211137 /* UMDnsZone.m */; };
+		A65D3DD929914208007A8E85 /* ulibdns.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A65D3DD829914208007A8E85 /* ulibdns.framework */; };
 		A669C8921B959E8E00DEFC2E /* UMDnsResourceRecord_all.h in Headers */ = {isa = PBXBuildFile; fileRef = A669C8901B959E8D00DEFC2E /* UMDnsResourceRecord_all.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A669C8961B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.h in Headers */ = {isa = PBXBuildFile; fileRef = A669C8941B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A669C8971B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.m in Sources */ = {isa = PBXBuildFile; fileRef = A669C8951B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.m */; };
@@ -270,6 +271,7 @@
 		A6566EC61B94F94F00211137 /* UMDnsHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsHeader.m; sourceTree = "<group>"; };
 		A6566EC91B95012000211137 /* UMDnsZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsZone.h; sourceTree = "<group>"; };
 		A6566ECA1B95012000211137 /* UMDnsZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsZone.m; sourceTree = "<group>"; };
+		A65D3DD829914208007A8E85 /* ulibdns.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ulibdns.framework; path = "/Library/Application Support/FinkTelecomServices/frameworks/ulibdns.framework"; sourceTree = "<absolute>"; };
 		A669C8901B959E8D00DEFC2E /* UMDnsResourceRecord_all.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecord_all.h; sourceTree = "<group>"; };
 		A669C8941B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMDnsResourceRecordAAAA.h; sourceTree = "<group>"; };
 		A669C8951B95A59E00DEFC2E /* UMDnsResourceRecordAAAA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UMDnsResourceRecordAAAA.m; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 			files = (
 				A6798AE122BB89FD0019806C /* ulib.framework in Frameworks */,
 				A69733BC1C087FA300211137 /* ulibdns.framework in Frameworks */,
+				A65D3DD929914208007A8E85 /* ulibdns.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +500,7 @@
 			isa = PBXGroup;
 			children = (
 				A6798AD622BB86FE0019806C /* ulib.framework */,
+				A65D3DD829914208007A8E85 /* ulibdns.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -925,7 +929,7 @@
 		A696EA031B943764009727B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Andreas Fink (andreas@fink.org)";
 				TargetAttributes = {
 					A696EA0B1B943764009727B0 = {
@@ -1139,11 +1143,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					arm64,
-					x86_64,
-				);
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1172,6 +1171,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1191,7 +1191,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1203,11 +1203,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					arm64,
-					x86_64,
-				);
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1236,6 +1231,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1263,6 +1259,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = NO;
 				DEPLOYMENT_LOCATION = YES;
 				DEVELOPMENT_TEAM = 38L827M334;
@@ -1295,6 +1292,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = NO;
 				DEPLOYMENT_LOCATION = YES;
 				DEVELOPMENT_TEAM = 38L827M334;
@@ -1325,6 +1323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 2GSNWPNR77;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1341,6 +1340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 2GSNWPNR77;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1358,6 +1358,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DEVELOPMENT_TEAM = 38L827M334;
 				DSTROOT = /;
@@ -1365,6 +1366,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(LOCAL_LIBRARY_DIR)/Application\\ Support/FinkTelecomServices/frameworks",
 					"$(LOCAL_LIBRARY_DIR)/Application\\ Support/FinkTelecomServices/frameworks",
 				);
 				INSTALL_PATH = "/Library/Application Support/FinkTelecomServices/bin";
@@ -1380,6 +1382,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DEVELOPMENT_TEAM = 38L827M334;
 				DSTROOT = /;
@@ -1387,6 +1390,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(LOCAL_LIBRARY_DIR)/Application\\ Support/FinkTelecomServices/frameworks",
 					"$(LOCAL_LIBRARY_DIR)/Application\\ Support/FinkTelecomServices/frameworks",
 				);
 				INSTALL_PATH = "/Library/Application Support/FinkTelecomServices/bin";

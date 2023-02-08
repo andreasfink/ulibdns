@@ -166,7 +166,6 @@
 - (UMSocketError)receiveAndProcessData
 {
     NSData *data = NULL;
-    size_t size = 0;
     UMSocketError err = [_socket receiveEverythingTo:&data];
     if(err==UMSocketError_no_error)
     {

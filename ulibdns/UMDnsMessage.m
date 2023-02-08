@@ -15,7 +15,7 @@
     self = [super init];
     if(self)
     {
-        
+        _header = [[UMDnsHeader alloc]init];
     }
     return self;
 }
@@ -34,15 +34,15 @@
     }
     for(UMDnsResourceRecord *rr in _answers)
     {
-        [d appendData:[rr resourceData]];
+        [d appendData:[rr encodedData]];
     }
     for(UMDnsResourceRecord *rr in _authority)
     {
-        [d appendData:[rr resourceData]];
+        [d appendData:[rr encodedData]];
     }
     for(UMDnsResourceRecord *rr in _additional)
     {
-        [d appendData:[rr resourceData]];
+        [d appendData:[rr encodedData]];
     }
     return d;
 }

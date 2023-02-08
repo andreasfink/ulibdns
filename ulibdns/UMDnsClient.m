@@ -55,13 +55,14 @@
     
     UMDnsMessage *msg = [[UMDnsMessage alloc]init];
     msg.header = [[UMDnsHeader alloc]init];
-    msg.header.requestId = [UMDnsHeader uniqueRequestId];
+    msg.header.requestId = [UMDnsClient getNewRequestIdFor:msg];
+    msg.header.isResponse = NO;
     msg.queries = @[query];
     msg.answers = @[];
     msg.authority = @[];
     msg.additional = @[];
-    NSData *data = [msg encodedData];
     [pendingUserQueries addObject:req];
+    NSData *data = [msg encodedData];
     [server sendDatagramRequest:data];
 }
 
@@ -83,7 +84,41 @@
 - (void)processReceivedData:(NSData *)data
 {
     int offset = 0;
+    
     UMDnsResourceRecord *rec = [[UMDnsResourceRecord alloc]initWithRawData:data atOffset:&offset];
     NSLog(@"Response: %@",rec.visualRepresentation);
 }
+
+
+static  UMSynchronizedArray         *_unusedRequestIds = NULL;
+static  UMSynchronizedDictionary    *_usedRequestIds  = NULL;
+
++ (uint16_t)getNewRequestIdFor:(id)obj
+{
+    if(_unusedRequestIds==NULL)
+    {
+        _unusedRequestIds   = [[UMSynchronizedArray alloc]init];
+        _usedRequestIds     = [[UMSynchronizedDictionary alloc]init];
+        for(uint16_t i=1;i<0xFFF0;i++)
+        {
+            [_unusedRequestIds addObject:@(i)];
+        }
+    }
+    NSNumber *n = [_unusedRequestIds removeFirst];
+    _usedRequestIds[n] = obj;
+    return (uint16_t)n.unsignedShortValue;
+}
+
++ (void)returnRequestId:(uint16_t)rid
+{
+    [_usedRequestIds removeObjectForKey:@(rid)];
+    [_unusedRequestIds addObject:@(rid)];
+}
+
++ (id)getObjectForRequestId:(uint16_t)rid
+{
+    return  _usedRequestIds [@(rid)];
+}
+
+
 @end

@@ -13,19 +13,18 @@
 
 @interface UMDnsMessage : UMObject
 {
-    UMDnsHeader         *_header;
-    NSArray<UMDnsQuery *>           *_queries; /* array of UMDnsQuery objects */
+    UMDnsHeader                     *_header;
+    NSArray<UMDnsQuery*>            *_queries; /* array of UMDnsQuery objects */
     NSArray<UMDnsResourceRecord *>  *_answers; /* array of UMDnsResourceRecord objects */
     NSArray<UMDnsResourceRecord *>  *_authority;
     NSArray<UMDnsResourceRecord *>  *_additional;
 }
 
 @property(readwrite,strong,atomic)  UMDnsHeader                     *header;
-@property(readwrite,strong,atomic)  NSArray<UMDnsQuery *>           *queries; /* array of UMDnsQuery objects */
-@property(readwrite,strong,atomic)  NSArray<UMDnsResourceRecord *>  *answers; /* array of UMDnsResourceRecord objects */
+@property(readwrite,strong,atomic)  NSArray<UMDnsQuery*>            *queries;
+@property(readwrite,strong,atomic)  NSArray<UMDnsResourceRecord *>  *answers;
 @property(readwrite,strong,atomic)  NSArray<UMDnsResourceRecord *>  *authority;
 @property(readwrite,strong,atomic)  NSArray<UMDnsResourceRecord *>  *additional;
 
 - (NSData *)encodedData;
-- (UMDnsMessage *)initWithData:(NSData *)data;
 @end
