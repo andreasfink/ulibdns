@@ -55,7 +55,7 @@
     
     UMDnsMessage *msg = [[UMDnsMessage alloc]init];
     msg.header = [[UMDnsHeader alloc]init];
-    msg.requestId = [UMDnsHeader uniqueRequestId];
+    msg.header.requestId = [UMDnsHeader uniqueRequestId];
     msg.queries = @[query];
     msg.answers = @[];
     msg.authority = @[];

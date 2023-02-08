@@ -41,16 +41,9 @@
 
 - (NSData *)encodedData;
 
++ (uint16_t)uniqueRequestId;
++ (void)returnUniqueRequestId:(uint16_t)i;
 
-+ (uint16_t)uniqueRequestId
-{
-    
-}
-
-+ (uint16_t)returnUniqueRequestId
-{
-    
-}
 @end
 
 
