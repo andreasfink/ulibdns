@@ -51,7 +51,7 @@
 {
     uint8_t *bytes = data.bytes;
     size_t maxlen = data.length;
-    
+    return 0;
 }
 
 - (UMDnsMessage *)initWithRawData:(NSData *)data atOffset:(size_t *)offset
@@ -82,7 +82,7 @@
 
 - (NSString *)visualRepresentation
 {
-    
+    return @"";
 }
 
 @end
