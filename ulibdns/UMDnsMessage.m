@@ -49,7 +49,7 @@
 
 - (size_t)grabData:(NSData *)data
 {
-    uint8_t *bytes = data.bytes;
+    const uint8_t *bytes = data.bytes;
     size_t maxlen = data.length;
     return 0;
 }

@@ -83,7 +83,7 @@
 
 - (void)processReceivedData:(NSData *)data
 {
-    int offset = 0;
+    size_t offset = 0;
     while(offset < data.length)
     {
         UMDnsMessage *msg = [[UMDnsMessage alloc]initWithRawData:data atOffset:&offset];
