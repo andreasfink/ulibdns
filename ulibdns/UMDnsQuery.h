@@ -22,6 +22,8 @@
 @property(readwrite,assign) UlibDnsResourceRecordType   recordType;
 @property(readwrite,assign) UlibDnsClass                recordClass;
 
+
+- (UMDnsQuery *)initWithData:(NSData *)data offset:(size_t *)offset;
 - (NSData *)encodedData;
 
 @end

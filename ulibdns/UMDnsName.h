@@ -13,6 +13,8 @@
     NSArray *_labels;
 }
 
+- (UMDnsName *)initWithData:(NSData *)binary offset:(size_t *)offset; /* can throw NSException */
+
 - (NSString *)visualName; /* returns "host.example.com" */
 - (NSString *)visualNameAbsoluteWriting; /* returns "host.example.com." */
 - (NSString *)visualNameRelativeTo:(NSString *)postfix; /* returns   "host" if prefix is "example.com" */
@@ -26,7 +28,7 @@
 
 - (NSData *)binary;
 - (NSUInteger)setBinary:(NSData *)binary;
-- (NSUInteger)setBinary:(NSData *)binary enforceLengthLimits:(BOOL)enforceLengthLimits;;
+- (NSUInteger)setBinary:(NSData *)binary enforceLengthLimits:(BOOL)enforceLengthLimits;
 
 - (UMDnsName *)initWithVisualName:(NSString *)name;
 - (UMDnsName *)initWithRawData:(NSData *)data atOffset:(int *)pos;

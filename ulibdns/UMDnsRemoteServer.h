@@ -32,6 +32,8 @@
 @property (readwrite,assign)    int         waitTimeoutInMs;
 @property (readwrite,strong)    id          delegate;
 
+
+- (UMDnsRemoteServer *)initWithAddress:(NSString *)addr useUDP:(BOOL)udp;
 - (void)sendRequest:(NSData *)data;
 - (void)sendDatagramRequest:(NSData *)data;
 - (void)sendStreamRequest:(NSData *)data;

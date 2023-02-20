@@ -54,7 +54,7 @@
     return 0;
 }
 
-- (UMDnsMessage *)initWithRawData:(NSData *)data atOffset:(size_t *)offset
+- (UMDnsMessage *)initWithData:(NSData *)data atOffset:(size_t *)offset
 {
     self = [super init];
     if(self)

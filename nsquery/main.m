@@ -29,7 +29,7 @@ int main(int argc, const char * argv[])
         NSString *nameserver=@"1.1.1.1";
 #endif
         
-        UMDnsRemoteServer *remoteServer = [[UMDnsRemoteServer alloc]initWithName:nameserver workSleeper:NULL];
+    
         UMHost *host = [[UMHost alloc]initWithName:nameserver];
         [host resolve];
         NSArray *addresses = host.addresses;
@@ -38,12 +38,10 @@ int main(int argc, const char * argv[])
             fprintf(stderr,"Unknown address for server %s",nameserver.UTF8String);
             exit(-1);
         }
-        remoteServer.address = addresses[0];
-        remoteServer.port = 53;
-        remoteServer.isUDP = YES;
+        UMDnsRemoteServer *remoteServer = [[UMDnsRemoteServer alloc]initWithAddress:nameserver useUDP:YES];
         [client addServer:remoteServer];
         UMDnsResolvingRequest *request = [[UMDnsResolvingRequest alloc]init];
-        request.resourceType    = UlibDnsResourceRecordType_NAPTR;
+        request.resourceType    = UlibDnsResourceRecordType_A;
         request.queryType       = UlibDnsQueryType_ANY;
         request.nameToResolve   = [[UMDnsName alloc]initWithVisualName:name];
         request.dnsClass        = UlibDnsClass_IN;
@@ -51,6 +49,7 @@ int main(int argc, const char * argv[])
         request.delegate = client;
         request.useStream = NO;
         [client sendUserQuery:request];
+        sleep(1000);
     }
     return 0;
 }

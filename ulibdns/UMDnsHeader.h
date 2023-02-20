@@ -40,7 +40,7 @@
 @property(readwrite,assign) uint16_t    arcount;
 
 - (NSData *)encodedData;
-
+- (UMDnsHeader *)initWithData:(NSData *)data offset:(size_t *)offset;
 + (uint16_t)uniqueRequestId;
 + (void)returnUniqueRequestId:(uint16_t)i;
 

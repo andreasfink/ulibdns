@@ -13,19 +13,32 @@
 
 @implementation UMDnsClient
 
+- (id)init
+{
+    self = [super init];
+    if(self)
+    {
+        _remoteServers = [[UMSynchronizedArray alloc]init];
+        _pendingUserQueries = [[UMSynchronizedArray alloc]init];
+    }
+    return self;
+}
+
 - (void)addServer:(UMDnsRemoteServer *)server
 {
-    [remoteServers addObject:server];
+    [_remoteServers addObject:server];
+    server.delegate = self;
 }
 
 - (void)removeServer:(UMDnsRemoteServer *)server
 {
-    [remoteServers removeObject:server];
+    server.delegate = NULL;
+    [_remoteServers removeObject:server];
 }
 
 - (void)start
 {
-    for(UMDnsRemoteServer *server in remoteServers.arrayCopy)
+    for(UMDnsRemoteServer *server in _remoteServers.arrayCopy)
     {
         [server startBackgroundTask];
     }
@@ -33,7 +46,7 @@
 
 - (void)stop
 {
-    for(UMDnsRemoteServer *server in remoteServers.arrayCopy)
+    for(UMDnsRemoteServer *server in _remoteServers.arrayCopy)
     {
         [server shutdownBackgroundTask];
     }
@@ -44,10 +57,14 @@
     UMDnsRemoteServer *server;
     @synchronized (self)
     {
-        UMDnsRemoteServer *server = [remoteServers removeFirst];
-        [remoteServers addObject:server];
+        server = [_remoteServers removeFirst];
+        [_remoteServers addObject:server];
     }
-
+    [server startBackgroundTask];
+    while(server.socket.isBound == NO)
+    {
+        usleep(100000);
+    }
     UMDnsQuery *query = [[UMDnsQuery alloc]init];
     query.name          = req.nameToResolve;
     query.recordType    = req.resourceType;
@@ -61,7 +78,7 @@
     msg.answers = @[];
     msg.authority = @[];
     msg.additional = @[];
-    [pendingUserQueries addObject:req];
+    [_pendingUserQueries addObject:req];
     NSData *data = [msg encodedData];
     [server sendDatagramRequest:data];
 }
@@ -83,13 +100,24 @@
 
 - (void)processReceivedData:(NSData *)data
 {
-    int offset = 0;
+    size_t offset = 0;
     while(offset < data.length)
     {
-        UMDnsMessage *msg = [[UMDnsMessage alloc]initWithRawData:data atOffset:&offset];
-        if(msg)
+        @try
         {
-            NSLog(@"Response: %@",msg.visualRepresentation);
+            UMDnsMessage *msg = [[UMDnsMessage alloc]initWithData:data offset:&offset];
+            if(msg)
+            {
+                NSLog(@"Response: %@",msg.visualRepresentation);
+            }
+            else
+            {
+                break;
+            }
+        }
+        @catch(NSException *e)
+        {
+            NSLog(@"Exception: %@",e);
         }
     }
 }

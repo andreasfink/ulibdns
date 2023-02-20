@@ -14,8 +14,8 @@
 
 @interface UMDnsClient : UMObject<UMDnsResolvingRequestDelegateProtocol>
 {
-    UMSynchronizedArray *remoteServers;
-    UMSynchronizedArray *pendingUserQueries;
+    UMSynchronizedArray *_remoteServers;
+    UMSynchronizedArray *_pendingUserQueries;
 }
 
 - (void)addServer:(UMDnsRemoteServer *)server;

@@ -10,6 +10,37 @@
 
 @implementation UMDnsHeader
 
+- (UMDnsHeader *)initWithData:(NSData *)data offset:(size_t *)offset
+{
+    self = [super init];
+    if(self)
+    {
+        if(data.length < 12)
+        {
+            return NULL;
+        }
+        unsigned char header[12];
+        memcpy(&header[0],data.bytes,12);
+        if(offset)
+        {
+            *offset += 12;
+        }
+        _requestId = (header[0] << 8) | header[1];
+        int flags = (header[2] << 8) | header[3];
+        _isResponse = (flags & (1 << 15) ) ? YES :  NO;
+        _authoritativeAnswer = (flags & (1 << 10) ) ? YES :  NO;
+        _trunCation = (flags & (1 << 9) ) ? YES :  NO;
+        _recursionDesired = (flags & (1 << 8) ) ? YES :  NO;
+        _recursionAvailable = (flags & (1 << 7) ) ? YES :  NO;
+        _zBits = (flags  >> 4) & 0x07;
+        _qdcount = (header[0] << 4) | header[5];
+        _ancount = (header[0] << 6) | header[7];
+        _nscount = (header[0] << 8) | header[9];
+        _arcount = (header[0] << 10) | header[11];
+    }
+    return self;
+}
+
 - (NSData *)encodedData
 {
     unsigned char header[12];

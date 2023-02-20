@@ -13,14 +13,15 @@
 
 - (UMDnsRemoteServer *)initWithAddress:(NSString *)addr useUDP:(BOOL)udp
 {
-    self = [super init];
+    self = [super initWithName:[NSString stringWithFormat:@"dns-remote-server:%@",addr]
+                   workSleeper:NULL];
     if(self)
     {
         _address = addr;
         _isUDP = udp;
         _port = 53;
         _waitTimeoutInMs = 100;
-        if(_isUDP)
+        if(!_isUDP)
         {
             if([_address isIPv4])
             {

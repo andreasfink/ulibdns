@@ -12,6 +12,42 @@
 
 @implementation UMDnsName
 
+- (UMDnsName *)initWithData:(NSData *)binary offset:(size_t *)offset
+{
+    self = [super init];
+    if(self)
+    {
+        NSMutableArray *labels      = [[NSMutableArray alloc]init];
+        const unsigned char *bytes  = [binary bytes]  + *offset;
+        NSUInteger len = [binary length] - *offset;
+        if(len<=0)
+        {
+            @throw ([NSException exceptionWithName:@"invalidName" reason:@"name length is <= 0" userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);
+        }
+        NSUInteger pos = 0;
+        while(1)
+        {
+            NSUInteger partLen = bytes[pos];
+            pos++;
+            if((pos + partLen) > len)
+            {
+                @throw ([NSException exceptionWithName:@"invalidName" reason:@"name length is larger than data" userInfo:@{@"backtrace": UMBacktrace(NULL,0)}]);
+            }
+            if(partLen == 0)
+            {
+                break;
+            }
+            NSData *part = [NSData dataWithBytes:&bytes[pos-1] length:partLen+1];
+            UMDnsLabel *newLabel = [[UMDnsLabel alloc]init];
+            [newLabel setBinary:part enforceLengthLimit:YES];
+            [labels addObject:newLabel];
+        }
+        _labels = labels;
+        *offset = *offset + pos;
+    }
+    return self;
+}
+
 - (NSArray<NSString *>*)visualComponents
 {
     NSUInteger n = [_labels count];
