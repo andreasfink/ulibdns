@@ -973,7 +973,7 @@ according to the TYPE and CLASS of the resource record.
     return @"";
 }
 
-- (UMDnsResourceRecord *)initWithRawData:(NSData *)data atOffset:(int *)pos
+- (UMDnsResourceRecord *)initWithRawData:(NSData *)data atOffset:(size_t *)pos
 {
     NSAssert(0,@"we do have a record type which doesnt implement method initWithRawData:atOffset");
     return NULL;

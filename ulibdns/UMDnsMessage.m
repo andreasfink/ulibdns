@@ -10,12 +10,68 @@
 
 @implementation UMDnsMessage
 
-- (UMDnsMessage *)initWithData:(NSData *)data
+
+
+
+- (UMDnsMessage *)initWithData:(NSData *)binary offset:(size_t *)offset; /* can throw NSException */
 {
+    size_t max = binary.length;
+    size_t current;
+    
+    if(offset)
+    {
+        size_t current = *offset;
+    }
+    else
+    {
+        current = 0;
+    }
     self = [super init];
     if(self)
     {
-        _header = [[UMDnsHeader alloc]init];
+        _header = [[UMDnsHeader alloc]initWithData:binary offset:&current];
+        
+        if(_header == NULL)
+        {
+            current = binary.length;
+            if(*offset)
+            {
+                *offset = current;
+            }
+            return NULL;
+        }
+        NSMutableArray<UMDnsQuery *> *queries = [[NSMutableArray alloc]init];
+        for(NSUInteger i=0;i<_header.qdcount;i++)
+        {
+            UMDnsQuery *query = [[UMDnsQuery alloc]initWithData:binary offset:&current];
+            [queries addObject:query];
+        }
+        _queries = queries;
+        
+        
+        NSMutableArray<UMDnsResourceRecord *> *an = [[NSMutableArray alloc]init];
+        for(NSUInteger i=0;i<_header.ancount;i++)
+        {
+            UMDnsResourceRecord *rr = [[UMDnsResourceRecord alloc]initWithRawData:binary atOffset:&current];
+            [an addObject:rr];
+        }
+        _answers = an;
+        
+        NSMutableArray<UMDnsResourceRecord *> *ns = [[NSMutableArray alloc]init];
+        for(NSUInteger i=0;i<_header.nscount;i++)
+        {
+            UMDnsResourceRecord *rr = [[UMDnsResourceRecord alloc]initWithRawData:binary atOffset:&current];
+            [ns addObject:rr];
+        }
+        _authority = an;
+
+        NSMutableArray<UMDnsResourceRecord *> *ad = [[NSMutableArray alloc]init];
+        for(NSUInteger i=0;i<_header.arcount;i++)
+        {
+            UMDnsResourceRecord *rr = [[UMDnsResourceRecord alloc]initWithRawData:binary atOffset:&current];
+            [ad addObject:rr];
+        }
+        _additional = ad;
     }
     return self;
 }

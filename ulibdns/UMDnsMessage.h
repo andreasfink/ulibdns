@@ -27,7 +27,6 @@
 @property(readwrite,strong,atomic)  NSArray<UMDnsResourceRecord *>  *additional;
 
 - (UMDnsMessage *)initWithData:(NSData *)binary offset:(size_t *)offset; /* can throw NSException */
-
 - (NSString *)visualRepresentation;
 - (NSData *)encodedData;
 @end
