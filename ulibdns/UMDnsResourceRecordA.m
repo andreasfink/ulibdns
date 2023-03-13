@@ -89,7 +89,7 @@
     return [NSString stringWithFormat:@"A\t%@",ip];
 }
 
-- (UMDnsResourceRecordA *)initWithRawData:(NSData *)data atOffset:(int *)pos
+- (UMDnsResourceRecordA *)initWithRawData:(NSData *)data atOffset:(size_t *)pos
 {
     self = [super init];
     if(self)

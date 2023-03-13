@@ -66,7 +66,7 @@ All RRs have the same top level format shown below:
 +(UlibDnsResourceRecordType)resourceRecordTypeFromString:(NSString *)rrtypeName;
 
 - (UMDnsResourceRecord *)initWithParams:(NSArray *)params zone:(NSString *)zone;
-- (UMDnsResourceRecord *)initWithRawData:(NSData *)data atOffset:(int *)pos;
+- (UMDnsResourceRecord *)initWithRawData:(NSData *)data atOffset:(size_t *)pos;
 - (NSString *)visualRepresentation;
 - (NSString *)recordClassString;
 

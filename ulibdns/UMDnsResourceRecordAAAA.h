@@ -18,6 +18,6 @@
 - (void)setAddressFromString:(NSString *)str;
 - (UMDnsResourceRecordAAAA *)initWithAddressString:(NSString *)a;
 - (UMDnsResourceRecordAAAA *)initWithParams:(NSArray *)params  zone:(NSString *)zone;
-- (UMDnsResourceRecordAAAA *)initWithRawData:(NSData *)data atOffset:(int *)pos;
+- (UMDnsResourceRecordAAAA *)initWithRawData:(NSData *)data atOffset:(size_t *)pos;
 
 @end

@@ -77,7 +77,7 @@
 }
 
 
-- (UMDnsResourceRecordAAAA *)initWithRawData:(NSData *)data atOffset:(int *)pos
+- (UMDnsResourceRecordAAAA *)initWithRawData:(NSData *)data atOffset:(size_t *)pos
 {
     self = [super init];
     if(self)

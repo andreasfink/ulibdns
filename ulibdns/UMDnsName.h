@@ -31,7 +31,7 @@
 - (NSUInteger)setBinary:(NSData *)binary enforceLengthLimits:(BOOL)enforceLengthLimits;
 
 - (UMDnsName *)initWithVisualName:(NSString *)name;
-- (UMDnsName *)initWithRawData:(NSData *)data atOffset:(int *)pos;
+- (UMDnsName *)initWithRawData:(NSData *)data atOffset:(size_t *)pos;
 - (UMDnsName *)initWithVisualName:(NSString *)name relativeToZone:(NSString *)zone;
 
 @end

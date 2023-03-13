@@ -267,12 +267,12 @@
     return self;
 }
 
-- (UMDnsName *)initWithRawData:(NSData *)data atOffset:(int *)pos
+- (UMDnsName *)initWithRawData:(NSData *)data atOffset:(size_t *)pos
 {
     self = [super init];
     if(self)
     {
-        int datapos = *pos;
+        size_t datapos = *pos;
         NSMutableArray *labels = [[NSMutableArray alloc]init];
         int redirectionCounter = 0;
         
@@ -316,7 +316,7 @@
         *pos = datapos;
         /* find canonical name */
         
-        int readpos = *pos;
+        size_t readpos = *pos;
         while(1)
         {
             if(readpos >= len)

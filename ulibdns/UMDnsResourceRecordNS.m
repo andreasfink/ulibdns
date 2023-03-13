@@ -75,7 +75,7 @@
     return [NSString stringWithFormat:@"NS\t%@",_nsname.visualNameAbsoluteWriting];
 }
 
-- (UMDnsResourceRecordNS *)initWithRawData:(NSData *)data atOffset:(int *)pos
+- (UMDnsResourceRecordNS *)initWithRawData:(NSData *)data atOffset:(size_t *)pos
 {
     self = [super init];
     if(self)
