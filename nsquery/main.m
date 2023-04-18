@@ -15,18 +15,18 @@ int main(int argc, const char * argv[])
     {
         UMDnsClient *client = [[UMDnsClient alloc]init];
 #if 0
-        if(argc < 5)
+        if(argc < 4)
         {
-            fprintf(stderr,"Syntax: %s <class> <type> <name> <nameserver>",argv[0]);
+            fprintf(stderr,"Syntax: %s <type (A, PTR etc)> <name (www.example.com)> <nameserver (9.9.9.9)>",argv[0]);
             exit(0);
         }
-        NSString *class=@(argv[1]);
-        NSString *type=@(argv[2]);
-        NSString *name=@(argv[3]);
-        NSString *nameserver=@(argv[4]);
+        NSString *recordType=@(argv[1]);
+        NSString *name=@(argv[2]);
+        NSString *nameserver=@(argv[3]);
 #else
-        NSString *name=@"www.apple.com";
-        NSString *nameserver=@"1.1.1.1";
+        NSString *recordType          = @"A";
+        NSString *name          = @"www.apple.com";
+        NSString *nameserver    = @"1.1.1.1";
 #endif
         
     
@@ -41,7 +41,8 @@ int main(int argc, const char * argv[])
         UMDnsRemoteServer *remoteServer = [[UMDnsRemoteServer alloc]initWithAddress:nameserver useUDP:YES];
         [client addServer:remoteServer];
         UMDnsResolvingRequest *request = [[UMDnsResolvingRequest alloc]init];
-        request.resourceType    = UlibDnsResourceRecordType_A;
+        
+        request.resourceType    = [UMDnsResourceRecord resourceRecordTypeFromString:recordType];
         request.queryType       = UlibDnsQueryType_ANY;
         request.nameToResolve   = [[UMDnsName alloc]initWithVisualName:name];
         request.dnsClass        = UlibDnsClass_IN;
