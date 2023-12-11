@@ -16,7 +16,9 @@ ulibdns/ulibdns_config.h
 ulibdns.pc
 BUILDNR
 make_buildnr.sh
-
+buildnumber.c
+buildnumber.h
+version.h
 
 #########################
 # .gitignore file for Xcode4 and Xcode5 Source projects
