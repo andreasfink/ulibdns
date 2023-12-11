@@ -1,0 +1,16 @@
+#ulibdns pkg-config source file
+
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: ulibdns
+Cflags: -I${includedir}
+Libs: -L${libdir} -l:libulibdns.dylib.1.16
+
+Description: universal DNS library
+Version: 1.16.3
+Requires: ulib
+
+

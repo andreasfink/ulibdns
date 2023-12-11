@@ -1,0 +1,6 @@
+framework module ulibdns {
+  umbrella header "ulibdns.h"
+
+  export *
+  module * { export * }
+}
