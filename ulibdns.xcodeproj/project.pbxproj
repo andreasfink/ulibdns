@@ -1263,7 +1263,7 @@
 				DEFINES_MODULE = NO;
 				DEPLOYMENT_LOCATION = YES;
 				DEVELOPMENT_TEAM = 2GSNWPNR77;
-				DSTROOT = "";
+				DSTROOT = "/Library/Application Support/";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "/Library/Application Support/FinkTelecomServices/frameworks/ulibdns.framework/Versions/A/ulibdns";
@@ -1274,7 +1274,7 @@
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ulibdns/Info.plist;
-				INSTALL_PATH = "/Library/Application Support/FinkTelecomServices/frameworks";
+				INSTALL_PATH = /FinkTelecomServices/frameworks;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.16.3;
@@ -1296,7 +1296,7 @@
 				DEFINES_MODULE = NO;
 				DEPLOYMENT_LOCATION = YES;
 				DEVELOPMENT_TEAM = 2GSNWPNR77;
-				DSTROOT = "";
+				DSTROOT = "/Library/Application Support/";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "/Library/Application Support/FinkTelecomServices/frameworks/ulibdns.framework/Versions/A/ulibdns";
@@ -1307,7 +1307,7 @@
 				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ulibdns/Info.plist;
-				INSTALL_PATH = "/Library/Application Support/FinkTelecomServices/frameworks";
+				INSTALL_PATH = /FinkTelecomServices/frameworks;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.16.3;
